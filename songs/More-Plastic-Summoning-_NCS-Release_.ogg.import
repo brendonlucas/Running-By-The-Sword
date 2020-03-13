@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/More-Plastic-Summoning-_NCS-Release_.ogg-4ffd704678e1c12d0b57a7afb3b8d8ec.oggstr"
+
+[deps]
+
+source_file="res://songs/More-Plastic-Summoning-_NCS-Release_.ogg"
+dest_files=[ "res://.import/More-Plastic-Summoning-_NCS-Release_.ogg-4ffd704678e1c12d0b57a7afb3b8d8ec.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
