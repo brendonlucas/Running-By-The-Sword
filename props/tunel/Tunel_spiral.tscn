@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://props/scene_map/spiral_tunnel__very_hypnotic/08_-_Default.material" type="Material" id=1]
 [ext_resource path="res://props/tunel/Helix003_08 - Default_0.gd" type="Script" id=2]
 [ext_resource path="res://props/scene_map/spiral_tunnel__very_hypnotic/09_-_Default.material" type="Material" id=3]
+[ext_resource path="res://materials/spiral_material.tres" type="Material" id=4]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "Helix003_08 - Default_0"
@@ -79,6 +80,9 @@ surfaces/0 = {
 "vertex_count": 374
 }
 
+[sub_resource type="SpatialMaterial" id=7]
+albedo_color = Color( 0, 0, 0, 1 )
+
 [sub_resource type="Animation" id=6]
 resource_name = "spiraltunnel-bw"
 length = 66.6667
@@ -142,7 +146,7 @@ transform = Transform( -0.997699, -0.0677899, 0, 0.0677899, -0.997699, 0, 0, 0, 
 
 [node name="Helix003_08 - Default_0" type="MeshInstance" parent="RootNode gltf orientation matrix/RootNode model correction matrix/7566263088d9468a832f5d8065be69cbfbx/Node/RootNode/Group001/Helix003"]
 mesh = SubResource( 1 )
-material/0 = null
+material/0 = ExtResource( 4 )
 script = ExtResource( 2 )
 new_color = Color( 0, 0, 0, 1 )
 
@@ -151,28 +155,28 @@ transform = Transform( 0.0677842, -0.9977, 0, 0.9977, 0.0677842, 0, 0, 0, 1, 0, 
 
 [node name="Helix006_08 - Default_0" type="MeshInstance" parent="RootNode gltf orientation matrix/RootNode model correction matrix/7566263088d9468a832f5d8065be69cbfbx/Node/RootNode/Group001/Helix006"]
 mesh = SubResource( 2 )
-material/0 = null
+material/0 = ExtResource( 4 )
 
 [node name="Helix005" type="Spatial" parent="RootNode gltf orientation matrix/RootNode model correction matrix/7566263088d9468a832f5d8065be69cbfbx/Node/RootNode/Group001"]
 transform = Transform( 0.9977, 0.0677886, 0, -0.0677886, 0.9977, 0, 0, 0, 1, 0, 0, -196.882 )
 
 [node name="Helix005_08 - Default_0" type="MeshInstance" parent="RootNode gltf orientation matrix/RootNode model correction matrix/7566263088d9468a832f5d8065be69cbfbx/Node/RootNode/Group001/Helix005"]
 mesh = SubResource( 3 )
-material/0 = null
+material/0 = ExtResource( 4 )
 
 [node name="Helix004" type="Spatial" parent="RootNode gltf orientation matrix/RootNode model correction matrix/7566263088d9468a832f5d8065be69cbfbx/Node/RootNode/Group001"]
 transform = Transform( -0.0677855, 0.9977, 0, -0.9977, -0.0677855, 0, 0, 0, 1, 0, 0, -196.882 )
 
 [node name="Helix004_08 - Default_0" type="MeshInstance" parent="RootNode gltf orientation matrix/RootNode model correction matrix/7566263088d9468a832f5d8065be69cbfbx/Node/RootNode/Group001/Helix004"]
 mesh = SubResource( 4 )
-material/0 = null
+material/0 = ExtResource( 4 )
 
 [node name="Cylinder001" type="Spatial" parent="RootNode gltf orientation matrix/RootNode model correction matrix/7566263088d9468a832f5d8065be69cbfbx/Node/RootNode"]
 transform = Transform( 1, -1.49012e-08, 0, 1.49012e-08, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="Cylinder001_09 - Default_0" type="MeshInstance" parent="RootNode gltf orientation matrix/RootNode model correction matrix/7566263088d9468a832f5d8065be69cbfbx/Node/RootNode/Cylinder001"]
 mesh = SubResource( 5 )
-material/0 = null
+material/0 = SubResource( 7 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/spiraltunnel-bw = SubResource( 6 )

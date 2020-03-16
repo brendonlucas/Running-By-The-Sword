@@ -9,7 +9,6 @@ func _ready():
 	camera = get_parent().get_parent().get_node("AnimationPlayer")
 	player = get_parent().get_parent().get_node("player/Player")
 	pista = get_parent().get_parent().get_node("base_map_1")
-	#espiral = get_parent().get_node("scene/RootNode gltf orientation matrix/RootNode model correction matrix/7566263088d9468a832f5d8065be69cbfbx/Node/RootNode/Group001/Helix003/Helix003_08 - Default_0")
 	
 func _physics_process(delta):
 	var bodies = get_overlapping_bodies()

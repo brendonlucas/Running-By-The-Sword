@@ -7,6 +7,7 @@ var beats_e
 var anim_beats_d
 var beats_d
 var tocou
+var chao
 
 func _ready():
 	laser = get_parent().get_parent().get_node("lasers/laser/Laser_machine/AnimationPlayer")
@@ -21,17 +22,10 @@ func _physics_process(delta):
 	for body in bodies:
 		if body.name == "Player" and tocou != true:
 			tocou = true
+			#chao.disabled = true
 			laser.play("laser")
 			anim_beats_e.play("beat")
 			beats_e.show()
 			anim_beats_d.play("beat")
 			beats_d.show()
 			
-			
-			
-			#var c1 = Color("#ffb2d90a")
-			#espiral.material_override.albedo_color = new_color
-			#print(espiral.name)
-			
-
-

@@ -1,7 +1,7 @@
 extends KinematicBody
 
 var MOVE_SPEED = 7
-const JUMP_FORCE = 11
+var JUMP_FORCE = 11
 const GRAVITY = 0.98
 const MAX_FALL_SPEED = 20
 var y_velo = 0
@@ -19,11 +19,17 @@ var animate_current
 var block_jump = false
 var is_moving = true
 
+var active_jump_super = false
+
 func _ready():
 	animation = get_node("AnimationPlayer")
 	
 func _input(event):
 	pass
+	
+func super_jump(forca):
+	JUMP_FORCE = forca
+	active_jump_super = true
 	
 func block_moves_cam_down(type):
 	block_jump = type
@@ -38,10 +44,7 @@ func change_speed(speed):
 
 func invert_controls(type):
 	Type_controls = type
-	if jump_active:
-		jump_active = false
-	else:
-		jump_active = true
+	
 	
 	if direita:
 		direita = false
@@ -65,7 +68,7 @@ func _physics_process(delta):
 		roll = false
 		
 	var move_vec = Vector3()
-	if true or Input.is_action_pressed("frente"):
+	if true:
 		#move_vec.x -= 1
 		is_moving = true
 		
@@ -102,17 +105,34 @@ func _physics_process(delta):
 		esquerda = false
 		direita = false
 
-	
+		
+	if Type_controls == 3 and Input.is_action_pressed("direita"):
+		move_vec.x += 1
+		#is_moving = true
+		centro = true
+		esquerda = false
+		direita = false
+		
+	if Type_controls == 3 and Input.is_action_pressed("esquerda"):
+		move_vec.x -= 1
+		#is_moving = true
+		centro = true
+		esquerda = false
+		direita = false
+		
 	if !block_jump and !roll and velo_pista == 7 and is_moving and is_on_floor() and animate_current != "jump_fall":
 		animation.play("anm_02076002")
 	
 	if !block_jump and !roll and velo_pista != 7 and is_moving and is_on_floor() and animate_current != "jump_fall":
 		animation.play("anm_02076008")
 	
-	if !block_jump and jump_active and grounded and Input.is_action_just_pressed("pulo"):
+	if !block_jump and jump_active and grounded and Input.is_action_just_pressed("pulo") or active_jump_super:
 		just_jumped = true
 		y_velo = JUMP_FORCE
-		animation.play("anm_00076004")
+		if active_jump_super:
+			animation.play("anm_00070190")
+		else:
+			animation.play("anm_00076004")
 	
 	move_vec *= MOVE_SPEED
 	move_vec.z
@@ -124,3 +144,7 @@ func _physics_process(delta):
 		y_velo = -0.1
 	if y_velo < -MAX_FALL_SPEED:
 		y_velo = -MAX_FALL_SPEED
+	
+	if active_jump_super:
+		active_jump_super = false
+		JUMP_FORCE = 11

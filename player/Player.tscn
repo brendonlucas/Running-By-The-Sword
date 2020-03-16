@@ -7454,6 +7454,7 @@ tracks/24/keys = PoolRealArray( 0, 1, 0, 0, 0, -0.103999, -0.137855, 0.337169, 0
 
 [sub_resource type="Animation" id=43]
 length = 0.866667
+loop = true
 tracks/0/type = "transform"
 tracks/0/path = NodePath("RootNode gltf orientation matrix/RootNode model correction matrix/ply_20705820fbx/Node/RootNode/Node 2/Skeleton:root_2")
 tracks/0/interp = 1
@@ -7987,6 +7988,7 @@ tracks/24/enabled = true
 tracks/24/keys = PoolRealArray( 0, 1, 0, 0, 0, -0.453123, 0.0558419, -0.169373, 0.873426, 1, 1, 1, 0.0666667, 1, 0, 0, 0, -0.340709, -0.0502408, -0.271846, 0.898606, 1, 1, 1, 0.133333, 1, 0, 0, 0, -0.165463, -0.233099, -0.272177, 0.918807, 1, 1, 1, 0.2, 1, 0, 0, 0, 0.0101394, -0.185004, -0.0182464, 0.982516, 1, 1, 1, 0.266667, 1, 0, 0, 0, 0.0493073, -0.0520798, 0.0183824, 0.997256, 1, 1, 1, 0.333333, 1, 0, 0, 0, 0.0603533, 0.0493417, 0.0507492, 0.995664, 1, 1, 1, 0.4, 1, 0, 0, 0, -0.0296616, 0.0879264, 0.0980505, 0.990846, 1, 1, 1, 0.466667, 1, 0, 0, 0, -0.196041, 0.0904542, 0.154821, 0.964062, 1, 1, 1, 0.533333, 1, 0, 0, 0, -0.379036, 0.0616526, 0.186621, 0.904269, 1, 1, 1, 0.6, 1, 0, 0, 0, -0.451122, 0.0184358, 0.0481124, 0.890974, 1, 1, 1, 0.666667, 1, 0, 0, 0, -0.0397275, 0.043345, 0.0499319, 0.99702, 1, 1, 1, 0.7, 1, 0, 0, 0, 0.0574684, 0.0498905, 0.0483951, 0.995925, 1, 1, 1 )
 
 [sub_resource type="Animation" id=46]
+loop = true
 tracks/0/type = "transform"
 tracks/0/path = NodePath("RootNode gltf orientation matrix/RootNode model correction matrix/ply_20705820fbx/Node/RootNode/Node 2/Skeleton:root_2")
 tracks/0/interp = 1
@@ -11224,7 +11226,7 @@ bones/1/name = "ply_2705820_1"
 bones/1/parent = 0
 bones/1/rest = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 bones/1/enabled = true
-bones/1/bound_children = [  ]
+bones/1/bound_children = [ NodePath("BoneAttachment") ]
 bones/2/name = "root_2"
 bones/2/parent = 1
 bones/2/rest = Transform( 0, 0, 1, 0.999109, -0.042194, 0, 0.042194, 0.999109, 0, 0, 0.470649, 0.0106637 )
