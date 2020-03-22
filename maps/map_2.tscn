@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://props/cilindro/base_redondo.tscn" type="PackedScene" id=1]
 [ext_resource path="res://texturas/rainbow-textures.jpg" type="Texture" id=2]
@@ -14,6 +14,10 @@
 [ext_resource path="res://maps/cods_masp2/colisions_sensores/area_change_speed.gd" type="Script" id=12]
 [ext_resource path="res://maps/cods_masp2/colisions_sensores/area_jump_collider2.gd" type="Script" id=13]
 [ext_resource path="res://maps/cods_masp2/colisions_sensores/area_jump_rotate_collider4.gd" type="Script" id=14]
+[ext_resource path="res://maps/cods_masp2/colisions_sensores/area_stop_moves.gd" type="Script" id=15]
+[ext_resource path="res://maps/cods_masp2/colisions_sensores/area_move_final.gd" type="Script" id=16]
+[ext_resource path="res://maps/cods_masp2/colisions_sensores/area_move_final-atak.gd" type="Script" id=17]
+[ext_resource path="res://maps/cods_masp2/luna.gd" type="Script" id=18]
 
 [sub_resource type="BoxShape" id=7]
 extents = Vector3( 1.80506, 0.791998, 0.1127 )
@@ -35,11 +39,27 @@ is_hemisphere = true
 [sub_resource type="SpatialMaterial" id=9]
 albedo_color = Color( 0.054902, 0.054902, 0.054902, 1 )
 
+[sub_resource type="BoxShape" id=13]
+extents = Vector3( 1, 1.18948, 1 )
+
+[sub_resource type="CubeMesh" id=14]
+
 [sub_resource type="BoxShape" id=5]
 extents = Vector3( 1.52203, 0.0211211, 2.87084 )
 
 [sub_resource type="BoxShape" id=6]
 extents = Vector3( 1, 8.76118, 0.0197538 )
+
+[sub_resource type="Animation" id=12]
+resource_name = "rotate_final_player"
+length = 0.1
+tracks/0/type = "transform"
+tracks/0/path = NodePath("../..")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, -67.5797, 34.9104, -0.24836, 0, 1, 0, -1.62921e-07, 1, 1, 1, 0.1, 1, -67.5797, 34.9104, -0.248362, 0, 0.707107, 0, 0.707107, 1, 1, 1 )
 
 [sub_resource type="Animation" id=10]
 resource_name = "rotate_player"
@@ -104,6 +124,45 @@ transform = Transform( 0.990908, 0, -0.13454, 0, 1, 0, 0.13454, 0, 0.990908, -0.
 shape = SubResource( 7 )
 
 [node name="MeshInstance" type="MeshInstance" parent="base_map/sensores/sensor_play_music"]
+transform = Transform( 0.98215, 0, -0.188101, 0, 1, 0, 0.188101, 0, 0.98215, -0.354485, 0, 0.0132484 )
+mesh = SubResource( 8 )
+material/0 = null
+
+[node name="sensor_rotate" type="Area" parent="base_map/sensores"]
+transform = Transform( 0.992271, 0, 0.124086, 0, 1, 0, -0.124086, 0, 0.992271, -67.6746, 49.0288, -0.959825 )
+script = ExtResource( 16 )
+
+[node name="CollisionShape" type="CollisionShape" parent="base_map/sensores/sensor_rotate"]
+transform = Transform( 0.990908, 0, -0.13454, 0, 1, 0, 0.13454, 0, 0.990908, -0.482971, 0, 0.0326176 )
+shape = SubResource( 7 )
+
+[node name="MeshInstance" type="MeshInstance" parent="base_map/sensores/sensor_rotate"]
+transform = Transform( 0.98215, 0, -0.188101, 0, 1, 0, 0.188101, 0, 0.98215, -0.354485, 0, 0.0132484 )
+mesh = SubResource( 8 )
+material/0 = null
+
+[node name="sensor_block_moves" type="Area" parent="base_map/sensores"]
+transform = Transform( 0.995023, 0, 0.0996496, 0, 1, 0, -0.0996496, 0, 0.995023, -67.6746, 49.0288, 1.10324 )
+script = ExtResource( 15 )
+
+[node name="CollisionShape" type="CollisionShape" parent="base_map/sensores/sensor_block_moves"]
+transform = Transform( 0.990908, 0, -0.13454, 0, 1, 0, 0.13454, 0, 0.990908, -0.482971, 0, 0.0326176 )
+shape = SubResource( 7 )
+
+[node name="MeshInstance" type="MeshInstance" parent="base_map/sensores/sensor_block_moves"]
+transform = Transform( 0.98215, 0, -0.188101, 0, 1, 0, 0.188101, 0, 0.98215, -0.354485, 0, 0.0132484 )
+mesh = SubResource( 8 )
+material/0 = null
+
+[node name="sensor_active_ball" type="Area" parent="base_map/sensores"]
+transform = Transform( 0.0990418, 0, -0.995083, 0, 1, 0, 0.995083, 0, 0.0990418, -62.0906, 49.0288, 0.0215311 )
+script = ExtResource( 17 )
+
+[node name="CollisionShape" type="CollisionShape" parent="base_map/sensores/sensor_active_ball"]
+transform = Transform( 0.990908, 0, -0.13454, 0, 1, 0, 0.13454, 0, 0.990908, -0.482971, 0, 0.0326176 )
+shape = SubResource( 7 )
+
+[node name="MeshInstance" type="MeshInstance" parent="base_map/sensores/sensor_active_ball"]
 transform = Transform( 0.98215, 0, -0.188101, 0, 1, 0, 0.188101, 0, 0.98215, -0.354485, 0, 0.0132484 )
 mesh = SubResource( 8 )
 material/0 = null
@@ -187,7 +246,7 @@ mesh = SubResource( 8 )
 material/0 = null
 
 [node name="sensor_jump4" type="Area" parent="base_map/sensores"]
-transform = Transform( 0.731508, 0, -0.681832, 0, 1, 0, 0.681832, 0, 0.731508, -42.0518, 45.8429, -52.5866 )
+transform = Transform( 0.731508, 0, -0.681832, 0, 1, 0, 0.681832, 0, 0.731508, -42.4465, 45.8429, -51.9116 )
 script = ExtResource( 9 )
 
 [node name="CollisionShape" type="CollisionShape" parent="base_map/sensores/sensor_jump4"]
@@ -220,9 +279,25 @@ material/0 = SubResource( 9 )
 [node name="luna" type="Spatial" parent="base_map"]
 transform = Transform( -1.14044e-05, 0, -70, 0, 70, 0, 70, 0, -1.14044e-05, 0, 0, 0 )
 
-[node name="scene" parent="base_map/luna" instance=ExtResource( 6 )]
+[node name="luna" parent="base_map/luna" instance=ExtResource( 6 )]
+script = ExtResource( 18 )
 
 [node name="ball" type="Spatial" parent="base_map"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -63.5257, 48.3343, -0.480075 )
+
+[node name="base" type="StaticBody" parent="base_map/ball"]
+transform = Transform( 2.75054, 0, 0, 0, 0.12603, 0, 0, 0, 1.98124, 0.57217, -0.455242, -0.185273 )
+
+[node name="CollisionShape" type="CollisionShape" parent="base_map/ball/base"]
+shape = SubResource( 13 )
+
+[node name="MeshInstance" type="MeshInstance" parent="base_map/ball/base"]
+mesh = SubResource( 14 )
+material/0 = null
+
+[node name="ball_smash" type="Spatial" parent="base_map/ball"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="base_map/ball/ball_smash"]
 
 [node name="base_chao" type="StaticBody" parent="."]
 transform = Transform( -0.0185344, 0, 0.999828, 0, 1, 0, -0.999828, 0, -0.0185344, -67.6533, 34.3456, -0.467387 )
@@ -255,5 +330,6 @@ far = 300.0
 stream = ExtResource( 11 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="player/Player/target"]
+anims/rotate_final_player = SubResource( 12 )
 anims/rotate_player = SubResource( 10 )
 anims/rotate_player-reset = SubResource( 11 )

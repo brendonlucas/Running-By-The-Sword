@@ -888,7 +888,6 @@ tracks/26/keys = PoolRealArray( 0, 1, 0, 0, 0, -0.00687064, 0.213172, 0.16099, 0
 
 [sub_resource type="Animation" id=7]
 resource_name = "anm_00000007_l"
-length = 1.0
 tracks/0/type = "transform"
 tracks/0/path = NodePath("RootNode gltf orientation matrix/RootNode model correction matrix/ply_20705820fbx/Node/RootNode/Node 2/Skeleton:root_2")
 tracks/0/interp = 1
@@ -7829,7 +7828,6 @@ tracks/24/keys = PoolRealArray( 0, 1, 0, 0, 0, -0.453123, 0.0558419, -0.169373, 
 
 [sub_resource type="Animation" id=45]
 resource_name = "anm_00076207"
-length = 1.0
 tracks/0/type = "transform"
 tracks/0/path = NodePath("RootNode gltf orientation matrix/RootNode model correction matrix/ply_20705820fbx/Node/RootNode/Node 2/Skeleton:root_2")
 tracks/0/interp = 1
@@ -10668,6 +10666,7 @@ tracks/26/keys = PoolRealArray( 0, 1, 0, 0, 0, 0.121254, 0.0817799, -0.0215547, 
 [sub_resource type="Animation" id=60]
 resource_name = "anm_02076008"
 length = 0.4
+loop = true
 tracks/0/type = "transform"
 tracks/0/path = NodePath("RootNode gltf orientation matrix/RootNode model correction matrix/ply_20705820fbx/Node/RootNode/Node 2/Skeleton:root_2")
 tracks/0/interp = 1
@@ -10858,7 +10857,7 @@ tracks/26/imported = false
 tracks/26/enabled = true
 tracks/26/keys = PoolRealArray( 0, 1, 0, 0, 0, 0.0714767, -0.0977436, -0.0691002, 0.990234, 1, 1, 1, 0.0666667, 1, 0, 0, 0, -0.0224597, -0.0617286, -0.136651, 0.988439, 1, 1, 1, 0.133333, 1, 0, 0, 0, -0.0131437, 0.0694888, 0.15315, 0.985669, 1, 1, 1, 0.2, 1, 0, 0, 0, -0.136665, 0.109058, 0.62235, 0.762961, 1, 1, 1, 0.266667, 1, 0, 0, 0, -0.0224597, -0.0617286, -0.136651, 0.988439, 1, 1, 1, 0.333333, 1, 0, 0, 0, -0.0857126, 0.0838443, 0.356593, 0.926534, 1, 1, 1, 0.4, 1, 0, 0, 0, 0.0714767, -0.0977436, -0.0691002, 0.990234, 1, 1, 1 )
 
-[sub_resource type="Animation" id=62]
+[sub_resource type="Animation" id=61]
 resource_name = "jump"
 tracks/0/type = "transform"
 tracks/0/path = NodePath("RootNode gltf orientation matrix/RootNode model correction matrix/ply_20705820fbx/Node/RootNode/Node 2/Skeleton:root_2")
@@ -11050,7 +11049,7 @@ tracks/26/imported = false
 tracks/26/enabled = true
 tracks/26/keys = PoolRealArray( 0, 1, 0, 0, 0, 0.123031, 0.2183, 0.0502958, 0.966788, 1, 1, 1, 0.0666667, 1, 0, 0, 0, 0.0360695, 0.212569, 0.0685516, 0.974071, 1, 1, 1, 0.133333, 1, 0, 0, 0, -0.0836736, 0.20277, 0.0951754, 0.970992, 1, 1, 1, 0.2, 1, 0, 0, 0, -0.110026, 0.200673, 0.103929, 0.967896, 1, 1, 1, 0.266667, 1, 0, 0, 0, -0.0636199, 0.20637, 0.0985088, 0.971422, 1, 1, 1, 0.4, 1, 0, 0, 0, 0.056173, 0.220228, 0.0816487, 0.970401, 1, 1, 1, 0.466667, 1, 0, 0, 0, 0.0966325, 0.202359, -0.0955615, 0.969836, 1, 1, 1, 0.533333, 1, 0, 0, 0, 0.108303, 0.195303, -0.153813, 0.962532, 1, 1, 1, 0.666667, 1, 0, 0, 0, 0.124339, 0.192154, -0.15445, 0.961125, 1, 1, 1, 0.733333, 1, 0, 0, 0, 0.11409, 0.193857, -0.146125, 0.963354, 1, 1, 1, 0.8, 1, 0, 0, 0, 0.082538, 0.198587, -0.127991, 0.968178, 1, 1, 1, 1, 1, 0, 0, 0, -0.0604327, 0.209442, -0.0499496, 0.974673, 1, 1, 1 )
 
-[sub_resource type="Animation" id=63]
+[sub_resource type="Animation" id=62]
 resource_name = "jump_fall"
 tracks/0/type = "transform"
 tracks/0/path = NodePath("RootNode gltf orientation matrix/RootNode model correction matrix/ply_20705820fbx/Node/RootNode/Node 2/Skeleton:root_2")
@@ -11242,7 +11241,7 @@ tracks/26/imported = false
 tracks/26/enabled = true
 tracks/26/keys = PoolRealArray( 0, 1, 0, 0, 0, -0.0604327, 0.209442, -0.0499496, 0.974673, 1, 1, 1, 0.1, 1, 0, 0, 0, -0.119347, 0.209626, -0.0177163, 0.970309, 1, 1, 1, 0.2, 1, 0, 0, 0, -0.266389, 0.19846, 0.0642982, 0.941019, 1, 1, 1, 0.3, 1, 0, 0, 0, -0.326246, 0.18752, 0.100491, 0.921033, 1, 1, 1, 0.4, 1, 0, 0, 0, -0.36868, 0.175617, 0.131973, 0.903226, 1, 1, 1, 0.5, 1, 0, 0, 0, -0.151788, 0.199094, 0.123882, 0.960195, 1, 1, 1, 0.6, 1, 0, 0, 0, 0.00246388, 0.217134, 0.0987624, 0.97113, 1, 1, 1, 0.7, 1, 0, 0, 0, 0.0968771, 0.224947, 0.0759487, 0.966564, 1, 1, 1, 0.8, 1, 0, 0, 0, 0.106087, 0.224142, 0.0702243, 0.966217, 1, 1, 1, 0.9, 1, 0, 0, 0, 0.115571, 0.221391, 0.0601055, 0.966445, 1, 1, 1, 1, 1, 0, 0, 0, 0.118811, 0.219814, 0.055268, 0.966701, 1, 1, 1 )
 
-[sub_resource type="BoxShape" id=61]
+[sub_resource type="BoxShape" id=63]
 extents = Vector3( 0.146393, 0.446417, 0.146168 )
 
 [node name="Player" type="KinematicBody"]
@@ -11490,9 +11489,9 @@ anims/anm_02076002 = SubResource( 57 )
 anims/anm_02076003_l = SubResource( 58 )
 anims/anm_02076003_s = SubResource( 59 )
 anims/anm_02076008 = SubResource( 60 )
-anims/jump = SubResource( 62 )
-anims/jump_fall = SubResource( 63 )
+anims/jump = SubResource( 61 )
+anims/jump_fall = SubResource( 62 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.447372, -0.0205004 )
-shape = SubResource( 61 )
+shape = SubResource( 63 )

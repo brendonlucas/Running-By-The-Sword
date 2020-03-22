@@ -18,6 +18,7 @@ func _physics_process(delta):
 		if body.name == "Player" and tocou != true:
 			map.stop_move()
 			map.active_front_move(true)
+			animate_player.play("anm_02076008")
 			animate_rotate_player.play("rotate_final_player")
 			tocou = true
 
