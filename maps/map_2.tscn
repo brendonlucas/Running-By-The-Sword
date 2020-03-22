@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://props/cilindro/base_redondo.tscn" type="PackedScene" id=1]
 [ext_resource path="res://texturas/rainbow-textures.jpg" type="Texture" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://songs/NIVIRO-The-Labyrinth-_NCS-Release_.ogg" type="AudioStream" id=11]
 [ext_resource path="res://maps/cods_masp2/colisions_sensores/area_change_speed.gd" type="Script" id=12]
 [ext_resource path="res://maps/cods_masp2/colisions_sensores/area_jump_collider2.gd" type="Script" id=13]
+[ext_resource path="res://maps/cods_masp2/colisions_sensores/area_jump_rotate_collider4.gd" type="Script" id=14]
 
 [sub_resource type="BoxShape" id=7]
 extents = Vector3( 1.80506, 0.791998, 0.1127 )
@@ -50,6 +51,16 @@ tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = PoolRealArray( 0, 1, -67.5797, 34.9104, -0.24836, 0, 1, 0, -1.62921e-07, 1, 1, 1, 0.1, 1, -67.5797, 34.9104, -0.24836, 0, 0.707107, 0, 0.707107, 1, 1, 1, 0.2, 1, -67.5797, 34.9104, -0.24836, 0, 0, 0, 1, 1, 1, 1 )
 
+[sub_resource type="Animation" id=11]
+resource_name = "rotate_player-reset"
+tracks/0/type = "transform"
+tracks/0/path = NodePath("../..")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, -67.5797, 34.9104, -0.24836, 0, 0, 0, 1, 1, 1, 1, 0.1, 1, -67.5797, 34.9104, -0.24836, 0, 0.707107, 0, 0.707107, 1, 1, 1, 0.2, 1, -67.5797, 34.9104, -0.24836, 0, 1, 0, -1.62921e-07, 1, 1, 1 )
+
 [node name="map_2" type="Spatial"]
 transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0 )
 
@@ -68,16 +79,19 @@ transform = Transform( 35, 0, 0, 0, 35, 0, 0, 0, 35, 0, 0, 0 )
 transform = Transform( 35, 0, 0, 0, 1, 0, 0, 0, 35, 0, 34.191, 0 )
 
 [node name="base_superior_cortado" parent="base_map/plataformas" instance=ExtResource( 8 )]
-transform = Transform( -18.1518, 0, -29.9251, 0, 1, 0, 29.9251, 0, -18.1518, 0, 36.7076, 0 )
+transform = Transform( -18.1518, 0, -29.9251, 0, 1, 0, 29.9251, 0, -18.1518, 0, 36.75, 0 )
 
 [node name="base_superior_cortado2" parent="base_map/plataformas" instance=ExtResource( 8 )]
-transform = Transform( 34.9428, 0, 2.00011, 0, 1, 0, -2.00011, 0, 34.9428, 0, 39.397, 0 )
+transform = Transform( 34.9428, 0, 2.00011, 0, 1, 0, -2.00011, 0, 34.9428, 0, 39.436, 0 )
 
 [node name="base_superior_cortado3" parent="base_map/plataformas" instance=ExtResource( 8 )]
-transform = Transform( -29.9038, 0, -18.1868, 0, 1, 0, 18.1868, 0, -29.9038, 0, 42.176, 0 )
+transform = Transform( -31.0021, 0, -16.2441, 0, 1, 0, 16.2441, 0, -31.0021, 0, 41.945, 0 )
 
 [node name="base_superior_cortado4" parent="base_map/plataformas" instance=ExtResource( 8 )]
-transform = Transform( -34.4181, 0, -6.35542, 0, 1, 0, 6.35542, 0, -34.4181, 0, 46.1883, 0 )
+transform = Transform( 17.6384, 0, 30.2306, 0, 1, 0, -30.2306, 0, 17.6384, 0, 44.452, 0 )
+
+[node name="base_superior_cortado5" parent="base_map/plataformas" instance=ExtResource( 8 )]
+transform = Transform( -21.1833, 0, -27.8616, 0, 1, 0, 27.8616, 0, -21.1833, 0, 47.587, 0 )
 
 [node name="sensores" type="Spatial" parent="base_map"]
 
@@ -95,15 +109,15 @@ mesh = SubResource( 8 )
 material/0 = null
 
 [node name="sensor_jump" type="Area" parent="base_map/sensores"]
-transform = Transform( 0.878934, 0, -0.476944, 0, 1, 0, 0.476944, 0, 0.878934, -48.6142, 36.0704, -47.359 )
+transform = Transform( 0.820361, 0, -0.571845, 0, 1, 0, 0.571845, 0, 0.820361, -48.8476, 36.0704, -46.9172 )
 script = ExtResource( 9 )
 
 [node name="CollisionShape" type="CollisionShape" parent="base_map/sensores/sensor_jump"]
-transform = Transform( 0.966547, 0, -0.256492, 0, 1, 0, 0.256492, 0, 0.966547, 0.157013, 0, -1.59611 )
+transform = Transform( 0.966547, 0, -0.256492, 0, 1, 0, 0.256492, 0, 0.966547, -0.037468, 0, -0.719055 )
 shape = SubResource( 7 )
 
 [node name="MeshInstance" type="MeshInstance" parent="base_map/sensores/sensor_jump"]
-transform = Transform( 0.98215, 0, -0.188101, 0, 1, 0, 0.188101, 0, 0.98215, -0.354485, 0, 0.0132484 )
+transform = Transform( 0.982151, 0, -0.188102, 0, 1, 0, 0.188102, 0, 0.982151, -0.384819, 0, -0.854801 )
 mesh = SubResource( 8 )
 material/0 = null
 
@@ -116,6 +130,32 @@ transform = Transform( 0.990908, 0, -0.13454, 0, 1, 0, 0.13454, 0, 0.990908, -0.
 shape = SubResource( 7 )
 
 [node name="MeshInstance" type="MeshInstance" parent="base_map/sensores/sensor_more_speed"]
+transform = Transform( 0.98215, 0, -0.188101, 0, 1, 0, 0.188101, 0, 0.98215, -0.354485, 0, 0.0132484 )
+mesh = SubResource( 8 )
+material/0 = null
+
+[node name="sensor_more_speed2" type="Area" parent="base_map/sensores"]
+transform = Transform( 0.509927, 0, -0.860218, 0, 1, 0, 0.860218, 0, 0.509927, -24.3665, 48.9963, -62.9742 )
+script = ExtResource( 12 )
+
+[node name="CollisionShape" type="CollisionShape" parent="base_map/sensores/sensor_more_speed2"]
+transform = Transform( 0.990908, 0, -0.13454, 0, 1, 0, 0.13454, 0, 0.990908, -0.482971, 0, 0.0326214 )
+shape = SubResource( 7 )
+
+[node name="MeshInstance" type="MeshInstance" parent="base_map/sensores/sensor_more_speed2"]
+transform = Transform( 0.98215, 0, -0.188101, 0, 1, 0, 0.188101, 0, 0.98215, -0.354485, 0, 0.0132484 )
+mesh = SubResource( 8 )
+material/0 = null
+
+[node name="sensor_jump_reset" type="Area" parent="base_map/sensores"]
+transform = Transform( 0.817487, 0, -0.575947, 0, 1, 0, 0.575947, 0, 0.817487, 49.2575, 43.3456, 47.3805 )
+script = ExtResource( 14 )
+
+[node name="CollisionShape" type="CollisionShape" parent="base_map/sensores/sensor_jump_reset"]
+transform = Transform( 0.990908, 0, -0.13454, 0, 1, 0, 0.13454, 0, 0.990908, -0.482971, 0, 0.0326214 )
+shape = SubResource( 7 )
+
+[node name="MeshInstance" type="MeshInstance" parent="base_map/sensores/sensor_jump_reset"]
 transform = Transform( 0.98215, 0, -0.188101, 0, 1, 0, 0.188101, 0, 0.98215, -0.354485, 0, 0.0132484 )
 mesh = SubResource( 8 )
 material/0 = null
@@ -134,7 +174,7 @@ mesh = SubResource( 8 )
 material/0 = null
 
 [node name="sensor_jump3" type="Area" parent="base_map/sensores"]
-transform = Transform( -0.858996, 0, 0.511983, 0, 1, 0, -0.511983, 0, -0.858996, -48.9395, 40.8934, -48.3724 )
+transform = Transform( -0.833153, 0, 0.553042, 0, 1, 0, -0.553042, 0, -0.833153, -45.8812, 41.1673, -51.1803 )
 script = ExtResource( 9 )
 
 [node name="CollisionShape" type="CollisionShape" parent="base_map/sensores/sensor_jump3"]
@@ -142,6 +182,19 @@ transform = Transform( 0.990908, 0, -0.13454, 0, 1, 0, 0.13454, 0, 0.990908, -0.
 shape = SubResource( 7 )
 
 [node name="MeshInstance" type="MeshInstance" parent="base_map/sensores/sensor_jump3"]
+transform = Transform( 0.98215, 0, -0.188101, 0, 1, 0, 0.188101, 0, 0.98215, -0.354485, 0, 0.0132484 )
+mesh = SubResource( 8 )
+material/0 = null
+
+[node name="sensor_jump4" type="Area" parent="base_map/sensores"]
+transform = Transform( 0.731508, 0, -0.681832, 0, 1, 0, 0.681832, 0, 0.731508, -42.0518, 45.8429, -52.5866 )
+script = ExtResource( 9 )
+
+[node name="CollisionShape" type="CollisionShape" parent="base_map/sensores/sensor_jump4"]
+transform = Transform( 0.990908, 0, -0.13454, 0, 1, 0, 0.13454, 0, 0.990908, -0.439079, -0.0189056, 0.0492535 )
+shape = SubResource( 7 )
+
+[node name="MeshInstance" type="MeshInstance" parent="base_map/sensores/sensor_jump4"]
 transform = Transform( 0.98215, 0, -0.188101, 0, 1, 0, 0.188101, 0, 0.98215, -0.354485, 0, 0.0132484 )
 mesh = SubResource( 8 )
 material/0 = null
@@ -203,3 +256,4 @@ stream = ExtResource( 11 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="player/Player/target"]
 anims/rotate_player = SubResource( 10 )
+anims/rotate_player-reset = SubResource( 11 )

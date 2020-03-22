@@ -15,7 +15,7 @@ func _physics_process(delta):
 	var bodies = get_overlapping_bodies()
 	for body in bodies:
 		if body.name == "Player" and tocou != true:
-			player.super_jump(22)
+			player.super_jump(25)
 			player.invert_controls(1)
 			player_animate.play("rotate_player-reset")
 			map.change_rotation()
