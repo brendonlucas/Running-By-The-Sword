@@ -80,11 +80,10 @@ surfaces/0 = {
 "vertex_count": 374
 }
 
-[sub_resource type="SpatialMaterial" id=7]
+[sub_resource type="SpatialMaterial" id=6]
 albedo_color = Color( 0, 0, 0, 1 )
 
-[sub_resource type="Animation" id=6]
-resource_name = "spiraltunnel-bw"
+[sub_resource type="Animation" id=7]
 length = 66.6667
 tracks/0/type = "transform"
 tracks/0/path = NodePath("RootNode gltf orientation matrix/RootNode model correction matrix/7566263088d9468a832f5d8065be69cbfbx/Node/RootNode/Group001")
@@ -176,7 +175,7 @@ transform = Transform( 1, -1.49012e-08, 0, 1.49012e-08, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="Cylinder001_09 - Default_0" type="MeshInstance" parent="RootNode gltf orientation matrix/RootNode model correction matrix/7566263088d9468a832f5d8065be69cbfbx/Node/RootNode/Cylinder001"]
 mesh = SubResource( 5 )
-material/0 = SubResource( 7 )
+material/0 = SubResource( 6 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/spiraltunnel-bw = SubResource( 6 )
+anims/spiraltunnel-bw = SubResource( 7 )

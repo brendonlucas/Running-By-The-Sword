@@ -1,11 +1,14 @@
 extends KinematicBody
 
-var MOVE_SPEED = 7#15.75 
+var MOVE_SPEED = 7 #15.75 
 var y_velo = 0
 var move_mode = 1
 
 func _ready():
 	pass
+	
+func change_speed_slow():
+	MOVE_SPEED = 5
 	
 func change_speed(new_speed):
 	MOVE_SPEED = MOVE_SPEED * new_speed

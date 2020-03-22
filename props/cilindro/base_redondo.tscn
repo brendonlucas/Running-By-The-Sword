@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://props/cilindro/base_redondo.fbx" type="PackedScene" id=1]
+[ext_resource path="res://texturas/de3abb29ddd7cd6833d10d91f0f0229d - Cópia.jpg" type="Texture" id=2]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_texture = ExtResource( 2 )
+
+[node name="base_redondo" instance=ExtResource( 1 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0 )
+
+[node name="Tube2" parent="." index="0"]
+material/0 = SubResource( 1 )

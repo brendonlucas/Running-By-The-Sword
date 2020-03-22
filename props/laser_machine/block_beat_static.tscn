@@ -2,12 +2,12 @@
 
 [sub_resource type="CubeMesh" id=1]
 
-[sub_resource type="SpatialMaterial" id=4]
+[sub_resource type="SpatialMaterial" id=2]
 albedo_color = Color( 0, 0, 0, 1 )
 
-[sub_resource type="CubeMesh" id=2]
+[sub_resource type="CubeMesh" id=3]
 
-[sub_resource type="SpatialMaterial" id=3]
+[sub_resource type="SpatialMaterial" id=4]
 albedo_color = Color( 0, 0.976471, 1, 1 )
 emission_enabled = true
 emission = Color( 0, 0.858824, 1, 1 )
@@ -26,13 +26,13 @@ emission_on_uv2 = false
 [node name="block_beat_static" type="Spatial"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.52944, -6.38941 )
 
-[node name="teto" type="Spatial" parent="."]
+[node name="teto" type="StaticBody" parent="."]
 transform = Transform( 0.452, 0, 0, 0, 0.5, 0, 0, 0, 5.1, -0.583, -0.394945, 0.142329 )
 
 [node name="MeshInstance" type="MeshInstance" parent="teto"]
 transform = Transform( 1.20693, 0, 0, 0, 0.122757, 0, 0, 0, 3.18136, 0, -0.0193279, 0 )
 mesh = SubResource( 1 )
-material/0 = SubResource( 4 )
+material/0 = SubResource( 2 )
 
 [node name="pilares" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.358961, -0.0465822 )
@@ -42,23 +42,23 @@ transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial4" type="Spatial" parent="pilares"]
 transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -0.907489, -0.544401, 15.207 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial4"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial3" type="Spatial" parent="pilares"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, 15.7294 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial3"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial5" type="Spatial" parent="pilares"]
@@ -66,7 +66,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, 14.6803 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial5"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial9" type="Spatial" parent="pilares"]
@@ -74,23 +74,23 @@ transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial9"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial8" type="Spatial" parent="pilares"]
 transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -0.907489, -0.544401, 13.1926 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial8"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial7" type="Spatial" parent="pilares"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, 13.715 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial7"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial6" type="Spatial" parent="pilares"]
@@ -98,7 +98,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, 12.6659 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial6"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial17" type="Spatial" parent="pilares"]
@@ -106,23 +106,23 @@ transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial17"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial16" type="Spatial" parent="pilares"]
 transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -0.907489, -0.544401, 11.1404 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial16"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial15" type="Spatial" parent="pilares"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, 11.6628 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial15"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial14" type="Spatial" parent="pilares"]
@@ -130,7 +130,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, 10.6137 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial14"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial13" type="Spatial" parent="pilares"]
@@ -138,23 +138,23 @@ transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial13"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial12" type="Spatial" parent="pilares"]
 transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -0.907489, -0.544401, 9.12601 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial12"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial11" type="Spatial" parent="pilares"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, 9.64842 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial11"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial10" type="Spatial" parent="pilares"]
@@ -162,7 +162,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, 8.59931 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial10"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial33" type="Spatial" parent="pilares"]
@@ -170,23 +170,23 @@ transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial33"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial32" type="Spatial" parent="pilares"]
 transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -0.907489, -0.544401, 7.05069 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial32"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial31" type="Spatial" parent="pilares"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, 7.5731 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial31"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial30" type="Spatial" parent="pilares"]
@@ -194,7 +194,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, 6.52399 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial30"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial29" type="Spatial" parent="pilares"]
@@ -202,23 +202,23 @@ transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial29"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial28" type="Spatial" parent="pilares"]
 transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -0.907489, -0.544401, 5.0363 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial28"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial27" type="Spatial" parent="pilares"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, 5.55872 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial27"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial26" type="Spatial" parent="pilares"]
@@ -226,7 +226,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, 4.5096 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial26"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial25" type="Spatial" parent="pilares"]
@@ -234,23 +234,23 @@ transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial25"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial24" type="Spatial" parent="pilares"]
 transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -0.907489, -0.544401, 2.98408 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial24"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial23" type="Spatial" parent="pilares"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, 3.50649 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial23"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial22" type="Spatial" parent="pilares"]
@@ -258,7 +258,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, 2.45738 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial22"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial21" type="Spatial" parent="pilares"]
@@ -266,23 +266,23 @@ transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial21"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial20" type="Spatial" parent="pilares"]
 transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -0.907489, -0.544401, 0.96969 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial20"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial19" type="Spatial" parent="pilares"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, 1.49211 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial19"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial18" type="Spatial" parent="pilares"]
@@ -290,7 +290,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, 0.44299 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial18"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial2" type="Spatial" parent="pilares"]
@@ -298,23 +298,23 @@ transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial2"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial64" type="Spatial" parent="pilares"]
 transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -0.907489, -0.544401, -1.07365 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial64"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial63" type="Spatial" parent="pilares"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, -0.551229 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial63"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial62" type="Spatial" parent="pilares"]
@@ -322,7 +322,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, -1.60035 
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial62"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial61" type="Spatial" parent="pilares"]
@@ -330,23 +330,23 @@ transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial61"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial60" type="Spatial" parent="pilares"]
 transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -0.907489, -0.544401, -3.08803 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial60"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial59" type="Spatial" parent="pilares"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, -2.56561 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial59"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial58" type="Spatial" parent="pilares"]
@@ -354,7 +354,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, -3.61473 
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial58"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial57" type="Spatial" parent="pilares"]
@@ -362,23 +362,23 @@ transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial57"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial56" type="Spatial" parent="pilares"]
 transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -0.907489, -0.544401, -5.14026 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial56"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial55" type="Spatial" parent="pilares"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, -4.61784 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial55"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial54" type="Spatial" parent="pilares"]
@@ -386,7 +386,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, -5.66696 
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial54"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial53" type="Spatial" parent="pilares"]
@@ -394,23 +394,23 @@ transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial53"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial52" type="Spatial" parent="pilares"]
 transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -0.907489, -0.544401, -7.15464 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial52"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial51" type="Spatial" parent="pilares"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, -6.63223 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial51"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial50" type="Spatial" parent="pilares"]
@@ -418,7 +418,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, -7.68134 
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial50"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial49" type="Spatial" parent="pilares"]
@@ -426,23 +426,23 @@ transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial49"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial48" type="Spatial" parent="pilares"]
 transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -0.907489, -0.544401, -9.22996 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial48"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial47" type="Spatial" parent="pilares"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, -8.70755 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial47"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial46" type="Spatial" parent="pilares"]
@@ -450,7 +450,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, -9.75666 
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial46"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial45" type="Spatial" parent="pilares"]
@@ -458,23 +458,23 @@ transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial45"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial44" type="Spatial" parent="pilares"]
 transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -0.907489, -0.544401, -11.2443 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial44"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial43" type="Spatial" parent="pilares"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, -10.7219 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial43"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial42" type="Spatial" parent="pilares"]
@@ -482,7 +482,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, -11.771 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial42"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial41" type="Spatial" parent="pilares"]
@@ -490,23 +490,23 @@ transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial41"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial40" type="Spatial" parent="pilares"]
 transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -0.907489, -0.544401, -13.2966 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial40"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial39" type="Spatial" parent="pilares"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, -12.7742 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial39"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial38" type="Spatial" parent="pilares"]
@@ -514,7 +514,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, -13.8233 
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial38"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial37" type="Spatial" parent="pilares"]
@@ -522,23 +522,23 @@ transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial37"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial36" type="Spatial" parent="pilares"]
 transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -0.907489, -0.544401, -15.311 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial36"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial35" type="Spatial" parent="pilares"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, -14.7885 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial35"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial34" type="Spatial" parent="pilares"]
@@ -546,7 +546,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, -15.8377 
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares/Spatial34"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="pilares2" type="Spatial" parent="."]
@@ -557,23 +557,23 @@ transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial4" type="Spatial" parent="pilares2"]
 transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -0.907489, -0.544401, 15.207 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial4"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial3" type="Spatial" parent="pilares2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, 15.7294 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial3"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial34" type="Spatial" parent="pilares2"]
@@ -581,7 +581,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, 16.7705 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial34"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial5" type="Spatial" parent="pilares2"]
@@ -589,7 +589,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, 14.6803 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial5"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial9" type="Spatial" parent="pilares2"]
@@ -597,23 +597,23 @@ transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial9"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial8" type="Spatial" parent="pilares2"]
 transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -0.907489, -0.544401, 13.1926 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial8"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial7" type="Spatial" parent="pilares2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, 13.715 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial7"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial6" type="Spatial" parent="pilares2"]
@@ -621,7 +621,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, 12.6659 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial6"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial17" type="Spatial" parent="pilares2"]
@@ -629,23 +629,23 @@ transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial17"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial16" type="Spatial" parent="pilares2"]
 transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -0.907489, -0.544401, 11.1404 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial16"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial15" type="Spatial" parent="pilares2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, 11.6628 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial15"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial14" type="Spatial" parent="pilares2"]
@@ -653,7 +653,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, 10.6137 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial14"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial13" type="Spatial" parent="pilares2"]
@@ -661,23 +661,23 @@ transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial13"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial12" type="Spatial" parent="pilares2"]
 transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -0.907489, -0.544401, 9.12601 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial12"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial11" type="Spatial" parent="pilares2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, 9.64842 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial11"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial10" type="Spatial" parent="pilares2"]
@@ -685,7 +685,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, 8.59931 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial10"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial33" type="Spatial" parent="pilares2"]
@@ -693,23 +693,23 @@ transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial33"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial32" type="Spatial" parent="pilares2"]
 transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -0.907489, -0.544401, 7.05069 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial32"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial31" type="Spatial" parent="pilares2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, 7.5731 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial31"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial30" type="Spatial" parent="pilares2"]
@@ -717,7 +717,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, 6.52399 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial30"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial29" type="Spatial" parent="pilares2"]
@@ -725,23 +725,23 @@ transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial29"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial28" type="Spatial" parent="pilares2"]
 transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -0.907489, -0.544401, 5.0363 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial28"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial27" type="Spatial" parent="pilares2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, 5.55872 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial27"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial26" type="Spatial" parent="pilares2"]
@@ -749,7 +749,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, 4.5096 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial26"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial25" type="Spatial" parent="pilares2"]
@@ -757,23 +757,23 @@ transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial25"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial24" type="Spatial" parent="pilares2"]
 transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -0.907489, -0.544401, 2.98408 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial24"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial23" type="Spatial" parent="pilares2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, 3.50649 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial23"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial22" type="Spatial" parent="pilares2"]
@@ -781,7 +781,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, 2.45738 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial22"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial21" type="Spatial" parent="pilares2"]
@@ -789,23 +789,23 @@ transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial21"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial20" type="Spatial" parent="pilares2"]
 transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -0.907489, -0.544401, 0.96969 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial20"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial19" type="Spatial" parent="pilares2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, 1.49211 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial19"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial18" type="Spatial" parent="pilares2"]
@@ -813,7 +813,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, 0.44299 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial18"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial2" type="Spatial" parent="pilares2"]
@@ -821,23 +821,23 @@ transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial2"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial64" type="Spatial" parent="pilares2"]
 transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -0.907489, -0.544401, -1.07365 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial64"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial63" type="Spatial" parent="pilares2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, -0.551229 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial63"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial62" type="Spatial" parent="pilares2"]
@@ -845,7 +845,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, -1.60035 
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial62"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial61" type="Spatial" parent="pilares2"]
@@ -853,23 +853,23 @@ transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial61"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial60" type="Spatial" parent="pilares2"]
 transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -0.907489, -0.544401, -3.08803 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial60"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial59" type="Spatial" parent="pilares2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, -2.56561 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial59"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial58" type="Spatial" parent="pilares2"]
@@ -877,7 +877,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, -3.61473 
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial58"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial57" type="Spatial" parent="pilares2"]
@@ -885,23 +885,23 @@ transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial57"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial56" type="Spatial" parent="pilares2"]
 transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -0.907489, -0.544401, -5.14026 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial56"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial55" type="Spatial" parent="pilares2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, -4.61784 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial55"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial54" type="Spatial" parent="pilares2"]
@@ -909,7 +909,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, -5.66696 
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial54"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial53" type="Spatial" parent="pilares2"]
@@ -917,23 +917,23 @@ transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial53"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial52" type="Spatial" parent="pilares2"]
 transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -0.907489, -0.544401, -7.15464 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial52"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial51" type="Spatial" parent="pilares2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, -6.63223 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial51"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial50" type="Spatial" parent="pilares2"]
@@ -941,7 +941,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, -7.68134 
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial50"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial49" type="Spatial" parent="pilares2"]
@@ -949,23 +949,23 @@ transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial49"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial48" type="Spatial" parent="pilares2"]
 transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -0.907489, -0.544401, -9.22996 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial48"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial47" type="Spatial" parent="pilares2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, -8.70755 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial47"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial46" type="Spatial" parent="pilares2"]
@@ -973,7 +973,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, -9.75666 
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial46"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial45" type="Spatial" parent="pilares2"]
@@ -981,23 +981,23 @@ transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial45"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial44" type="Spatial" parent="pilares2"]
 transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -0.907489, -0.544401, -11.2443 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial44"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial43" type="Spatial" parent="pilares2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, -10.7219 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial43"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial42" type="Spatial" parent="pilares2"]
@@ -1005,7 +1005,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, -11.771 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial42"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial41" type="Spatial" parent="pilares2"]
@@ -1013,23 +1013,23 @@ transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial41"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial40" type="Spatial" parent="pilares2"]
 transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -0.907489, -0.544401, -13.2966 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial40"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial39" type="Spatial" parent="pilares2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, -12.7742 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial39"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial38" type="Spatial" parent="pilares2"]
@@ -1037,7 +1037,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, -13.8233 
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial38"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
 
 [node name="Spatial37" type="Spatial" parent="pilares2"]
@@ -1045,21 +1045,21 @@ transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial37"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial36" type="Spatial" parent="pilares2"]
 transform = Transform( 0.942233, 0.334958, 0, -0.334958, 0.942233, 0, 0, 0, 1, -0.907489, -0.544401, -15.311 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial36"]
 transform = Transform( 0.1, 1.67545e-14, 0, 3.3509e-15, 0.5, 0, 0, 7.10543e-15, 0.1, -0.00282097, 0.00229931, 0.00643539 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Spatial35" type="Spatial" parent="pilares2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03323, -0.499732, -14.7885 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="pilares2/Spatial35"]
 transform = Transform( 0.1, 0, 0, 0, 0.5, 0, 0, 0, 0.1, -0.00282097, 0.00229931, 0.00643516 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = SubResource( 5 )
