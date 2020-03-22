@@ -1993,3 +1993,21 @@ anims/player_rotation_1 = SubResource( 32 )
 anims/reset_cam = SubResource( 33 )
 anims/reset_cam_down = SubResource( 34 )
 anims/rotate_1 = SubResource( 35 )
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control"]
+anchor_top = 0.887
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -0.200012
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

@@ -9,7 +9,7 @@ var cam_animation
 func _ready():
 	#player = get_parent().get_parent().get_node("player/Player")
 	luna = get_parent().get_parent().get_node("luna/scene")
-	label_text = get_parent().get_parent().get_parent().get_node("player/Player/UI_text/Label")
+	label_text = get_parent().get_parent().get_parent().get_node("Control/Label")
 	cam_animation = get_parent().get_parent().get_parent().get_node("AnimationPlayer")
 	
 func _physics_process(delta):

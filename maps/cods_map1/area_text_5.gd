@@ -7,7 +7,6 @@ var label_text
 
 func _ready():
 	luna = get_parent().get_parent().get_node("luna/scene")
-	label_text = get_parent().get_parent().get_parent().get_node("player/Player/UI_text/Label")
  
 	
 func _physics_process(delta):

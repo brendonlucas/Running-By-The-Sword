@@ -34,7 +34,7 @@ func super_jump(forca):
 func block_moves_cam_down(type):
 	block_jump = type
 	if type == true:
-		animation.play("Jump")
+		animation.play("jump")
 	elif type == false:
 		animation.play("jump_fall")
 		
