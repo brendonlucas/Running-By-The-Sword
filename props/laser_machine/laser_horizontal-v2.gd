@@ -1,6 +1,7 @@
 extends Area
 
 var tocou
+var player
 
 func _ready():
 	pass

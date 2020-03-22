@@ -1273,7 +1273,7 @@ tracks/26/keys = PoolRealArray( 0, 1, 0, 0, 0, 0.121254, 0.0817799, -0.0215547, 
 
 [sub_resource type="Animation" id=9]
 resource_name = "anm_00000008"
-length = 0.333333
+length = 0.3
 tracks/0/type = "transform"
 tracks/0/path = NodePath("RootNode gltf orientation matrix/RootNode model correction matrix/ply_20705820fbx/Node/RootNode/Node 2/Skeleton:root_2")
 tracks/0/interp = 1
@@ -10857,7 +10857,7 @@ tracks/26/imported = false
 tracks/26/enabled = true
 tracks/26/keys = PoolRealArray( 0, 1, 0, 0, 0, 0.0714767, -0.0977436, -0.0691002, 0.990234, 1, 1, 1, 0.0666667, 1, 0, 0, 0, -0.0224597, -0.0617286, -0.136651, 0.988439, 1, 1, 1, 0.133333, 1, 0, 0, 0, -0.0131437, 0.0694888, 0.15315, 0.985669, 1, 1, 1, 0.2, 1, 0, 0, 0, -0.136665, 0.109058, 0.62235, 0.762961, 1, 1, 1, 0.266667, 1, 0, 0, 0, -0.0224597, -0.0617286, -0.136651, 0.988439, 1, 1, 1, 0.333333, 1, 0, 0, 0, -0.0857126, 0.0838443, 0.356593, 0.926534, 1, 1, 1, 0.4, 1, 0, 0, 0, 0.0714767, -0.0977436, -0.0691002, 0.990234, 1, 1, 1 )
 
-[sub_resource type="Animation" id=61]
+[sub_resource type="Animation" id=64]
 resource_name = "jump"
 tracks/0/type = "transform"
 tracks/0/path = NodePath("RootNode gltf orientation matrix/RootNode model correction matrix/ply_20705820fbx/Node/RootNode/Node 2/Skeleton:root_2")
@@ -11242,7 +11242,7 @@ tracks/26/enabled = true
 tracks/26/keys = PoolRealArray( 0, 1, 0, 0, 0, -0.0604327, 0.209442, -0.0499496, 0.974673, 1, 1, 1, 0.1, 1, 0, 0, 0, -0.119347, 0.209626, -0.0177163, 0.970309, 1, 1, 1, 0.2, 1, 0, 0, 0, -0.266389, 0.19846, 0.0642982, 0.941019, 1, 1, 1, 0.3, 1, 0, 0, 0, -0.326246, 0.18752, 0.100491, 0.921033, 1, 1, 1, 0.4, 1, 0, 0, 0, -0.36868, 0.175617, 0.131973, 0.903226, 1, 1, 1, 0.5, 1, 0, 0, 0, -0.151788, 0.199094, 0.123882, 0.960195, 1, 1, 1, 0.6, 1, 0, 0, 0, 0.00246388, 0.217134, 0.0987624, 0.97113, 1, 1, 1, 0.7, 1, 0, 0, 0, 0.0968771, 0.224947, 0.0759487, 0.966564, 1, 1, 1, 0.8, 1, 0, 0, 0, 0.106087, 0.224142, 0.0702243, 0.966217, 1, 1, 1, 0.9, 1, 0, 0, 0, 0.115571, 0.221391, 0.0601055, 0.966445, 1, 1, 1, 1, 1, 0, 0, 0, 0.118811, 0.219814, 0.055268, 0.966701, 1, 1, 1 )
 
 [sub_resource type="BoxShape" id=63]
-extents = Vector3( 0.146393, 0.446417, 0.146168 )
+extents = Vector3( 0.146393, 0.446417, 0.0861946 )
 
 [node name="Player" type="KinematicBody"]
 
@@ -11489,7 +11489,7 @@ anims/anm_02076002 = SubResource( 57 )
 anims/anm_02076003_l = SubResource( 58 )
 anims/anm_02076003_s = SubResource( 59 )
 anims/anm_02076008 = SubResource( 60 )
-anims/jump = SubResource( 61 )
+anims/jump = SubResource( 64 )
 anims/jump_fall = SubResource( 62 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
