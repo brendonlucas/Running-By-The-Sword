@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Runnig"
-run/main_scene="res://maps/map_1.tscn"
+run/main_scene="res://maps/map_2.tscn"
 config/icon="res://icon.png"
 
 [input]

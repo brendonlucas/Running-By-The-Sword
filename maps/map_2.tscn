@@ -1,12 +1,38 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://props/cilindro/base_redondo.tscn" type="PackedScene" id=1]
+[ext_resource path="res://texturas/rainbow-textures.jpg" type="Texture" id=2]
+[ext_resource path="res://player/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://maps/cods_masp2/Player.gd" type="Script" id=4]
 
 [sub_resource type="Environment" id=1]
+ambient_light_color = Color( 0.847059, 0.847059, 0.847059, 1 )
+
+[sub_resource type="QuadMesh" id=2]
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="SphereMesh" id=4]
+flip_faces = true
+is_hemisphere = true
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 1.52203, 0.0211211, 2.87084 )
+
+[sub_resource type="BoxShape" id=6]
+extents = Vector3( 1, 8.76118, 0.0197538 )
 
 [node name="map_2" type="Spatial"]
+transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0 )
 
 [node name="base_mapa" type="KinematicBody" parent="."]
 
 [node name="base_principal" type="Spatial" parent="base_mapa"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 17.0884, 0 )
+
+[node name="base_redondo" parent="base_mapa/base_principal" instance=ExtResource( 1 )]
+transform = Transform( 35, 0, 0, 0, 35, 0, 0, 0, 35, 0, 0, 0 )
 
 [node name="plataformas" type="Spatial" parent="base_mapa"]
 
@@ -19,16 +45,43 @@ environment = SubResource( 1 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="base_mapa/world_config"]
 
-[node name="player" type="Spatial" parent="base_mapa"]
+[node name="chao" type="MeshInstance" parent="base_mapa/world_config"]
+transform = Transform( 300, 0.000113789, 1.42751e-14, 0, -1.31134e-05, 0.861, -0.000113789, 300, 3.76355e-08, 0, 1.07476, 0 )
+mesh = SubResource( 2 )
+material/0 = SubResource( 3 )
+
+[node name="MeshInstance" type="MeshInstance" parent="base_mapa/world_config"]
+transform = Transform( 150, 0, 0, 0, 100, 0, 0, 0, 150, 0, 0, 0 )
+mesh = SubResource( 4 )
+material/0 = null
 
 [node name="luna" type="Spatial" parent="base_mapa"]
 
 [node name="ball" type="Spatial" parent="base_mapa"]
 
 [node name="base_chao" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 34.3456, 67.9454 )
 
 [node name="chao" type="CollisionShape" parent="base_chao"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.220833, 0 )
+shape = SubResource( 5 )
 
 [node name="parede" type="CollisionShape" parent="base_chao"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.92427, -2.05879 )
+shape = SubResource( 6 )
 
 [node name="parede2" type="CollisionShape" parent="base_chao"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.92427, 1.82072 )
+shape = SubResource( 6 )
+
+[node name="player" type="Spatial" parent="."]
+transform = Transform( -0.0104196, 0, -0.999946, 0, 1, 0, 0.999946, 0, -0.0104196, 0, 34.9104, 68.1644 )
+
+[node name="Player" parent="player" instance=ExtResource( 3 )]
+script = ExtResource( 4 )
+
+[node name="target" type="Spatial" parent="player/Player"]
+transform = Transform( -1, -8.48392e-08, 3.14603e-07, 0, 0.965509, 0.26037, -3.25842e-07, 0.26037, -0.965509, 0.001, 1.421, -1.984 )
+
+[node name="Camera" type="Camera" parent="player/Player/target"]
+far = 300.0

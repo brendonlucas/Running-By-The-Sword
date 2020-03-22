@@ -65,78 +65,45 @@ func _physics_process(delta):
 	var just_jumped = false
 	var grounded = is_on_floor()
 
-	if animate_current == "anm_00076004":
+	if animate_current == "anm_00000008":
 		roll = true
 	else:
 		roll = false
 		
 	var move_vec = Vector3()
+	
 	if true:
-		#move_vec.x -= 1
 		is_moving = true
 		
 	if !moves_blocked and !block_jump and Input.is_action_just_pressed("traz"):
 		roll = true
-		#is_moving = true
-		animation.play("anm_00076004")
+		animation.play("anm_00000008")
 		
 	if !moves_blocked and Type_controls == 1 and Input.is_action_pressed("direita"):
 		move_vec.x += 1
-		#is_moving = true
-		centro = true
-		esquerda = false
-		direita = false
 		
 	if !moves_blocked and Type_controls == 1 and Input.is_action_pressed("esquerda"):
 		move_vec.x -= 1
-		#is_moving = true
-		centro = true
-		esquerda = false
-		direita = false
 		
 	if !moves_blocked and Type_controls == 2 and Input.is_action_pressed("direita"):
 		move_vec.z += 1
-		#is_moving = true
-		centro = true
-		esquerda = false
-		direita = false
 		
 	if !moves_blocked and Type_controls == 2 and Input.is_action_pressed("esquerda"):
 		move_vec.z -= 1
-		#is_moving = true
-		centro = true
-		esquerda = false
-		direita = false
-
 		
 	if !moves_blocked and Type_controls == 3 and Input.is_action_pressed("direita"):
 		move_vec.x += 1
-		#is_moving = true
-		centro = true
-		esquerda = false
-		direita = false
 		
 	if !moves_blocked and Type_controls == 3 and Input.is_action_pressed("esquerda"):
 		move_vec.x -= 1
-		#is_moving = true
-		centro = true
-		esquerda = false
-		direita = false
 		
 	if !moves_blocked and Type_controls == 4 and Input.is_action_pressed("direita"):
 		move_vec.x -= 1
-		#is_moving = true
-		centro = true
-		esquerda = false
-		direita = false
 		
 	if !moves_blocked and Type_controls == 4 and Input.is_action_pressed("esquerda"):
 		move_vec.x += 1
-		#is_moving = true
-		centro = true
-		esquerda = false
-		direita = false
-		
+
+
 	if !moves_blocked and !block_jump and !roll and velo_pista == 7 and is_moving and is_on_floor() and animate_current != "jump_fall":
 		animation.play("anm_02076002")
 	
@@ -149,7 +116,7 @@ func _physics_process(delta):
 		if active_jump_super:
 			animation.play("anm_00070190")
 		else:
-			animation.play("anm_00076004")
+			animation.play("anm_00000008")
 	
 	move_vec *= MOVE_SPEED
 	move_vec.z
