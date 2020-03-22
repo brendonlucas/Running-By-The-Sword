@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://props/cilindro/base_redondo.tscn" type="PackedScene" id=1]
 [ext_resource path="res://texturas/rainbow-textures.jpg" type="Texture" id=2]
@@ -8,6 +8,16 @@
 [ext_resource path="res://player/luna.tscn" type="PackedScene" id=6]
 [ext_resource path="res://props/cilindro/base_superior.tscn" type="PackedScene" id=7]
 [ext_resource path="res://props/cilindro/base_superior_cortado.tscn" type="PackedScene" id=8]
+[ext_resource path="res://maps/cods_masp2/colisions_sensores/area_jump_collider.gd" type="Script" id=9]
+[ext_resource path="res://maps/cods_masp2/area_play_music.gd" type="Script" id=10]
+[ext_resource path="res://songs/NIVIRO-The-Labyrinth-_NCS-Release_.ogg" type="AudioStream" id=11]
+[ext_resource path="res://maps/cods_masp2/colisions_sensores/area_change_speed.gd" type="Script" id=12]
+[ext_resource path="res://maps/cods_masp2/colisions_sensores/area_jump_collider2.gd" type="Script" id=13]
+
+[sub_resource type="BoxShape" id=7]
+extents = Vector3( 1.80506, 0.791998, 0.1127 )
+
+[sub_resource type="QuadMesh" id=8]
 
 [sub_resource type="Environment" id=1]
 ambient_light_color = Color( 0.847059, 0.847059, 0.847059, 1 )
@@ -21,58 +31,145 @@ albedo_texture = ExtResource( 2 )
 flip_faces = true
 is_hemisphere = true
 
+[sub_resource type="SpatialMaterial" id=9]
+albedo_color = Color( 0.054902, 0.054902, 0.054902, 1 )
+
 [sub_resource type="BoxShape" id=5]
 extents = Vector3( 1.52203, 0.0211211, 2.87084 )
 
 [sub_resource type="BoxShape" id=6]
 extents = Vector3( 1, 8.76118, 0.0197538 )
 
+[sub_resource type="Animation" id=10]
+resource_name = "rotate_player"
+tracks/0/type = "transform"
+tracks/0/path = NodePath("../..")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, -67.5797, 34.9104, -0.24836, 0, 1, 0, -1.62921e-07, 1, 1, 1, 0.1, 1, -67.5797, 34.9104, -0.24836, 0, 0.707107, 0, 0.707107, 1, 1, 1, 0.2, 1, -67.5797, 34.9104, -0.24836, 0, 0, 0, 1, 1, 1, 1 )
+
 [node name="map_2" type="Spatial"]
 transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0 )
 
-[node name="base_mapa" type="KinematicBody" parent="."]
+[node name="base_map" type="KinematicBody" parent="."]
 script = ExtResource( 5 )
 
-[node name="base_principal" type="Spatial" parent="base_mapa"]
+[node name="base_principal" type="Spatial" parent="base_map"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 17.0884, 0 )
 
-[node name="base_redondo" parent="base_mapa/base_principal" instance=ExtResource( 1 )]
+[node name="base_redondo" parent="base_map/base_principal" instance=ExtResource( 1 )]
 transform = Transform( 35, 0, 0, 0, 35, 0, 0, 0, 35, 0, 0, 0 )
 
-[node name="plataformas" type="Spatial" parent="base_mapa"]
+[node name="plataformas" type="Spatial" parent="base_map"]
 
-[node name="base_superior" parent="base_mapa/plataformas" instance=ExtResource( 7 )]
+[node name="base_superior" parent="base_map/plataformas" instance=ExtResource( 7 )]
 transform = Transform( 35, 0, 0, 0, 1, 0, 0, 0, 35, 0, 34.191, 0 )
 
-[node name="base_superior_cortado" parent="base_mapa/plataformas" instance=ExtResource( 8 )]
-transform = Transform( 35, 0, 0, 0, 1, 0, 0, 0, 35, 0, 41.6967, 0 )
+[node name="base_superior_cortado" parent="base_map/plataformas" instance=ExtResource( 8 )]
+transform = Transform( -18.1518, 0, -29.9251, 0, 1, 0, 29.9251, 0, -18.1518, 0, 36.7076, 0 )
 
-[node name="sensores" type="Spatial" parent="base_mapa"]
+[node name="base_superior_cortado2" parent="base_map/plataformas" instance=ExtResource( 8 )]
+transform = Transform( 34.9428, 0, 2.00011, 0, 1, 0, -2.00011, 0, 34.9428, 0, 39.397, 0 )
 
-[node name="world_config" type="Spatial" parent="base_mapa"]
+[node name="base_superior_cortado3" parent="base_map/plataformas" instance=ExtResource( 8 )]
+transform = Transform( -29.9038, 0, -18.1868, 0, 1, 0, 18.1868, 0, -29.9038, 0, 42.176, 0 )
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="base_mapa/world_config"]
+[node name="base_superior_cortado4" parent="base_map/plataformas" instance=ExtResource( 8 )]
+transform = Transform( -34.4181, 0, -6.35542, 0, 1, 0, 6.35542, 0, -34.4181, 0, 46.1883, 0 )
+
+[node name="sensores" type="Spatial" parent="base_map"]
+
+[node name="sensor_play_music" type="Area" parent="base_map/sensores"]
+transform = Transform( 0.999905, 0, 0.0137876, 0, 1, 0, -0.0137876, 0, 0.999905, -67.6746, 36.0704, -2.07421 )
+script = ExtResource( 10 )
+
+[node name="CollisionShape" type="CollisionShape" parent="base_map/sensores/sensor_play_music"]
+transform = Transform( 0.990908, 0, -0.13454, 0, 1, 0, 0.13454, 0, 0.990908, -0.482971, 0, 0.0326176 )
+shape = SubResource( 7 )
+
+[node name="MeshInstance" type="MeshInstance" parent="base_map/sensores/sensor_play_music"]
+transform = Transform( 0.98215, 0, -0.188101, 0, 1, 0, 0.188101, 0, 0.98215, -0.354485, 0, 0.0132484 )
+mesh = SubResource( 8 )
+material/0 = null
+
+[node name="sensor_jump" type="Area" parent="base_map/sensores"]
+transform = Transform( 0.878934, 0, -0.476944, 0, 1, 0, 0.476944, 0, 0.878934, -48.6142, 36.0704, -47.359 )
+script = ExtResource( 9 )
+
+[node name="CollisionShape" type="CollisionShape" parent="base_map/sensores/sensor_jump"]
+transform = Transform( 0.966547, 0, -0.256492, 0, 1, 0, 0.256492, 0, 0.966547, 0.157013, 0, -1.59611 )
+shape = SubResource( 7 )
+
+[node name="MeshInstance" type="MeshInstance" parent="base_map/sensores/sensor_jump"]
+transform = Transform( 0.98215, 0, -0.188101, 0, 1, 0, 0.188101, 0, 0.98215, -0.354485, 0, 0.0132484 )
+mesh = SubResource( 8 )
+material/0 = null
+
+[node name="sensor_more_speed" type="Area" parent="base_map/sensores"]
+transform = Transform( -0.429156, 0, -0.90323, 0, 1, 0, 0.90323, 0, -0.429156, 34.4886, 38.7345, -58.2983 )
+script = ExtResource( 12 )
+
+[node name="CollisionShape" type="CollisionShape" parent="base_map/sensores/sensor_more_speed"]
+transform = Transform( 0.990908, 0, -0.13454, 0, 1, 0, 0.13454, 0, 0.990908, -0.482971, 0, 0.0326214 )
+shape = SubResource( 7 )
+
+[node name="MeshInstance" type="MeshInstance" parent="base_map/sensores/sensor_more_speed"]
+transform = Transform( 0.98215, 0, -0.188101, 0, 1, 0, 0.188101, 0, 0.98215, -0.354485, 0, 0.0132484 )
+mesh = SubResource( 8 )
+material/0 = null
+
+[node name="sensor_jump_revert" type="Area" parent="base_map/sensores"]
+transform = Transform( -0.485466, 0, 0.874256, 0, 1, 0, -0.874256, 0, -0.485466, 19.9847, 38.1175, 64.6521 )
+script = ExtResource( 13 )
+
+[node name="CollisionShape" type="CollisionShape" parent="base_map/sensores/sensor_jump_revert"]
+transform = Transform( 0.990908, 0, -0.13454, 0, 1, 0, 0.13454, 0, 0.990908, -0.482971, 0, 0.0326214 )
+shape = SubResource( 7 )
+
+[node name="MeshInstance" type="MeshInstance" parent="base_map/sensores/sensor_jump_revert"]
+transform = Transform( 0.98215, 0, -0.188101, 0, 1, 0, 0.188101, 0, 0.98215, -0.354485, 0, 0.0132484 )
+mesh = SubResource( 8 )
+material/0 = null
+
+[node name="sensor_jump3" type="Area" parent="base_map/sensores"]
+transform = Transform( -0.858996, 0, 0.511983, 0, 1, 0, -0.511983, 0, -0.858996, -48.9395, 40.8934, -48.3724 )
+script = ExtResource( 9 )
+
+[node name="CollisionShape" type="CollisionShape" parent="base_map/sensores/sensor_jump3"]
+transform = Transform( 0.990908, 0, -0.13454, 0, 1, 0, 0.13454, 0, 0.990908, -0.482971, 0, 0.0326176 )
+shape = SubResource( 7 )
+
+[node name="MeshInstance" type="MeshInstance" parent="base_map/sensores/sensor_jump3"]
+transform = Transform( 0.98215, 0, -0.188101, 0, 1, 0, 0.188101, 0, 0.98215, -0.354485, 0, 0.0132484 )
+mesh = SubResource( 8 )
+material/0 = null
+
+[node name="world_config" type="Spatial" parent="base_map"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="base_map/world_config"]
 environment = SubResource( 1 )
 
-[node name="DirectionalLight" type="DirectionalLight" parent="base_mapa/world_config"]
+[node name="DirectionalLight" type="DirectionalLight" parent="base_map/world_config"]
 transform = Transform( 0.666667, 0, 0, 0, -0.590845, 0.308782, 0, -0.308782, -0.590845, 0, 71.7339, -83.5247 )
 
-[node name="chao" type="MeshInstance" parent="base_mapa/world_config"]
+[node name="chao" type="MeshInstance" parent="base_map/world_config"]
 transform = Transform( 300, 0.000113789, 1.42751e-14, 0, -1.31134e-05, 0.861, -0.000113789, 300, 3.76355e-08, 0, 1.07476, 0 )
 mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
 
-[node name="MeshInstance" type="MeshInstance" parent="base_mapa/world_config"]
+[node name="parede" type="MeshInstance" parent="base_map/world_config"]
 transform = Transform( 150, 0, 0, 0, 100, 0, 0, 0, 150, 0, 0, 0 )
 mesh = SubResource( 4 )
-material/0 = null
+material/0 = SubResource( 9 )
 
-[node name="luna" type="Spatial" parent="base_mapa"]
+[node name="luna" type="Spatial" parent="base_map"]
 transform = Transform( -1.14044e-05, 0, -70, 0, 70, 0, 70, 0, -1.14044e-05, 0, 0, 0 )
 
-[node name="scene" parent="base_mapa/luna" instance=ExtResource( 6 )]
+[node name="scene" parent="base_map/luna" instance=ExtResource( 6 )]
 
-[node name="ball" type="Spatial" parent="base_mapa"]
+[node name="ball" type="Spatial" parent="base_map"]
 
 [node name="base_chao" type="StaticBody" parent="."]
 transform = Transform( -0.0185344, 0, 0.999828, 0, 1, 0, -0.999828, 0, -0.0185344, -67.6533, 34.3456, -0.467387 )
@@ -100,3 +197,9 @@ transform = Transform( -1, -8.48392e-08, 3.14603e-07, 0, 0.965509, 0.26037, -3.2
 
 [node name="Camera" type="Camera" parent="player/Player/target"]
 far = 300.0
+
+[node name="music" type="AudioStreamPlayer3D" parent="player/Player/target"]
+stream = ExtResource( 11 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="player/Player/target"]
+anims/rotate_player = SubResource( 10 )
