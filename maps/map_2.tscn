@@ -1,9 +1,13 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://props/cilindro/base_redondo.tscn" type="PackedScene" id=1]
 [ext_resource path="res://texturas/rainbow-textures.jpg" type="Texture" id=2]
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://maps/cods_masp2/Player.gd" type="Script" id=4]
+[ext_resource path="res://maps/cods_masp2/base_map.gd" type="Script" id=5]
+[ext_resource path="res://player/luna.tscn" type="PackedScene" id=6]
+[ext_resource path="res://props/cilindro/base_superior.tscn" type="PackedScene" id=7]
+[ext_resource path="res://props/cilindro/base_superior_cortado.tscn" type="PackedScene" id=8]
 
 [sub_resource type="Environment" id=1]
 ambient_light_color = Color( 0.847059, 0.847059, 0.847059, 1 )
@@ -27,6 +31,7 @@ extents = Vector3( 1, 8.76118, 0.0197538 )
 transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0 )
 
 [node name="base_mapa" type="KinematicBody" parent="."]
+script = ExtResource( 5 )
 
 [node name="base_principal" type="Spatial" parent="base_mapa"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 17.0884, 0 )
@@ -36,6 +41,12 @@ transform = Transform( 35, 0, 0, 0, 35, 0, 0, 0, 35, 0, 0, 0 )
 
 [node name="plataformas" type="Spatial" parent="base_mapa"]
 
+[node name="base_superior" parent="base_mapa/plataformas" instance=ExtResource( 7 )]
+transform = Transform( 35, 0, 0, 0, 1, 0, 0, 0, 35, 0, 34.191, 0 )
+
+[node name="base_superior_cortado" parent="base_mapa/plataformas" instance=ExtResource( 8 )]
+transform = Transform( 35, 0, 0, 0, 1, 0, 0, 0, 35, 0, 41.6967, 0 )
+
 [node name="sensores" type="Spatial" parent="base_mapa"]
 
 [node name="world_config" type="Spatial" parent="base_mapa"]
@@ -44,6 +55,7 @@ transform = Transform( 35, 0, 0, 0, 35, 0, 0, 0, 35, 0, 0, 0 )
 environment = SubResource( 1 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="base_mapa/world_config"]
+transform = Transform( 0.666667, 0, 0, 0, -0.590845, 0.308782, 0, -0.308782, -0.590845, 0, 71.7339, -83.5247 )
 
 [node name="chao" type="MeshInstance" parent="base_mapa/world_config"]
 transform = Transform( 300, 0.000113789, 1.42751e-14, 0, -1.31134e-05, 0.861, -0.000113789, 300, 3.76355e-08, 0, 1.07476, 0 )
@@ -56,11 +68,14 @@ mesh = SubResource( 4 )
 material/0 = null
 
 [node name="luna" type="Spatial" parent="base_mapa"]
+transform = Transform( -1.14044e-05, 0, -70, 0, 70, 0, 70, 0, -1.14044e-05, 0, 0, 0 )
+
+[node name="scene" parent="base_mapa/luna" instance=ExtResource( 6 )]
 
 [node name="ball" type="Spatial" parent="base_mapa"]
 
 [node name="base_chao" type="StaticBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 34.3456, 67.9454 )
+transform = Transform( -0.0185344, 0, 0.999828, 0, 1, 0, -0.999828, 0, -0.0185344, -67.6533, 34.3456, -0.467387 )
 
 [node name="chao" type="CollisionShape" parent="base_chao"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.220833, 0 )
@@ -75,7 +90,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.92427, 1.82072 )
 shape = SubResource( 6 )
 
 [node name="player" type="Spatial" parent="."]
-transform = Transform( -0.0104196, 0, -0.999946, 0, 1, 0, 0.999946, 0, -0.0104196, 0, 34.9104, 68.1644 )
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -67.5797, 34.9104, -0.24836 )
 
 [node name="Player" parent="player" instance=ExtResource( 3 )]
 script = ExtResource( 4 )

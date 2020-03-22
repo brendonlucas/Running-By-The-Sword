@@ -30,7 +30,7 @@ mesh = SubResource( 1 )
 material/0 = SubResource( 2 )
 
 [node name="StaticBody2" type="StaticBody" parent="StaticBody"]
-transform = Transform( 0.01, 0, 0, 0, -1.62921e-09, -0.01, 0, 0.01, -1.62921e-09, 0, 0.00368422, 0 )
+transform = Transform( 0.01, 0, 0, 0, -1.62921e-09, -0.01, 0, 0.01, -1.62921e-09, 0, 0, 0 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="StaticBody/StaticBody2"]
 shape = SubResource( 3 )
