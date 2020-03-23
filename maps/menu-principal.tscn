@@ -161,16 +161,16 @@ __meta__ = {
 [node name="Control" type="Control" parent="UI"]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -256.0
-margin_right = 256.0
-margin_bottom = 275.0
+margin_left = -512.0
+margin_right = 512.0
+margin_bottom = 285.0
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="Sprite" type="Sprite" parent="UI/Control"]
-position = Vector2( -97.8198, 23.5118 )
-scale = Vector2( 0.486422, 0.536639 )
+position = Vector2( 236.742, 4.08565 )
+scale = Vector2( 0.680684, 0.801822 )
 texture = ExtResource( 11 )
 normal_map = ExtResource( 11 )
 centered = false
