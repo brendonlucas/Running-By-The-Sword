@@ -22,16 +22,3 @@ func _process(delta):
 		elif anim_time == 3:
 			animate_luna.play("anm_rezero2_library_001",true)
 			anim_time = 1
-
-
-
-
-
-
-
-
-
-
-
-
-

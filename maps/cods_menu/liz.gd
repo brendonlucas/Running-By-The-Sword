@@ -7,7 +7,6 @@ onready var time = get_node("Timer")
 var time_anim = 1
 var is_on_active = true
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	animate_liz = get_node("Player/AnimationPlayer")
 	animate_liz.play("anm_00070001_s",true)
@@ -33,4 +32,3 @@ func _physics_process(delta):
 			animate_liz.play("anm_02000030",true)
 			time_anim = 1
 			
-

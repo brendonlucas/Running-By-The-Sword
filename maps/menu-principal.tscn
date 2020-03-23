@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://texturas/universe.jpg" type="Texture" id=1]
 [ext_resource path="res://texturas/background8269659.jpg" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://songs/load.wav" type="AudioStream" id=8]
 [ext_resource path="res://maps/cods_menu/liz.gd" type="Script" id=9]
 [ext_resource path="res://maps/cods_menu/luna.gd" type="Script" id=10]
+[ext_resource path="res://texturas/logo.png" type="Texture" id=11]
 
 [sub_resource type="Environment" id=1]
 ambient_light_color = Color( 0.431373, 0.431373, 0.431373, 1 )
@@ -28,10 +29,10 @@ transmission = Color( 1, 1, 1, 1 )
 [sub_resource type="SpatialMaterial" id=4]
 albedo_texture = ExtResource( 1 )
 
-[sub_resource type="SpatialMaterial" id=9]
+[sub_resource type="SpatialMaterial" id=5]
 albedo_texture = ExtResource( 1 )
 
-[sub_resource type="SpatialMaterial" id=10]
+[sub_resource type="SpatialMaterial" id=6]
 albedo_texture = ExtResource( 1 )
 emission_enabled = true
 emission = Color( 0, 0, 0, 1 )
@@ -40,7 +41,7 @@ emission_operator = 0
 emission_on_uv2 = false
 emission_texture = ExtResource( 1 )
 
-[sub_resource type="SpatialMaterial" id=5]
+[sub_resource type="SpatialMaterial" id=7]
 albedo_color = Color( 0.027451, 0.945098, 0.968627, 1 )
 albedo_texture = ExtResource( 2 )
 emission_enabled = true
@@ -50,7 +51,7 @@ emission_operator = 1
 emission_on_uv2 = false
 emission_texture = ExtResource( 3 )
 
-[sub_resource type="SpatialMaterial" id=6]
+[sub_resource type="SpatialMaterial" id=8]
 albedo_color = Color( 1, 0, 0, 1 )
 albedo_texture = ExtResource( 2 )
 emission_enabled = true
@@ -60,9 +61,9 @@ emission_operator = 1
 emission_on_uv2 = false
 emission_texture = ExtResource( 3 )
 
-[sub_resource type="CubeMesh" id=7]
+[sub_resource type="CubeMesh" id=9]
 
-[sub_resource type="SpatialMaterial" id=8]
+[sub_resource type="SpatialMaterial" id=10]
 albedo_color = Color( 0.968627, 0.94902, 0.94902, 1 )
 
 [sub_resource type="Animation" id=11]
@@ -99,27 +100,27 @@ material/0 = SubResource( 4 )
 [node name="parede" type="MeshInstance" parent="estruturas"]
 transform = Transform( -9.55016e-08, -1.06689, 0, 1, -2.96526e-07, 0, 0, 0, 1, 0, 0.176015, -0.886274 )
 mesh = SubResource( 2 )
-material/0 = SubResource( 9 )
+material/0 = SubResource( 5 )
 
 [node name="parede2" type="MeshInstance" parent="estruturas"]
 transform = Transform( 1.62921e-07, 1.06689, -3.25841e-07, 1, -1.73819e-07, 0, -5.30863e-14, -3.47638e-07, -1, 0, 0.176015, 0.891856 )
 mesh = SubResource( 2 )
-material/0 = SubResource( 10 )
+material/0 = SubResource( 6 )
 
 [node name="portal" type="MeshInstance" parent="estruturas"]
 transform = Transform( 1.80601e-14, 1.46793e-07, -0.999938, 0.680406, -1.46793e-07, 0, -1.10852e-07, -0.901011, -1.62911e-07, 0.438, 0.176, -0.445118 )
 mesh = SubResource( 2 )
-material/0 = SubResource( 5 )
+material/0 = SubResource( 7 )
 
 [node name="portal2" type="MeshInstance" parent="estruturas"]
 transform = Transform( 1.45827e-14, 1.49926e-07, -0.999945, 0.549395, -1.49926e-07, 0, -8.95078e-08, -0.920239, -1.62912e-07, 0.438472, 0.253803, 0.442896 )
 mesh = SubResource( 2 )
-material/0 = SubResource( 6 )
+material/0 = SubResource( 8 )
 
 [node name="MeshInstance" type="MeshInstance" parent="estruturas"]
 transform = Transform( 1, 0, 0, 0, 0.325645, 0, 0, 0, 0.0195874, 0.888328, 0.192866, 0 )
-mesh = SubResource( 7 )
-material/0 = SubResource( 8 )
+mesh = SubResource( 9 )
+material/0 = SubResource( 10 )
 
 [node name="target" type="Spatial" parent="."]
 transform = Transform( -1.19209e-07, 0, -1, 0, 1, 0, 1, 0, -1.19209e-07, -0.368, 0.27, -0.00640678 )
@@ -157,6 +158,23 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Control" type="Control" parent="UI"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -256.0
+margin_right = 256.0
+margin_bottom = 275.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="UI/Control"]
+position = Vector2( -97.8198, 23.5118 )
+scale = Vector2( 0.486422, 0.536639 )
+texture = ExtResource( 11 )
+normal_map = ExtResource( 11 )
+centered = false
+
 [node name="Button" type="Button" parent="UI"]
 anchor_left = 0.375
 anchor_top = 0.712
@@ -172,10 +190,25 @@ __meta__ = {
 }
 
 [node name="Timer" type="Timer" parent="UI"]
-wait_time = 5.0
+wait_time = 3.0
 one_shot = true
 
 [node name="effect" type="AudioStreamPlayer2D" parent="UI"]
 position = Vector2( 506.157, 291.901 )
 stream = ExtResource( 8 )
+
+[node name="Label" type="Label" parent="UI"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -112.104
+margin_top = -34.16
+margin_right = 112.104
+text = "In Progress Game"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="UI/Button" to="UI" method="_on_Button_pressed"]
