@@ -19,9 +19,16 @@ var block_jump = false
 var is_moving = true
 var block_move = false
 var active_jump_super = false
+var death = false
 
 func _ready():
 	animation = get_node("AnimationPlayer")
+	
+	
+func player_death():
+	death = true
+	block_move = true
+	is_moving = false
 	
 func block_moving():
 	is_moving = false
@@ -58,8 +65,11 @@ func _physics_process(delta):
 	else:
 		roll = false
 	var move_vec = Vector3()
+	
+	if death:
+		animation.play("")
 		
-	if !block_jump and Input.is_action_just_pressed("traz"):
+	if !block_move and !block_jump and Input.is_action_just_pressed("traz"):
 		roll = true
 		animation.play("anm_00000008")
 		

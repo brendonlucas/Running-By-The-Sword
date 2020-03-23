@@ -135,16 +135,16 @@ albedo_color = Color( 0, 0, 0, 1 )
 
 [sub_resource type="BoxShape" id=24]
 
-[sub_resource type="BoxShape" id=35]
+[sub_resource type="BoxShape" id=25]
 extents = Vector3( 8.59044, 1, 238.41 )
 
-[sub_resource type="ProceduralSky" id=25]
+[sub_resource type="ProceduralSky" id=26]
 sky_top_color = Color( 0, 0.462745, 0.717647, 1 )
 sun_curve = 0.0153894
 
-[sub_resource type="Environment" id=26]
+[sub_resource type="Environment" id=27]
 background_mode = 1
-background_sky = SubResource( 25 )
+background_sky = SubResource( 26 )
 ambient_light_energy = 0.0
 ss_reflections_max_steps = 100
 ss_reflections_fade_in = 0.941501
@@ -155,8 +155,7 @@ glow_enabled = true
 glow_intensity = 0.6
 glow_blend_mode = 1
 
-[sub_resource type="Animation" id=27]
-resource_name = "change_cam_text2"
+[sub_resource type="Animation" id=28]
 length = 10.0
 tracks/0/type = "transform"
 tracks/0/path = NodePath("player/Player/target")
@@ -166,8 +165,7 @@ tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = PoolRealArray( 0, 1, 2.79397e-07, 0.414705, 1.75037, 6.72122e-08, 0.978495, 0.206272, 1.59417e-07, 1, 1, 1, 3, 1, 2.79397e-07, 0.414705, 1.75037, 6.72122e-08, 0.978495, 0.206272, 1.59417e-07, 1, 1, 1, 4.8, 1, 0.784882, 1.59778, 6.22241, 0.0299977, -1.58306e-08, 7.50957e-08, 0.99955, 1, 1, 1, 7, 1, 0.784882, 1.59778, 6.22241, 0.0299977, -1.58306e-08, 7.50957e-08, 0.99955, 1, 1, 1, 9.9, 1, 2.79397e-07, 0.414705, 1.75037, 6.72122e-08, 0.978495, 0.206272, 1.59417e-07, 1, 1, 1 )
 
-[sub_resource type="Animation" id=28]
-resource_name = "change_cam_text_reset"
+[sub_resource type="Animation" id=29]
 tracks/0/type = "transform"
 tracks/0/path = NodePath("player/Player/target")
 tracks/0/interp = 1
@@ -176,7 +174,7 @@ tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = PoolRealArray( 0, 1, 0.784882, 1.59778, 6.22241, 0.0299977, -1.58306e-08, 7.50957e-08, 0.99955, 1, 1, 1, 1, 1, 2.79397e-07, 0.414705, 1.75037, 6.72122e-08, 0.978495, 0.206272, 1.59417e-07, 1, 1, 1 )
 
-[sub_resource type="Animation" id=29]
+[sub_resource type="Animation" id=30]
 tracks/0/type = "transform"
 tracks/0/path = NodePath("player/Player/target")
 tracks/0/interp = 1
@@ -185,7 +183,7 @@ tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = PoolRealArray( 0, 1, 2.79397e-07, 0.414705, 1.75037, 6.72122e-08, 0.978495, 0.206272, 1.59417e-07, 1, 1, 1, 1, 1, 1.10703, 2.41963, -1.16263, -1.14973e-07, 0.75029, -0.661109, -1.14973e-07, 1, 1, 1 )
 
-[sub_resource type="Animation" id=30]
+[sub_resource type="Animation" id=31]
 length = 0.3
 tracks/0/type = "transform"
 tracks/0/path = NodePath("player")
@@ -195,7 +193,7 @@ tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = PoolRealArray( 0, 1, 354.665, 0.491556, 0.0345202, 0, -0.707107, 0, 0.707107, 1, 1, 1, 0.1, 1, 354.665, 0.491556, 0.0345154, 0, 1, 0, -1.62921e-07, 1, 1, 1 )
 
-[sub_resource type="Animation" id=31]
+[sub_resource type="Animation" id=32]
 length = 1.5
 tracks/0/type = "transform"
 tracks/0/path = NodePath("player/Player/target")
@@ -205,7 +203,7 @@ tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = PoolRealArray( 0, 1, 0, 1.321, -1.663, 0, 0, 0, 1, 1, 1, 1, 1.5, 1, 2.79397e-07, 0.414705, 1.75037, 6.72122e-08, 0.978495, 0.206272, 1.59417e-07, 1, 1, 1 )
 
-[sub_resource type="Animation" id=32]
+[sub_resource type="Animation" id=33]
 tracks/0/type = "transform"
 tracks/0/path = NodePath("player/Player/target")
 tracks/0/interp = 1
@@ -214,7 +212,7 @@ tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = PoolRealArray( 0, 1, 1.10703, 2.41963, -1.16263, -1.14973e-07, 0.75029, -0.661109, -1.14973e-07, 1, 1, 1, 1, 1, 2.79397e-07, 0.414705, 1.75037, 6.72122e-08, 0.978495, 0.206272, 1.59417e-07, 1, 1, 1 )
 
-[sub_resource type="Animation" id=33]
+[sub_resource type="Animation" id=34]
 length = 1.5
 tracks/0/type = "transform"
 tracks/0/path = NodePath("player/Player/target")
@@ -2395,26 +2393,26 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -291.597, 266.244, -994.744 )
 script = ExtResource( 43 )
 
 [node name="CollisionShape" type="CollisionShape" parent="base_map_1/AREA DE MORTE/Area"]
-shape = SubResource( 35 )
+shape = SubResource( 25 )
 
 [node name="Area2" type="Area" parent="base_map_1/AREA DE MORTE"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -291.597, 224.387, -740.491 )
 script = ExtResource( 43 )
 
 [node name="CollisionShape" type="CollisionShape" parent="base_map_1/AREA DE MORTE/Area2"]
-shape = SubResource( 35 )
+shape = SubResource( 25 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource( 26 )
+environment = SubResource( 27 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/change_cam_text2 = SubResource( 27 )
-anims/change_cam_text_reset = SubResource( 28 )
-anims/down_cam = SubResource( 29 )
-anims/player_rotation_1 = SubResource( 30 )
-anims/reset_cam = SubResource( 31 )
-anims/reset_cam_down = SubResource( 32 )
-anims/rotate_1 = SubResource( 33 )
+anims/change_cam_text2 = SubResource( 28 )
+anims/change_cam_text_reset = SubResource( 29 )
+anims/down_cam = SubResource( 30 )
+anims/player_rotation_1 = SubResource( 31 )
+anims/reset_cam = SubResource( 32 )
+anims/reset_cam_down = SubResource( 33 )
+anims/rotate_1 = SubResource( 34 )
 
 [node name="Control" type="Control" parent="."]
 anchor_right = 1.0
