@@ -9,23 +9,25 @@ const H_LOOK_SENS = 0.6
 const V_LOOK_SENS = 0.4
 var velo_pista = 7
 
-var esquerda
+
 var centro =  true
-var direita
 var Type_controls = 1
 var jump_active = true
 var animation
 var animate_current
 var block_jump = false
 var is_moving = true
-
+var block_move = false
 var active_jump_super = false
 
 func _ready():
 	animation = get_node("AnimationPlayer")
 	
-func _input(event):
-	pass
+func block_moving():
+	is_moving = false
+	
+func block_moves(type):
+	block_move = type
 	
 func super_jump(forca):
 	JUMP_FORCE = forca
@@ -38,22 +40,11 @@ func block_moves_cam_down(type):
 	elif type == false:
 		animation.play("jump_fall")
 		
-	
 func change_speed(speed):
 	velo_pista = velo_pista * speed
 
 func invert_controls(type):
 	Type_controls = type
-	
-	
-	if direita:
-		direita = false
-		esquerda = true
-		
-	elif esquerda:
-		esquerda = false
-		direita = true
-		
 	
 func _physics_process(delta):
 	animate_current = animation.current_animation
@@ -66,59 +57,29 @@ func _physics_process(delta):
 		roll = true
 	else:
 		roll = false
-		
 	var move_vec = Vector3()
-	if true:
-		#move_vec.x -= 1
-		is_moving = true
 		
 	if !block_jump and Input.is_action_just_pressed("traz"):
 		roll = true
-		#is_moving = true
 		animation.play("anm_00000008")
 		
-	if Type_controls == 1 and Input.is_action_pressed("direita"):
+	if !block_move and Type_controls == 1 and Input.is_action_pressed("direita"):
 		move_vec.z -= 1
-		#is_moving = true
-		centro = true
-		esquerda = false
-		direita = false
 		
-	if Type_controls == 1 and Input.is_action_pressed("esquerda"):
+	if !block_move and Type_controls == 1 and Input.is_action_pressed("esquerda"):
 		move_vec.z += 1
-		#is_moving = true
-		centro = true
-		esquerda = false
-		direita = false
-		
-	if Type_controls == 2 and Input.is_action_pressed("direita"):
-		move_vec.z += 1
-		#is_moving = true
-		centro = true
-		esquerda = false
-		direita = false
-		
-	if Type_controls == 2 and Input.is_action_pressed("esquerda"):
-		move_vec.z -= 1
-		#is_moving = true
-		centro = true
-		esquerda = false
-		direita = false
 
-		
-	if Type_controls == 3 and Input.is_action_pressed("direita"):
+	if !block_move and Type_controls == 2 and Input.is_action_pressed("direita"):
+		move_vec.z += 1
+
+	if !block_move and Type_controls == 2 and Input.is_action_pressed("esquerda"):
+		move_vec.z -= 1
+
+	if !block_move and Type_controls == 3 and Input.is_action_pressed("direita"):
 		move_vec.x += 1
-		#is_moving = true
-		centro = true
-		esquerda = false
-		direita = false
-		
-	if Type_controls == 3 and Input.is_action_pressed("esquerda"):
+	
+	if !block_move and Type_controls == 3 and Input.is_action_pressed("esquerda"):
 		move_vec.x -= 1
-		#is_moving = true
-		centro = true
-		esquerda = false
-		direita = false
 		
 	if !block_jump and !roll and velo_pista == 7 and is_moving and is_on_floor() and animate_current != "jump_fall":
 		animation.play("anm_02076002")

@@ -1,7 +1,7 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://props/laser_machine/laser_vertical.gd" type="Script" id=1]
-[ext_resource path="res://props/laser_machine/laser_toque.gd" type="Script" id=2]
+[sub_resource type="BoxShape" id=6]
+extents = Vector3( 0.96158, 0.939874, 0.134982 )
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -26,12 +26,12 @@ emission_energy = 1.0
 emission_operator = 0
 emission_on_uv2 = false
 
-[sub_resource type="BoxShape" id=6]
-extents = Vector3( 0.96158, 0.939874, 0.134982 )
-
-[node name="laser_vertical" type="Spatial"]
+[node name="laser_vertical" type="Area"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.11729, 0 )
-script = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1.71224, 0, 0, 0, 1, 0.195503, 0.689046, 0 )
+shape = SubResource( 6 )
 
 [node name="base" type="StaticBody" parent="."]
 transform = Transform( 1.18434, 0, 0, 0, 0.277913, 0, 0, 0, 0.364904, 0.189983, 2.44062, 0 )
@@ -48,22 +48,17 @@ shape = SubResource( 3 )
 [node name="laser" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1.71224, 0, 0, 0, 1, -0.611506, 0.785881, 0 )
 
-[node name="Area" type="Area" parent="laser"]
-script = ExtResource( 2 )
+[node name="Area" type="Spatial" parent="laser"]
 
 [node name="MeshInstance" type="MeshInstance" parent="laser/Area"]
 transform = Transform( 0.15, 0, 0, 0, 1, 0, 0, 0, 0.155, 0, 0, 0 )
 mesh = SubResource( 4 )
 material/0 = SubResource( 5 )
 
-[node name="CollisionShape" type="CollisionShape" parent="laser/Area"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.807009, -0.0565548, 0 )
-shape = SubResource( 6 )
-
 [node name="laser2" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1.71224, 0, 0, 0, 1, 0.177924, 0.785881, 0 )
 
-[node name="Area" type="Area" parent="laser2"]
+[node name="Area" type="Spatial" parent="laser2"]
 
 [node name="MeshInstance" type="MeshInstance" parent="laser2/Area"]
 transform = Transform( 0.15, 0, 0, 0, 1, 0, 0, 0, 0.15, 0, 0, 0 )
@@ -73,7 +68,7 @@ material/0 = SubResource( 5 )
 [node name="laser3" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1.71224, 0, 0, 0, 1, 1.02072, 0.785881, 0 )
 
-[node name="Area" type="Area" parent="laser3"]
+[node name="Area" type="Spatial" parent="laser3"]
 
 [node name="MeshInstance" type="MeshInstance" parent="laser3/Area"]
 transform = Transform( 0.15, 0, 0, 0, 1, 0, 0, 0, 0.15, 0, 0, 0 )

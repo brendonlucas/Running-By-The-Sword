@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=2]
+[gd_scene load_steps=81 format=2]
 
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://texturas/texture.png" type="Texture" id=2]
@@ -43,9 +43,12 @@
 [ext_resource path="res://songs/coin-collect.wav" type="AudioStream" id=41]
 [ext_resource path="res://maps/cods_map1/UI_coins.gd" type="Script" id=42]
 [ext_resource path="res://maps/cods_map1/codigo_de_falha.gd" type="Script" id=43]
+[ext_resource path="res://props/laser_machine/laser_toque.gd" type="Script" id=44]
+[ext_resource path="res://maps/cods_map1/area_block_moves.gd" type="Script" id=45]
+[ext_resource path="res://maps/cods_map1/area_active_moves.gd" type="Script" id=46]
 
 [sub_resource type="BoxShape" id=1]
-extents = Vector3( 3.17774, 1, 2.09215 )
+extents = Vector3( 3.17774, 1, 15.3905 )
 
 [sub_resource type="BoxShape" id=2]
 extents = Vector3( 0.31517, 0.210416, 0.303548 )
@@ -67,12 +70,6 @@ extents = Vector3( 0.0682718, 1, 31.085 )
 
 [sub_resource type="BoxShape" id=8]
 extents = Vector3( 17.1807, 1.25081, 0.0134469 )
-
-[sub_resource type="BoxShape" id=34]
-extents = Vector3( 0.134651, 23.2301, 17.9046 )
-
-[sub_resource type="BoxShape" id=36]
-extents = Vector3( 55.9283, 4.77528, 0.129882 )
 
 [sub_resource type="PlaneMesh" id=9]
 
@@ -146,16 +143,16 @@ sky_top_color = Color( 0, 0.462745, 0.717647, 1 )
 sun_curve = 0.0153894
 
 [sub_resource type="Environment" id=26]
-background_mode = 2
+background_mode = 1
 background_sky = SubResource( 25 )
-tonemap_mode = 3
+ambient_light_energy = 0.0
 ss_reflections_max_steps = 100
 ss_reflections_fade_in = 0.941501
 ss_reflections_fade_out = 0.68302
 ss_reflections_depth_tolerance = 2.5
 ss_reflections_roughness = false
 glow_enabled = true
-glow_intensity = 0.7
+glow_intensity = 0.6
 glow_blend_mode = 1
 
 [sub_resource type="Animation" id=27]
@@ -579,62 +576,6 @@ shape = SubResource( 8 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.259, -0.714005, 43.9068 )
 shape = SubResource( 8 )
 
-[node name="CollisionShape49" type="CollisionShape" parent="base_map_1/colisions"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.35901, 7.507, -132.126 )
-shape = SubResource( 34 )
-
-[node name="CollisionShape50" type="CollisionShape" parent="base_map_1/colisions"]
-transform = Transform( 0.593, 0, 0, 0, 1, 0, 0, 0, 1, 0.169006, 7.507, -132.126 )
-shape = SubResource( 34 )
-
-[node name="CollisionShape52" type="CollisionShape" parent="base_map_1/colisions"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.35901, 21.8936, -219.698 )
-shape = SubResource( 34 )
-
-[node name="CollisionShape51" type="CollisionShape" parent="base_map_1/colisions"]
-transform = Transform( 0.593, 0, 0, 0, 1, 0, 0, 0, 1, 0.169006, 21.8936, -219.698 )
-shape = SubResource( 34 )
-
-[node name="CollisionShape54" type="CollisionShape" parent="base_map_1/colisions"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.35901, 43.6465, -297.995 )
-shape = SubResource( 34 )
-
-[node name="CollisionShape53" type="CollisionShape" parent="base_map_1/colisions"]
-transform = Transform( 0.593, 0, 0, 0, 1, 0, 0, 0, 1, 0.169006, 43.6465, -297.995 )
-shape = SubResource( 34 )
-
-[node name="CollisionShape56" type="CollisionShape" parent="base_map_1/colisions"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.35901, 68.6745, -377.94 )
-shape = SubResource( 34 )
-
-[node name="CollisionShape55" type="CollisionShape" parent="base_map_1/colisions"]
-transform = Transform( 0.593, 0, 0, 0, 1, 0, 0, 0, 1, 0.169006, 68.6745, -377.94 )
-shape = SubResource( 34 )
-
-[node name="CollisionShape58" type="CollisionShape" parent="base_map_1/colisions"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.35901, 87.6844, -450.704 )
-shape = SubResource( 34 )
-
-[node name="CollisionShape57" type="CollisionShape" parent="base_map_1/colisions"]
-transform = Transform( 0.593, 0, 0, 0, 1, 0, 0, 0, 1, 0.169006, 87.6844, -450.704 )
-shape = SubResource( 34 )
-
-[node name="CollisionShape60" type="CollisionShape" parent="base_map_1/colisions"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.35901, 113.217, -706.334 )
-shape = SubResource( 34 )
-
-[node name="CollisionShape59" type="CollisionShape" parent="base_map_1/colisions"]
-transform = Transform( 0.593, 0, 0, 0, 1, 0, 0, 0, 1, 0.169006, 113.217, -706.334 )
-shape = SubResource( 34 )
-
-[node name="CollisionShape61" type="CollisionShape" parent="base_map_1/colisions"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 601.738, -134.888, 44.068 )
-shape = SubResource( 36 )
-
-[node name="CollisionShape62" type="CollisionShape" parent="base_map_1/colisions"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 601.738, -134.888, 41.699 )
-shape = SubResource( 36 )
-
 [node name="laser_verticais" type="Spatial" parent="base_map_1"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -147.98, 137.82, 0 )
 
@@ -643,327 +584,419 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -73.0525, 0, 0 )
 
 [node name="laser_vertical" parent="base_map_1/laser_verticais/red" instance=ExtResource( 17 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 73.5565, 0.337906, 0.721172 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical2" parent="base_map_1/laser_verticais/red" instance=ExtResource( 17 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 63.5594, 0.337906, -0.696118 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical3" parent="base_map_1/laser_verticais/red" instance=ExtResource( 17 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 51.2667, 0.337906, 0.0324285 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical16" parent="base_map_1/laser_verticais/red" instance=ExtResource( 17 )]
 transform = Transform( -1.62921e-07, -30, 4.37114e-08, 0, -1.31134e-06, -1, 1, -4.88762e-06, 7.12149e-15, 524.185, -137.74, -0.171 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical4" parent="base_map_1/laser_verticais/red" instance=ExtResource( 17 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 39.259, 0.337906, 0.721172 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical5" parent="base_map_1/laser_verticais/red" instance=ExtResource( 17 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 27.1526, 0.337906, -0.726314 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical6" parent="base_map_1/laser_verticais/red" instance=ExtResource( 17 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9772, 0.337906, 0.0674462 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical7" parent="base_map_1/laser_verticais/red" instance=ExtResource( 17 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3998, 0.337906, 0.0674462 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical8" parent="base_map_1/laser_verticais/red" instance=ExtResource( 17 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.94911, 0.337906, -0.711326 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical9" parent="base_map_1/laser_verticais/red" instance=ExtResource( 17 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.7002, 0.337906, 0.0170054 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical10" parent="base_map_1/laser_verticais/red" instance=ExtResource( 17 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.0946, 0.337906, 0.779555 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical11" parent="base_map_1/laser_verticais/red" instance=ExtResource( 17 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29.2945, 0.337906, -0.715362 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical12" parent="base_map_1/laser_verticais/red" instance=ExtResource( 17 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -37.0105, 0.337906, 0.761978 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical13" parent="base_map_1/laser_verticais/red" instance=ExtResource( 17 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -47.2895, 0.337906, 0.761978 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical14" parent="base_map_1/laser_verticais/red" instance=ExtResource( 17 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -49.1845, 0.337906, -0.0266089 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical15" parent="base_map_1/laser_verticais/red" instance=ExtResource( 17 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -59.2925, 0.337906, -0.688775 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical17" parent="base_map_1/laser_verticais/red" instance=ExtResource( 17 )]
 transform = Transform( -1.62921e-07, 0, 2, 0, 2, 0, -1, 0, -3.25841e-07, -72.1462, 0.337906, 0.298082 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical18" parent="base_map_1/laser_verticais/red" instance=ExtResource( 17 )]
 transform = Transform( 2.65431e-14, 1.62921e-07, 1, 1, -1.62921e-07, 0, 1.62921e-07, 1, -1.62921e-07, -72.1462, 1.24548, -0.790116 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical19" parent="base_map_1/laser_verticais/red" instance=ExtResource( 17 )]
 transform = Transform( 2.65431e-14, 1.62921e-07, -1, 1, -1.62921e-07, 0, -1.62921e-07, -1, -1.62921e-07, -72.1462, 1.24548, 0.785419 )
+script = ExtResource( 44 )
 
 [node name="yellow" type="Spatial" parent="base_map_1/laser_verticais"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -143.565, 0, -47.4767 )
 
 [node name="laser_vertical" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -0.429565, 0.406464, 29.2042 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical2" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.289764, 0.406464, 17.6305 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical3" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.289764, 0.406464, 7.27175 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical4" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 1.13705, 0.406464, 7.27175 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical5" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -0.459503, 0.406464, -5.313 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical6" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.993225, 0.406464, -7.47521 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical7" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.257843, 0.406464, -18.1663 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical8" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.987335, 0.406464, -26.5409 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical9" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -0.472198, 0.406464, -35.8373 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical15" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.962585, 0.406464, -45.8659 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical16" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.247131, 0.406464, -45.8659 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical17" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -0.437958, 0.406464, -54.4891 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical18" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.264771, 0.406464, -61.8102 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical19" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 1.03268, 0.406464, -69.9592 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical20" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.257751, 0.406464, -69.9592 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical21" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -0.496826, 0.406464, -80.1268 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical22" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -0.496826, 0.406464, -89.8668 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical23" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.260284, 0.406464, -89.8668 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical24" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.976501, 0.406464, -101.461 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical25" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.976501, 20.829, -141.615 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical26" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.281677, 20.829, -156.338 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical27" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.281677, 20.829, -168.033 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical30" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.994232, 20.829, -168.033 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical28" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.281677, 20.829, -179.697 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical29" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -0.468567, 20.829, -179.697 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical31" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -0.468567, 37.4157, -224.274 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical32" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 1.0141, 37.4157, -233.569 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical33" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.267761, 37.4157, -233.569 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical34" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.267761, 37.4157, -251.402 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical36" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.267761, 37.4157, -261.864 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical37" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -0.444794, 37.4157, -261.864 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical38" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.953674, 37.4157, -270.134 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical40" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.953674, 55.0496, -304.701 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical41" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.251556, 55.0496, -304.701 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical42" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.251556, 55.0496, -313.483 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical43" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -0.49176, 55.0496, -313.483 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical44" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.970215, 55.0496, -321.809 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical46" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.256439, 55.0496, -331.412 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical47" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -0.449982, 55.0496, -339.474 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical48" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.950104, 55.0496, -346.732 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical49" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.950104, 75.5818, -376.081 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical50" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -0.487823, 75.5818, -385.742 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical51" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.246826, 75.5818, -397.389 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical52" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.924133, 75.5818, -411.364 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical53" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.276062, 75.5818, -411.364 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical54" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -0.492523, 75.5818, -422.092 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical55" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.312286, 75.5818, -422.092 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical58" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.244446, 92.3349, -465.316 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical59" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -0.423248, 92.3349, -465.316 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical60" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -0.423248, 92.3349, -476.941 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical61" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.308685, 92.3349, -476.941 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical63" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.965637, 92.3349, -487.422 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical35" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.267761, 37.4157, -242.519 )
+script = ExtResource( 44 )
 
 [node name="laser_horizontal" type="Spatial" parent="base_map_1/laser_verticais/yellow"]
 transform = Transform( 1.62921e-07, 1, -3.25841e-07, 1, -1.62921e-07, 0, -5.30863e-14, -3.25841e-07, -1, -0.392029, 20.118, -146.161 )
 
 [node name="laser_vertical" parent="base_map_1/laser_verticais/yellow/laser_horizontal" instance=ExtResource( 26 )]
 transform = Transform( -1, -1.42108e-14, -3.25841e-07, 6.69658e-15, 1, -2.84217e-14, 3.25841e-07, -2.84217e-14, -1, 0, -0.221344, 0 )
+script = ExtResource( 44 )
 
 [node name="laser_horizontal11" type="Spatial" parent="base_map_1/laser_verticais/yellow"]
 transform = Transform( 1.62921e-07, 1, -3.25841e-07, 1, -1.62921e-07, 0, -5.30863e-14, -3.25841e-07, -1, -0.392029, 20.118, -160.978 )
 
 [node name="laser_vertical" parent="base_map_1/laser_verticais/yellow/laser_horizontal11" instance=ExtResource( 26 )]
 transform = Transform( -1, -1.42108e-14, -3.25841e-07, 6.69658e-15, 1, -2.84217e-14, 3.25841e-07, -2.84217e-14, -1, 0, -0.221344, 0 )
+script = ExtResource( 44 )
 
 [node name="laser_horizontal17" type="Spatial" parent="base_map_1/laser_verticais/yellow"]
 transform = Transform( 1.62921e-07, 1, -3.25841e-07, 1, -1.62921e-07, 0, -5.30863e-14, -3.25841e-07, -1, -0.392029, 20.118, -194.512 )
 
 [node name="laser_vertical" parent="base_map_1/laser_verticais/yellow/laser_horizontal17" instance=ExtResource( 26 )]
 transform = Transform( -1, -1.42108e-14, -3.25841e-07, 6.69658e-15, 1, -2.84217e-14, 3.25841e-07, -2.84217e-14, -1, 0, -0.221344, 0 )
+script = ExtResource( 44 )
 
 [node name="laser_horizontal18" type="Spatial" parent="base_map_1/laser_verticais/yellow"]
 transform = Transform( 1.62921e-07, 1, -3.25841e-07, 1, -1.62921e-07, 0, -5.30863e-14, -3.25841e-07, -1, -0.392029, 36.7471, -226.704 )
 
 [node name="laser_vertical" parent="base_map_1/laser_verticais/yellow/laser_horizontal18" instance=ExtResource( 26 )]
 transform = Transform( -1, -1.42108e-14, -3.25841e-07, 6.69658e-15, 1, -2.84217e-14, 3.25841e-07, -2.84217e-14, -1, 0, -0.221344, 0 )
+script = ExtResource( 44 )
 
 [node name="laser_horizontal19" type="Spatial" parent="base_map_1/laser_verticais/yellow"]
 transform = Transform( 1.62921e-07, 1, -3.25841e-07, 1, -1.62921e-07, 0, -5.30863e-14, -3.25841e-07, -1, -0.392029, 36.7471, -240.416 )
 
 [node name="laser_vertical" parent="base_map_1/laser_verticais/yellow/laser_horizontal19" instance=ExtResource( 26 )]
 transform = Transform( -1, -1.42108e-14, -3.25841e-07, 6.69658e-15, 1, -2.84217e-14, 3.25841e-07, -2.84217e-14, -1, 0, -0.221344, 0 )
+script = ExtResource( 44 )
 
 [node name="laser_horizontal20" type="Spatial" parent="base_map_1/laser_verticais/yellow"]
 transform = Transform( 1.62921e-07, 1, -3.25841e-07, 1, -1.62921e-07, 0, -5.30863e-14, -3.25841e-07, -1, -0.392029, 36.8117, -254.557 )
 
 [node name="laser_vertical" parent="base_map_1/laser_verticais/yellow/laser_horizontal20" instance=ExtResource( 26 )]
 transform = Transform( -1, -1.42108e-14, -3.25841e-07, 6.69658e-15, 1, -2.84217e-14, 3.25841e-07, -2.84217e-14, -1, 0, -0.221344, 0 )
+script = ExtResource( 44 )
 
 [node name="laser_horizontal21" type="Spatial" parent="base_map_1/laser_verticais/yellow"]
 transform = Transform( 1.62921e-07, 1, -3.25841e-07, 1, -1.62921e-07, 0, -5.30863e-14, -3.25841e-07, -1, -0.392029, 36.8117, -272.06 )
 
 [node name="laser_vertical" parent="base_map_1/laser_verticais/yellow/laser_horizontal21" instance=ExtResource( 26 )]
 transform = Transform( -1, -1.42108e-14, -3.25841e-07, 6.69658e-15, 1, -2.84217e-14, 3.25841e-07, -2.84217e-14, -1, 0, -0.221344, 0 )
+script = ExtResource( 44 )
 
 [node name="laser_horizontal22" type="Spatial" parent="base_map_1/laser_verticais/yellow"]
 transform = Transform( 1.62921e-07, 1, -3.25841e-07, 1, -1.62921e-07, 0, -5.30863e-14, -3.25841e-07, -1, -0.392029, 54.7328, -298.499 )
 
 [node name="laser_vertical" parent="base_map_1/laser_verticais/yellow/laser_horizontal22" instance=ExtResource( 26 )]
 transform = Transform( -1, -1.42108e-14, -3.25841e-07, 6.69658e-15, 1, -2.84217e-14, 3.25841e-07, -2.84217e-14, -1, 0, -0.221344, 0 )
+script = ExtResource( 44 )
 
 [node name="laser_horizontal23" type="Spatial" parent="base_map_1/laser_verticais/yellow"]
 transform = Transform( 1.62921e-07, 1, -3.25841e-07, 1, -1.62921e-07, 0, -5.30863e-14, -3.25841e-07, -1, -0.392029, 54.7328, -324.811 )
 
 [node name="laser_vertical" parent="base_map_1/laser_verticais/yellow/laser_horizontal23" instance=ExtResource( 26 )]
 transform = Transform( -1, -1.42108e-14, -3.25841e-07, 6.69658e-15, 1, -2.84217e-14, 3.25841e-07, -2.84217e-14, -1, 0, -0.221344, 0 )
+script = ExtResource( 44 )
 
 [node name="laser_horizontal24" type="Spatial" parent="base_map_1/laser_verticais/yellow"]
 transform = Transform( 1.62921e-07, 1, -3.25841e-07, 1, -1.62921e-07, 0, -5.30863e-14, -3.25841e-07, -1, -0.392029, 54.7328, -350.227 )
 
 [node name="laser_vertical" parent="base_map_1/laser_verticais/yellow/laser_horizontal24" instance=ExtResource( 26 )]
 transform = Transform( -1, -1.42108e-14, -3.25841e-07, 6.69658e-15, 1, -2.84217e-14, 3.25841e-07, -2.84217e-14, -1, 0, -0.221344, 0 )
+script = ExtResource( 44 )
 
 [node name="laser_horizontal25" type="Spatial" parent="base_map_1/laser_verticais/yellow"]
 transform = Transform( 1.62921e-07, 1, -3.25841e-07, 1, -1.62921e-07, 0, -5.30863e-14, -3.25841e-07, -1, -0.392029, 75.0846, -388.593 )
 
 [node name="laser_vertical" parent="base_map_1/laser_verticais/yellow/laser_horizontal25" instance=ExtResource( 26 )]
 transform = Transform( -1, -1.42108e-14, -3.25841e-07, 6.69658e-15, 1, -2.84217e-14, 3.25841e-07, -2.84217e-14, -1, 0, -0.221344, 0 )
+script = ExtResource( 44 )
 
 [node name="laser_horizontal26" type="Spatial" parent="base_map_1/laser_verticais/yellow"]
 transform = Transform( 1.62921e-07, 1, -3.25841e-07, 1, -1.62921e-07, 0, -5.30863e-14, -3.25841e-07, -1, -0.392029, 75.0846, -404.641 )
 
 [node name="laser_vertical" parent="base_map_1/laser_verticais/yellow/laser_horizontal26" instance=ExtResource( 26 )]
 transform = Transform( -1, -1.42108e-14, -3.25841e-07, 6.69658e-15, 1, -2.84217e-14, 3.25841e-07, -2.84217e-14, -1, 0, -0.221344, 0 )
+script = ExtResource( 44 )
 
 [node name="laser_horizontal27" type="Spatial" parent="base_map_1/laser_verticais/yellow"]
 transform = Transform( 1.62921e-07, 1, -3.25841e-07, 1, -1.62921e-07, 0, -5.30863e-14, -3.25841e-07, -1, -0.392029, 75.0846, -428.66 )
 
 [node name="laser_vertical" parent="base_map_1/laser_verticais/yellow/laser_horizontal27" instance=ExtResource( 26 )]
 transform = Transform( -1, -1.42108e-14, -3.25841e-07, 6.69658e-15, 1, -2.84217e-14, 3.25841e-07, -2.84217e-14, -1, 0, -0.221344, 0 )
+script = ExtResource( 44 )
 
 [node name="laser_horizontal28" type="Spatial" parent="base_map_1/laser_verticais/yellow"]
 transform = Transform( 1.62921e-07, 1, -3.25841e-07, 1, -1.62921e-07, 0, -5.30863e-14, -3.25841e-07, -1, -0.392029, 91.7104, -457.141 )
 
 [node name="laser_vertical" parent="base_map_1/laser_verticais/yellow/laser_horizontal28" instance=ExtResource( 26 )]
 transform = Transform( -1, -1.42108e-14, -3.25841e-07, 6.69658e-15, 1, -2.84217e-14, 3.25841e-07, -2.84217e-14, -1, 0, -0.221344, 0 )
+script = ExtResource( 44 )
 
 [node name="laser_horizontal29" type="Spatial" parent="base_map_1/laser_verticais/yellow"]
 transform = Transform( 1.62921e-07, 1, -3.25841e-07, 1, -1.62921e-07, 0, -5.30863e-14, -3.25841e-07, -1, -0.392029, 91.7104, -493.552 )
 
 [node name="laser_vertical" parent="base_map_1/laser_verticais/yellow/laser_horizontal29" instance=ExtResource( 26 )]
 transform = Transform( -1, -1.42108e-14, -3.25841e-07, 6.69658e-15, 1, -2.84217e-14, 3.25841e-07, -2.84217e-14, -1, 0, -0.221344, 0 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical10" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0340271, 0.406464, -117.896 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical11" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0340271, 20.5958, -199.315 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical12" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0340271, 37.7251, -276.797 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical13" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0340271, 55.2821, -355.761 )
+script = ExtResource( 44 )
 
 [node name="laser_vertical14" parent="base_map_1/laser_verticais/yellow" instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0340271, 75.8794, -436.008 )
+script = ExtResource( 44 )
 
 [node name="beats_block" type="Spatial" parent="base_map_1"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 74.1078, 141.568, 0 )
@@ -1036,7 +1069,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.162262, -0.867111, 0.903335 
 shape = SubResource( 3 )
 
 [node name="area_change_cam_down" type="Area" parent="base_map_1"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 254.758, 6.42495, 0 )
+transform = Transform( 0.999847, 0, -0.0175048, 0, 1, 0, 0.0175048, 0, 0.999847, 254.541, 6.42495, 0 )
 script = ExtResource( 20 )
 
 [node name="CollisionShape" type="CollisionShape" parent="base_map_1/area_change_cam_down"]
@@ -1090,7 +1123,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.12711, -3.31654, 0.423309 )
 shape = SubResource( 3 )
 
 [node name="aria_super_jump_4" type="Area" parent="base_map_1"]
-transform = Transform( -0.127636, 0, -0.991821, 0, 1, 0, 0.991821, 0, -0.127636, -291.353, 206.941, -395.356 )
+transform = Transform( -0.0226002, 0, -0.999744, 0, 1, 0, 0.999744, 0, -0.0226002, -290.275, 206.941, -395.356 )
 script = ExtResource( 7 )
 
 [node name="CollisionShape" type="CollisionShape" parent="base_map_1/aria_super_jump_4"]
@@ -1098,7 +1131,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.28015, -12.4229, 0.829285 )
 shape = SubResource( 3 )
 
 [node name="aria_super_jump_5" type="Area" parent="base_map_1"]
-transform = Transform( -0.127636, 0, -0.991821, 0, 1, 0, 0.991821, 0, -0.127636, -291.353, 215.051, -480.066 )
+transform = Transform( -0.0155853, 0, -0.999878, 0, 1, 0, 0.999878, 0, -0.0155853, -291.224, 215.051, -480.066 )
 script = ExtResource( 7 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="base_map_1/aria_super_jump_5"]
@@ -1135,6 +1168,126 @@ script = ExtResource( 25 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="base_map_1/aria_active_laser_2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10321, 0.708557, 0.00769043 )
+shape = SubResource( 3 )
+
+[node name="area_block_moves" type="Area" parent="base_map_1"]
+transform = Transform( -0.0158121, 0, -0.999875, 0, 1, 0, 0.999875, 0, -0.0158121, -291.353, 140.666, -162.353 )
+script = ExtResource( 45 )
+
+[node name="CollisionShape" type="CollisionShape" parent="base_map_1/area_block_moves"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.162273, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="area_active_moves" type="Area" parent="base_map_1"]
+transform = Transform( -0.0158121, 0, -0.999875, 0, 1, 0, 0.999875, 0, -0.0158121, -291.353, 162.045, -185.058 )
+script = ExtResource( 46 )
+
+[node name="CollisionShape" type="CollisionShape" parent="base_map_1/area_active_moves"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.162273, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="area_block_moves8" type="Area" parent="base_map_1"]
+transform = Transform( 0.999928, 0, 0.0120075, 0, 1, 0, -0.0120075, 0, 0.999928, -287.946, 140.666, -0.252634 )
+script = ExtResource( 45 )
+
+[node name="CollisionShape" type="CollisionShape" parent="base_map_1/area_block_moves8"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.162273, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="area_active_moves7" type="Area" parent="base_map_1"]
+transform = Transform( -0.00514879, 0, -0.999987, 0, 1, 0, 0.999987, 0, -0.00514879, -291.388, 139.884, -4.42133 )
+script = ExtResource( 46 )
+
+[node name="CollisionShape" type="CollisionShape" parent="base_map_1/area_active_moves7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.162273, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="area_block_moves2" type="Area" parent="base_map_1"]
+transform = Transform( -0.0158121, 0, -0.999875, 0, 1, 0, 0.999875, 0, -0.0158121, -291.353, 159.627, -244.864 )
+script = ExtResource( 45 )
+
+[node name="CollisionShape" type="CollisionShape" parent="base_map_1/area_block_moves2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.162273, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="area_active_moves2" type="Area" parent="base_map_1"]
+transform = Transform( -0.0158121, 0, -0.999875, 0, 1, 0, 0.999875, 0, -0.0158121, -291.353, 178.526, -264.427 )
+script = ExtResource( 46 )
+
+[node name="CollisionShape" type="CollisionShape" parent="base_map_1/area_active_moves2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.162273, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="area_block_moves3" type="Area" parent="base_map_1"]
+transform = Transform( -0.0158121, 0, -0.999875, 0, 1, 0, 0.999875, 0, -0.0158121, -291.353, 176.967, -322.184 )
+script = ExtResource( 45 )
+
+[node name="CollisionShape" type="CollisionShape" parent="base_map_1/area_block_moves3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.162273, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="area_active_moves3" type="Area" parent="base_map_1"]
+transform = Transform( -0.0158121, 0, -0.999875, 0, 1, 0, 0.999875, 0, -0.0158121, -291.353, 195.866, -340.793 )
+script = ExtResource( 46 )
+
+[node name="CollisionShape" type="CollisionShape" parent="base_map_1/area_active_moves3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.162273, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="area_block_moves4" type="Area" parent="base_map_1"]
+transform = Transform( -0.0158121, 0, -0.999875, 0, 1, 0, 0.999875, 0, -0.0158121, -291.353, 195.418, -401.481 )
+script = ExtResource( 45 )
+
+[node name="CollisionShape" type="CollisionShape" parent="base_map_1/area_block_moves4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.162273, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="area_active_moves4" type="Area" parent="base_map_1"]
+transform = Transform( -0.0158121, 0, -0.999875, 0, 1, 0, 0.999875, 0, -0.0158121, -291.353, 214.317, -420.091 )
+script = ExtResource( 46 )
+
+[node name="CollisionShape" type="CollisionShape" parent="base_map_1/area_active_moves4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.162273, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="area_block_moves5" type="Area" parent="base_map_1"]
+transform = Transform( -0.0158121, 0, -0.999875, 0, 1, 0, 0.999875, 0, -0.0158121, -291.353, 215.254, -479.998 )
+script = ExtResource( 45 )
+
+[node name="CollisionShape" type="CollisionShape" parent="base_map_1/area_block_moves5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.162273, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="area_active_moves5" type="Area" parent="base_map_1"]
+transform = Transform( -0.0158121, 0, -0.999875, 0, 1, 0, 0.999875, 0, -0.0158121, -291.353, 234.153, -495.717 )
+script = ExtResource( 46 )
+
+[node name="CollisionShape" type="CollisionShape" parent="base_map_1/area_active_moves5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.162273, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="area_block_moves6" type="Area" parent="base_map_1"]
+transform = Transform( -0.0158121, 0, -0.999875, 0, 1, 0, 0.999875, 0, -0.0158121, -291.353, 231.496, -728.697 )
+script = ExtResource( 45 )
+
+[node name="CollisionShape" type="CollisionShape" parent="base_map_1/area_block_moves6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.162273, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="area_block_moves7" type="Area" parent="base_map_1"]
+transform = Transform( -0.0158121, 0, -0.999875, 0, 1, 0, 0.999875, 0, -0.0158121, -291.353, 272.114, -1133.73 )
+script = ExtResource( 45 )
+
+[node name="CollisionShape" type="CollisionShape" parent="base_map_1/area_block_moves7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.162273, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="area_active_moves6" type="Area" parent="base_map_1"]
+transform = Transform( -0.0158121, 0, -0.999875, 0, 1, 0, 0.999875, 0, -0.0158121, -291.353, 275.039, -750.391 )
+script = ExtResource( 46 )
+
+[node name="CollisionShape" type="CollisionShape" parent="base_map_1/area_active_moves6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.162273, 0, 0 )
 shape = SubResource( 3 )
 
 [node name="spials" type="Spatial" parent="base_map_1"]
@@ -2000,6 +2153,226 @@ script = ExtResource( 40 )
 
 [node name="coin35" parent="base_map_1/coins" instance=ExtResource( 39 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 254.978, 130.642, -0.0590178 )
+script = ExtResource( 40 )
+
+[node name="coin36" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 209.352, 138.509, -0.0590178 )
+script = ExtResource( 40 )
+
+[node name="coin37" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -152.499, 138.509, -0.0590178 )
+script = ExtResource( 40 )
+
+[node name="coin38" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -170.09, 138.509, 0.683171 )
+script = ExtResource( 40 )
+
+[node name="coin39" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -181.234, 138.509, 0.0487889 )
+script = ExtResource( 40 )
+
+[node name="coin40" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -203.524, 138.509, -0.654117 )
+script = ExtResource( 40 )
+
+[node name="coin41" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -229.782, 138.509, 0.0367353 )
+script = ExtResource( 40 )
+
+[node name="coin42" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -252.185, 138.509, -0.584666 )
+script = ExtResource( 40 )
+
+[node name="coin43" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -267.683, 138.509, 0.0916253 )
+script = ExtResource( 40 )
+
+[node name="coin44" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -286.949, 138.509, 0.0916253 )
+script = ExtResource( 40 )
+
+[node name="coin45" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -291.474, 138.509, -18.0271 )
+script = ExtResource( 40 )
+
+[node name="coin46" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -291.229, 138.509, -27.3044 )
+script = ExtResource( 40 )
+
+[node name="coin47" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -291.943, 138.509, -40.5008 )
+script = ExtResource( 40 )
+
+[node name="coin49" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -291.333, 138.509, -54.1269 )
+script = ExtResource( 40 )
+
+[node name="coin50" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -290.595, 138.509, -57.5046 )
+script = ExtResource( 40 )
+
+[node name="coin51" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -290.595, 138.509, -72.1323 )
+script = ExtResource( 40 )
+
+[node name="coin52" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -291.186, 138.509, -83.5091 )
+script = ExtResource( 40 )
+
+[node name="coin53" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -291.186, 138.509, -127.653 )
+script = ExtResource( 40 )
+
+[node name="coin54" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -291.863, 158.386, -204.334 )
+script = ExtResource( 40 )
+
+[node name="coin55" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -290.619, 158.407, -227.668 )
+script = ExtResource( 40 )
+
+[node name="coin56" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -291.202, 158.369, -240.407 )
+script = ExtResource( 40 )
+
+[node name="coin57" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -290.579, 175.098, -286.676 )
+script = ExtResource( 40 )
+
+[node name="coin58" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -291.953, 175.098, -304.383 )
+script = ExtResource( 40 )
+
+[node name="coin59" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -290.629, 175.098, -315.436 )
+script = ExtResource( 40 )
+
+[node name="coin60" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -290.629, 193.182, -360.765 )
+script = ExtResource( 40 )
+
+[node name="coin61" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -291.394, 193.182, -371.02 )
+script = ExtResource( 40 )
+
+[node name="coin62" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -291.3, 193.182, -381.297 )
+script = ExtResource( 40 )
+
+[node name="coin63" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -291.3, 193.182, -396.546 )
+script = ExtResource( 40 )
+
+[node name="coin64" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -290.92, 213.532, -434.008 )
+script = ExtResource( 40 )
+
+[node name="coin65" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -291.241, 213.532, -442.974 )
+script = ExtResource( 40 )
+
+[node name="coin66" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -291.241, 213.532, -453.829 )
+script = ExtResource( 40 )
+
+[node name="coin67" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -290.626, 213.532, -465.547 )
+script = ExtResource( 40 )
+
+[node name="coin68" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -291.225, 213.532, -478.672 )
+script = ExtResource( 40 )
+
+[node name="coin69" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -290.781, 230.298, -512.386 )
+script = ExtResource( 40 )
+
+[node name="coin70" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -291.751, 230.298, -516.757 )
+script = ExtResource( 40 )
+
+[node name="coin71" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -291.751, 230.298, -519.91 )
+script = ExtResource( 40 )
+
+[node name="coin72" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -291.257, 230.74, -572.252 )
+script = ExtResource( 40 )
+
+[node name="coin73" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -290.32, 230.74, -599.908 )
+script = ExtResource( 40 )
+
+[node name="coin74" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -292.245, 230.74, -610.823 )
+script = ExtResource( 40 )
+
+[node name="coin75" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -291.198, 230.74, -627.308 )
+script = ExtResource( 40 )
+
+[node name="coin76" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -292.209, 230.74, -642.915 )
+script = ExtResource( 40 )
+
+[node name="coin77" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -290.23, 230.74, -652.461 )
+script = ExtResource( 40 )
+
+[node name="coin78" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -290.23, 230.74, -663.661 )
+script = ExtResource( 40 )
+
+[node name="coin79" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -290.23, 230.74, -711.152 )
+script = ExtResource( 40 )
+
+[node name="coin80" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -291.287, 272.094, -784.903 )
+script = ExtResource( 40 )
+
+[node name="coin81" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -290.554, 272.094, -822.572 )
+script = ExtResource( 40 )
+
+[node name="coin82" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -291.984, 272.094, -860.188 )
+script = ExtResource( 40 )
+
+[node name="coin83" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -291.984, 272.094, -892.228 )
+script = ExtResource( 40 )
+
+[node name="coin84" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -290.609, 272.094, -929.228 )
+script = ExtResource( 40 )
+
+[node name="coin85" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -290.609, 272.094, -962.482 )
+script = ExtResource( 40 )
+
+[node name="coin86" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -290.609, 272.094, -992.482 )
+script = ExtResource( 40 )
+
+[node name="coin87" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -291.244, 272.094, -1024.49 )
+script = ExtResource( 40 )
+
+[node name="coin88" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -291.244, 272.094, -1062.39 )
+script = ExtResource( 40 )
+
+[node name="coin89" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -291.244, 272.094, -1092.39 )
+script = ExtResource( 40 )
+
+[node name="coin90" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -291.244, 272.094, -1130.35 )
+script = ExtResource( 40 )
+
+[node name="coin48" parent="base_map_1/coins" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -290.999, 138.509, -36.9746 )
 script = ExtResource( 40 )
 
 [node name="coin30" parent="base_map_1/coins" instance=ExtResource( 39 )]
