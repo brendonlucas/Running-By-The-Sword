@@ -1,4 +1,4 @@
-[gd_scene load_steps=81 format=2]
+[gd_scene load_steps=82 format=2]
 
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://texturas/texture.png" type="Texture" id=2]
@@ -46,6 +46,7 @@
 [ext_resource path="res://props/laser_machine/laser_toque.gd" type="Script" id=44]
 [ext_resource path="res://maps/cods_map1/area_block_moves.gd" type="Script" id=45]
 [ext_resource path="res://maps/cods_map1/area_active_moves.gd" type="Script" id=46]
+[ext_resource path="res://maps/cods_map1/UI_pontuacao.gd" type="Script" id=47]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 3.17774, 1, 15.3905 )
@@ -232,7 +233,7 @@ transform = Transform( 6.59982, 0, 0, 0, 0.028, 0, 0, 0, 1, 351.959, 0, 0 )
 shape = SubResource( 1 )
 
 [node name="player" type="Spatial" parent="."]
-transform = Transform( 0, 0, -1, 0, 1, 0, 1, 0, 0, 354.665, 0.491556, 0.0345202 )
+transform = Transform( 0, 0, -1, 0, 1, 0, 1, 0, 0, 354.665, 0.0366459, 0.0345202 )
 script = ExtResource( 4 )
 
 [node name="Player" parent="player" instance=ExtResource( 1 )]
@@ -343,11 +344,11 @@ script = ExtResource( 31 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00646973, -0.84021, 0.0201111 )
 shape = SubResource( 3 )
 
-[node name="area_text_6" type="Area" parent="base_map_1/luna"]
+[node name="fim _mapa" type="Area" parent="base_map_1/luna"]
 transform = Transform( 0.127636, 0, 0.991821, 0, 1, 0, -0.991821, 0, 0.127636, 0.043335, 2.6239, 107.476 )
 script = ExtResource( 36 )
 
-[node name="CollisionShape" type="CollisionShape" parent="base_map_1/luna/area_text_6"]
+[node name="CollisionShape" type="CollisionShape" parent="base_map_1/luna/fim _mapa"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00646973, -0.84021, 0.0201111 )
 shape = SubResource( 3 )
 
@@ -2416,6 +2417,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="ColorRect" type="ColorRect" parent="UI_falha"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0509804, 0.0509804, 0.0509804, 0.47451 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Label" type="Label" parent="UI_falha"]
 anchor_left = 0.5
 anchor_top = 0.5
@@ -2470,8 +2479,41 @@ __meta__ = {
 }
 
 [node name="UI_pontuacao" type="Control" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 47 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="ColorRect" type="ColorRect" parent="UI_pontuacao"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0509804, 0.0509804, 0.0509804, 0.47451 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="coins_total_label" type="Label" parent="UI_pontuacao"]
+anchor_left = 0.097
+anchor_top = 0.223
+anchor_right = 0.285
+anchor_bottom = 0.275
+margin_left = -0.328003
+margin_top = 0.199997
+margin_right = 0.159973
+custom_colors/font_color = Color( 1, 0.996078, 0.996078, 1 )
+text = "20 Esferas coletadas"
+align = 1
+valign = 1
+
+[node name="Button" type="Button" parent="UI_pontuacao"]
+anchor_left = 0.782
+anchor_top = 0.801
+anchor_right = 0.98
+anchor_bottom = 0.878
+margin_left = -0.124878
+margin_top = 0.0135498
+margin_right = 0.123169
+margin_bottom = -0.186401
+text = "Proxima Fase"
