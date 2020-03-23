@@ -111,10 +111,10 @@ transform = Transform( 34.9428, 0, 2.00011, 0, 1, 0, -2.00011, 0, 34.9428, 0, 39
 transform = Transform( -31.0021, 0, -16.2441, 0, 1, 0, 16.2441, 0, -31.0021, 0, 41.945, 0 )
 
 [node name="base_superior_cortado4" parent="base_map/plataformas" instance=ExtResource( 8 )]
-transform = Transform( 17.6384, 0, 30.2306, 0, 1, 0, -30.2306, 0, 17.6384, 0, 44.452, 0 )
+transform = Transform( 17.6384, 0, 30.2306, 0, 1, 0, -30.2306, 0, 17.6384, 0, 45.1999, 0 )
 
 [node name="base_superior_cortado5" parent="base_map/plataformas" instance=ExtResource( 8 )]
-transform = Transform( -21.1833, 0, -27.8616, 0, 1, 0, 27.8616, 0, -21.1833, 0, 47.587, 0 )
+transform = Transform( -21.1833, 0, -27.8616, 0, 1, 0, 27.8616, 0, -21.1833, 0, 48.4747, 0 )
 
 [node name="lasers" type="Spatial" parent="base_map/plataformas"]
 
@@ -592,6 +592,386 @@ script = ExtResource( 20 )
 transform = Transform( -0.460678, 0, -0.194361, 0, 0.5, 0, 0.194361, 0, -0.460678, 30.7695, 40.0333, -62.4944 )
 script = ExtResource( 20 )
 
+[node name="laser_vertical-v143" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.455275, -0.00223396, -0.206689, -0.0010905, 0.49999, -0.003002, 0.206698, -0.00228268, -0.45527, -49.2465, 42.5297, 48.8438 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v188" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.154729, -0.00319211, -0.475446, -0.0010905, 0.49999, -0.003002, 0.475456, 0.000107957, -0.154733, -62.3413, 45.7819, 30.2564 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v189" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.154729, -0.00319211, -0.475446, -0.0010905, 0.49999, -0.003002, 0.475456, 0.000107957, -0.154733, -62.0639, 45.7819, 29.3273 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v190" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.342226, -0.00293502, -0.364518, -0.0010905, 0.49999, -0.003002, 0.364528, -0.00125971, -0.342226, -61.6294, 45.7819, 28.5307 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v196" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.212736, -0.0031807, -0.452475, -0.0010905, 0.49999, -0.003002, 0.452485, -0.000290418, -0.212739, -64.8944, 45.7819, 24.6119 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v195" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.212736, -0.0031807, -0.452475, -0.0010905, 0.49999, -0.003002, 0.452485, -0.000290418, -0.212739, -64.5035, 45.7819, 23.7245 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v194" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.384959, -0.00275529, -0.31906, -0.0010905, 0.49999, -0.003002, 0.31907, -0.00161542, -0.384957, -63.9731, 45.7819, 22.9883 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v197" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.14999, -0.00253663, -0.476967, -0.0010905, 0.49999, -0.003002, 0.476972, 0.0019408, 0.149981, -63.9556, 45.7819, 22.0975 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v198" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.14073, -0.00257372, -0.47978, -0.0010905, 0.49999, -0.003002, 0.479786, 0.00189134, 0.140721, -64.23, 45.7819, 21.1813 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v199" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.14073, -0.00257372, -0.47978, -0.0010905, 0.49999, -0.003002, 0.479786, 0.00189134, 0.140721, -64.5236, 45.7819, 20.2677 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v200" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.405635, -0.000870502, -0.292335, -0.0010905, 0.49999, -0.003002, 0.292334, 0.00307302, 0.405625, -63.8885, 45.7819, 17.3403 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v201" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.385686, -0.00106926, -0.318191, -0.0010905, 0.49999, -0.003002, 0.318191, 0.00300964, 0.385676, -64.5674, 45.7819, 16.7118 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v202" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.407808, -0.000847523, -0.289297, -0.0010905, 0.49999, -0.003002, 0.289296, 0.00307944, 0.407798, -65.2737, 45.7819, 16.1558 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v205" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.353598, -0.00135128, -0.353506, -0.0010905, 0.49999, -0.003002, 0.353507, 0.002894, 0.353588, -65.3552, 45.7819, 9.91058 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v204" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.329767, -0.00153732, -0.375835, -0.0010905, 0.49999, -0.003002, 0.375837, 0.00279962, 0.329757, -65.9248, 45.7819, 9.18142 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v209" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.259451, -0.00313207, -0.427406, -0.0010905, 0.49999, -0.003002, 0.427416, -0.000625565, -0.259452, -69.0027, 45.8066, 7.10677 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v208" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.286799, -0.00308455, -0.409557, -0.0010905, 0.49999, -0.003002, 0.409567, -0.000828696, -0.2868, -68.4296, 45.8066, 6.38039 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v212" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.00789176, 0.00298442, 0.499929, -0.0010905, 0.49999, -0.003002, -0.499937, -0.00113773, -0.00788516, -67.7545, 45.8066, 0.850808 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v213" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.187905, 0.00237214, 0.463343, -0.0010905, 0.49999, -0.003002, -0.463348, -0.00213873, -0.187896, -29.1195, 48.9959, -62.8076 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v214" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.204757, 0.00229217, 0.456147, -0.0010905, 0.49999, -0.003002, -0.456151, -0.00222422, -0.204748, -25.6103, 48.9959, -62.7908 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v215" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.204757, 0.00229217, 0.456147, -0.0010905, 0.49999, -0.003002, -0.456151, -0.00222422, -0.204748, -21.8083, 48.9959, -64.1809 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v216" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.204757, 0.00229217, 0.456147, -0.0010905, 0.49999, -0.003002, -0.456151, -0.00222422, -0.204748, -22.2042, 48.9959, -65.296 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v217" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.107967, 0.00269571, 0.488197, -0.0010905, 0.49999, -0.003002, -0.488203, -0.001713, -0.107959, -17.4721, 48.9959, -63.8035 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v218" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.0987033, 0.00272767, 0.490154, -0.0010905, 0.49999, -0.003002, -0.49016, -0.00166164, -0.0986954, -15.1978, 48.9959, -66.2481 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v220" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.254921, 0.00202655, 0.43013, -0.0010905, 0.49999, -0.003002, -0.430133, -0.00246866, -0.254912, -10.3203, 48.9959, -68.4035 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v221" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.254921, 0.00202655, 0.43013, -0.0010905, 0.49999, -0.003002, -0.430133, -0.00246866, -0.254912, -9.8354, 48.9959, -67.6473 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v222" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.254921, 0.00202655, 0.43013, -0.0010905, 0.49999, -0.003002, -0.430133, -0.00246866, -0.254912, -9.33902, 48.9959, -66.8415 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v223" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.497184, -0.00140248, -0.0529804, -0.0010905, 0.49999, -0.003002, 0.0529877, -0.00286954, -0.497177, -8.63895, 48.9959, -66.8791 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v224" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.498629, -0.00130957, -0.0369808, -0.0010905, 0.49999, -0.003002, 0.0369878, -0.00291311, -0.498622, -7.66025, 48.9959, -66.9518 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v225" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.497632, -0.00137709, -0.0485876, -0.0010905, 0.49999, -0.003002, 0.0485949, -0.00288181, -0.497625, -6.59226, 48.9959, -67.0477 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v226" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.497632, -0.00137709, -0.0485876, -0.0010905, 0.49999, -0.003002, 0.0485949, -0.00288181, -0.497625, -5.39359, 48.9959, -67.126 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v227" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.497632, -0.00137709, -0.0485876, -0.0010905, 0.49999, -0.003002, 0.0485949, -0.00288181, -0.497625, -4.25954, 48.9959, -67.2351 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v228" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.00729852, -0.00298577, -0.499938, -0.0010905, 0.49999, -0.003002, 0.499946, 0.00113419, 0.0072919, 1.06738, 48.9959, -66.3129 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v229" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.234293, -0.00316302, -0.441698, -0.0010905, 0.49999, -0.003002, 0.441708, -0.00044335, -0.234295, 1.366, 48.9959, -67.2173 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v230" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.497402, -0.0013904, -0.0508887, -0.0010905, 0.49999, -0.003002, 0.0508959, -0.00287541, -0.497395, 2.17983, 48.9959, -67.6938 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v231" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.499999, -0.00109312, -0.000433077, -0.0010905, 0.49999, -0.003002, 0.000439544, -0.00300105, -0.499991, 3.21973, 48.9959, -67.7635 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v232" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.499999, -0.00109312, -0.000433077, -0.0010905, 0.49999, -0.003002, 0.000439544, -0.00300105, -0.499991, 4.26293, 48.9959, -67.7241 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v233" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.499999, -0.00109312, -0.000433077, -0.0010905, 0.49999, -0.003002, 0.000439544, -0.00300105, -0.499991, 5.31078, 48.9959, -67.68 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v234" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.497889, -0.000810325, 0.045901, -0.0010905, 0.49999, -0.003002, -0.0458953, -0.00308943, -0.49788, 6.42307, 48.9959, -67.5348 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v235" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.495532, -0.000680351, 0.0666925, -0.0010905, 0.49999, -0.003002, -0.0666871, -0.00312063, -0.495524, 7.45955, 48.9959, -67.404 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v236" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.0918008, -0.00315119, -0.491491, -0.0010905, 0.49999, -0.003002, 0.4915, 0.000520773, -0.0918057, 12.8776, 48.9959, -68.166 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v237" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.0918008, -0.00315119, -0.491491, -0.0010905, 0.49999, -0.003002, 0.4915, 0.000520773, -0.0918057, 12.174, 48.9959, -65.3797 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v238" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.485833, 0.000350042, -0.118183, -0.0010905, 0.49999, -0.003002, 0.118178, 0.0031747, 0.485823, 12.9477, 48.9959, -65.4746 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v239" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.479408, -0.000192927, 0.142017, -0.0010905, 0.49999, -0.003002, -0.142013, -0.0031881, -0.479398, 13.4987, 48.9959, -67.6369 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v240" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.480988, 0.000229082, -0.136569, -0.0010905, 0.49999, -0.003002, 0.136565, 0.00318571, 0.480978, 14.4344, 48.9959, -67.3742 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v241" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.489588, 0.000458362, -0.101506, -0.0010905, 0.49999, -0.003002, 0.101501, 0.00316087, 0.489579, 14.0149, 48.9959, -65.1993 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v242" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.156968, 0.00319258, 0.474712, -0.0010905, 0.49999, -0.003002, -0.474721, -9.29142e-05, 0.156972, 17.2557, 48.9959, -65.3842 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v243" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.469569, -7.19057e-06, -0.171773, -0.0010905, 0.49999, -0.003002, 0.171769, 0.00319393, 0.469559, 17.9687, 48.9959, -65.6143 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v244" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.475326, 0.000105283, -0.155131, -0.0010905, 0.49999, -0.003002, 0.155128, 0.0031922, 0.475316, 17.7876, 48.9959, -64.7927 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v245" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.475326, 0.000105283, -0.155131, -0.0010905, 0.49999, -0.003002, 0.155128, 0.0031922, 0.475316, 18.7497, 48.9959, -64.4867 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v246" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.475326, 0.000105283, -0.155131, -0.0010905, 0.49999, -0.003002, 0.155128, 0.0031922, 0.475316, 18.9631, 48.9959, -65.2949 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v247" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.475326, 0.000105283, -0.155131, -0.0010905, 0.49999, -0.003002, 0.155128, 0.0031922, 0.475316, 19.9014, 48.9959, -65.058 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v248" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.475326, 0.000105283, -0.155131, -0.0010905, 0.49999, -0.003002, 0.155128, 0.0031922, 0.475316, 19.7693, 48.9959, -64.2302 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v249" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.475326, 0.000105283, -0.155131, -0.0010905, 0.49999, -0.003002, 0.155128, 0.0031922, 0.475316, 20.6781, 48.9959, -63.9541 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v250" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.475326, 0.000105283, -0.155131, -0.0010905, 0.49999, -0.003002, 0.155128, 0.0031922, 0.475316, 20.9646, 48.9959, -64.6601 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v251" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.475326, 0.000105283, -0.155131, -0.0010905, 0.49999, -0.003002, 0.155128, 0.0031922, 0.475316, 21.874, 48.9959, -64.359 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v252" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.475326, 0.000105283, -0.155131, -0.0010905, 0.49999, -0.003002, 0.155128, 0.0031922, 0.475316, 21.5936, 48.9959, -63.7272 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v253" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.202049, 0.00318665, 0.457347, -0.0010905, 0.49999, -0.003002, -0.457357, 0.000215623, 0.202052, 22.3813, 48.9959, -63.7613 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v219" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.0987033, 0.00272767, 0.490154, -0.0010905, 0.49999, -0.003002, -0.49016, -0.00166164, -0.0986954, -15.441, 48.9959, -67.245 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v211" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.499445, -0.00123055, -0.0235234, -0.0010905, 0.49999, -0.003002, 0.0235303, -0.00294736, -0.499438, -67.1027, 45.8066, 1.3319 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v206" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.480728, 0.00187387, 0.137469, -0.0010905, 0.49999, -0.003002, -0.137478, 0.00258647, 0.480722, -66.7762, 45.7819, 13.1193 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v203" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.356229, -0.00132962, -0.350855, -0.0010905, 0.49999, -0.003002, 0.350856, 0.00290402, 0.356219, -66.533, 45.7819, 8.51958 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v207" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.256251, -0.00313666, -0.429332, -0.0010905, 0.49999, -0.003002, 0.429342, -0.000602151, -0.256252, -67.9311, 45.8066, 5.63242 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v210" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.496411, -0.00144167, -0.0597868, -0.0010905, 0.49999, -0.003002, 0.0597944, -0.00285006, -0.496404, -66.2061, 45.8066, 1.26893 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v191" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.424081, -0.000665364, -0.264869, -0.0010905, 0.49999, -0.003002, 0.264868, 0.00312386, 0.424071, -60.5573, 45.7819, 26.701 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v192" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.424081, -0.000665364, -0.264869, -0.0010905, 0.49999, -0.003002, 0.264868, 0.00312386, 0.424071, -61.463, 45.7819, 26.1126 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v193" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.497028, 0.000757204, -0.0544357, -0.0010905, 0.49999, -0.003002, 0.0544301, 0.00310288, 0.497019, -62.3704, 45.7819, 25.8309 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v144" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.498592, -0.00131252, -0.0374855, -0.0010905, 0.49999, -0.003002, 0.0374925, -0.00291178, -0.498584, -48.3897, 42.5266, 48.6465 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v145" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.473767, -7.36879e-05, 0.159827, -0.0010905, 0.49999, -0.003002, -0.159824, -0.00319308, -0.473758, -47.4462, 42.5266, 48.7836 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v146" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.34567, 0.00141514, 0.361263, -0.0010905, 0.49999, -0.003002, -0.361264, -0.00286332, -0.34566, -46.5604, 42.5266, 49.191 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v147" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.34567, 0.00141514, 0.361263, -0.0010905, 0.49999, -0.003002, -0.361264, -0.00286332, -0.34566, -45.8573, 42.5266, 49.8004 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v148" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.34567, 0.00141514, 0.361263, -0.0010905, 0.49999, -0.003002, -0.361264, -0.00286332, -0.34566, -45.1405, 42.5266, 50.3647 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v151" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.34567, 0.00141514, 0.361263, -0.0010905, 0.49999, -0.003002, -0.361264, -0.00286332, -0.34566, -44.5215, 42.5266, 51.0535 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v152" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.34567, 0.00141514, 0.361263, -0.0010905, 0.49999, -0.003002, -0.361264, -0.00286332, -0.34566, -43.7941, 42.5266, 51.7692 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v153" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.358524, 0.00131054, 0.34851, -0.0010905, 0.49999, -0.003002, -0.348511, -0.00291268, -0.358514, -43.0884, 42.5266, 52.4764 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v155" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.369094, 0.00122015, 0.337296, -0.0010905, 0.49999, -0.003002, -0.337297, -0.00295168, -0.369084, -42.3294, 42.5266, 53.1693 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v156" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.386296, 0.00106348, 0.31745, -0.0010905, 0.49999, -0.003002, -0.31745, -0.00301168, -0.386286, -41.6087, 42.5266, 53.7923 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v157" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.386296, 0.00106348, 0.31745, -0.0010905, 0.49999, -0.003002, -0.31745, -0.00301168, -0.386286, -40.8125, 42.5266, 54.351 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v158" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.386296, 0.00106348, 0.31745, -0.0010905, 0.49999, -0.003002, -0.31745, -0.00301168, -0.386286, -40.0751, 42.5266, 54.8043 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v159" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( -0.386296, 0.00106348, 0.31745, -0.0010905, 0.49999, -0.003002, -0.31745, -0.00301168, -0.386286, -39.3642, 42.5266, 55.3084 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v173" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.418971, 0.00255213, 0.272868, -0.0010905, 0.49999, -0.003002, -0.272878, 0.00192037, 0.418968, -25.2368, 42.5297, 61.8924 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v172" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.487266, 0.00173589, 0.112113, -0.0010905, 0.49999, -0.003002, -0.112121, 0.00268102, 0.48726, -26.0542, 42.5266, 62.2164 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v171" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.492428, 0.000553522, -0.0866883, -0.0010905, 0.49999, -0.003002, 0.0866833, 0.0031456, 0.492419, -27.0076, 42.5266, 62.2229 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v170" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.396114, -0.00096798, -0.305111, -0.0010905, 0.49999, -0.003002, 0.305111, 0.00304372, 0.396104, -27.9445, 42.5266, 61.9535 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v169" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.396114, -0.00096798, -0.305111, -0.0010905, 0.49999, -0.003002, 0.305111, 0.00304372, 0.396104, -28.7314, 42.5266, 61.4569 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v168" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.396114, -0.00096798, -0.305111, -0.0010905, 0.49999, -0.003002, 0.305111, 0.00304372, 0.396104, -29.525, 42.5266, 61.0069 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v167" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.396114, -0.00096798, -0.305111, -0.0010905, 0.49999, -0.003002, 0.305111, 0.00304372, 0.396104, -30.2406, 42.5266, 60.4192 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v166" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.396114, -0.00096798, -0.305111, -0.0010905, 0.49999, -0.003002, 0.305111, 0.00304372, 0.396104, -31.0674, 42.5266, 59.8212 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v165" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.406902, -0.00085714, -0.290569, -0.0010905, 0.49999, -0.003002, 0.290569, 0.00307677, 0.406892, -31.8716, 42.5266, 59.2282 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v164" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.415663, -0.000761914, -0.277892, -0.0010905, 0.49999, -0.003002, 0.277891, 0.00310172, 0.415653, -32.7263, 42.5266, 58.6575 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v163" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.429682, -0.00059799, -0.255683, -0.0010905, 0.49999, -0.003002, 0.255681, 0.00313745, 0.429672, -33.5325, 42.5266, 58.1501 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v162" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.429682, -0.00059799, -0.255683, -0.0010905, 0.49999, -0.003002, 0.255681, 0.00313745, 0.429672, -34.4037, 42.5266, 57.7176 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v161" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.429682, -0.00059799, -0.255683, -0.0010905, 0.49999, -0.003002, 0.255681, 0.00313745, 0.429672, -35.201, 42.5266, 57.3805 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v174" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.0868528, -0.00276694, -0.492391, -0.0010905, 0.49999, -0.003002, 0.492398, 0.00159537, 0.086845, -35.5622, 42.5214, 56.6779 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v160" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.0462057, -0.00288839, -0.497853, -0.0010905, 0.49999, -0.003002, 0.49786, 0.00136324, 0.0461986, -35.6975, 42.5266, 55.8505 )
+script = ExtResource( 20 )
+
 [node name="laser_vertical-v141" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
 transform = Transform( -0.460678, 0, -0.194361, 0, 0.5, 0, 0.194361, 0, -0.460678, 22.1603, 40.0333, -65.3605 )
 script = ExtResource( 20 )
@@ -684,6 +1064,70 @@ script = ExtResource( 20 )
 transform = Transform( 0.251842, 0, -0.431944, 0, 0.5, 0, 0.431944, 0, 0.251842, 33.6226, 40.0266, 58.5496 )
 script = ExtResource( 20 )
 
+[node name="laser_vertical-v64" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.204317, 0, -0.45635, 0, 0.5, 0, 0.45635, 0, 0.204317, 30.6055, 42.4783, 62.1662 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v94" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.204317, 0, -0.45635, 0, 0.5, 0, 0.45635, 0, 0.204317, 30.8415, 42.4783, 61.303 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v95" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.204317, 0, -0.45635, 0, 0.5, 0, 0.45635, 0, 0.204317, 31.0432, 42.4783, 60.5808 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v175" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.22313, 0, -0.447452, 0, 0.5, 0, 0.447452, 0, 0.22313, 32.9963, 42.4783, 57.5627 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v176" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.22313, 0, -0.447452, 0, 0.5, 0, 0.447452, 0, 0.22313, 34.3055, 42.4783, 60.2673 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v177" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.25808, 0, -0.428246, 0, 0.5, 0, 0.428246, 0, 0.25808, 35.9768, 42.4783, 57.5375 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v178" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.278634, 0, -0.415167, 0, 0.5, 0, 0.415167, 0, 0.278634, 37.4816, 42.4783, 54.581 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v179" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.278634, 0, -0.415167, 0, 0.5, 0, 0.415167, 0, 0.278634, 38.0588, 42.4783, 55.4402 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v180" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.452799, 0, 0.212068, 0, 0.5, 0, -0.212068, 0, 0.452799, 38.8006, 42.4783, 55.7762 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v181" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.433022, 0, 0.249985, 0, 0.5, 0, -0.249985, 0, 0.433022, 39.7054, 42.4783, 55.2665 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v182" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.415011, 0, 0.278865, 0, 0.5, 0, -0.278865, 0, 0.415011, 40.6082, 42.4783, 54.6901 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v183" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.400366, 0, 0.299512, 0, 0.5, 0, -0.299512, 0, 0.400366, 41.468, 42.4783, 54.0728 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v184" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.325188, 0, -0.379806, 0, 0.5, 0, 0.379806, 0, 0.325188, 44.7322, 42.4783, 52.7705 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v185" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.325188, 0, -0.379806, 0, 0.5, 0, 0.379806, 0, 0.325188, 44.1217, 42.4783, 52.0539 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v187" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.325188, 0, -0.379806, 0, 0.5, 0, 0.379806, 0, 0.325188, 46.0078, 42.4783, 49.1016 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v186" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.325188, 0, -0.379806, 0, 0.5, 0, 0.379806, 0, 0.325188, 45.3974, 42.4783, 48.385 )
+script = ExtResource( 20 )
+
 [node name="laser_horizontal-v2" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
 transform = Transform( 0.252283, 0, -0.162336, 0, 0.3, 0, 0.162336, 0, 0.252283, -59.4434, 34.2973, -32.6385 )
 script = ExtResource( 20 )
@@ -762,6 +1206,154 @@ script = ExtResource( 20 )
 
 [node name="laser_horizontal-v42" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
 transform = Transform( 0.144021, 0, -0.263169, 0, 0.3, 0, 0.263169, 0, 0.144021, -35.2902, 39.4843, -57.942 )
+script = ExtResource( 20 )
+
+[node name="laser_horizontal-v43" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
+transform = Transform( 0.245674, 0, -0.172176, 0, 0.3, 0, 0.172176, 0, 0.245674, -54.0899, 41.9455, -40.4919 )
+script = ExtResource( 20 )
+
+[node name="laser_horizontal-v44" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
+transform = Transform( 0.245674, 0, -0.172176, 0, 0.3, 0, 0.172176, 0, 0.245674, -58.8623, 41.9455, -33.1727 )
+script = ExtResource( 20 )
+
+[node name="laser_horizontal-v45" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
+transform = Transform( 0.261575, 0, -0.146897, 0, 0.3, 0, 0.146897, 0, 0.261575, -60.4545, 41.9455, -30.4529 )
+script = ExtResource( 20 )
+
+[node name="laser_horizontal-v46" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
+transform = Transform( 0.272636, 0, -0.125179, 0, 0.3, 0, 0.125179, 0, 0.272636, -61.6971, 41.9455, -27.3808 )
+script = ExtResource( 20 )
+
+[node name="laser_horizontal-v59" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
+transform = Transform( 0.263683, 0, 0.143079, 0, 0.3, 0, -0.143079, 0, 0.263683, -58.5731, 41.9455, 34.3981 )
+script = ExtResource( 20 )
+
+[node name="laser_horizontal-v54" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
+transform = Transform( 0.248151, 0, 0.168586, 0, 0.3, 0, -0.168586, 0, 0.248151, -56.8492, 41.9455, 37.0363 )
+script = ExtResource( 20 )
+
+[node name="laser_horizontal-v53" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
+transform = Transform( 0.233647, 0, 0.188173, 0, 0.3, 0, -0.188173, 0, 0.233647, -54.9394, 41.9455, 39.5837 )
+script = ExtResource( 20 )
+
+[node name="laser_horizontal-v55" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
+transform = Transform( 0.223873, 0, 0.199702, 0, 0.3, 0, -0.199702, 0, 0.223873, -45.9459, 42.0144, 49.3649 )
+script = ExtResource( 20 )
+
+[node name="laser_horizontal-v56" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
+transform = Transform( 0.14872, 0, 0.260543, 0, 0.3, 0, -0.260543, 0, 0.14872, -34.1305, 41.9976, 58.6282 )
+script = ExtResource( 20 )
+
+[node name="laser_horizontal-v60" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
+transform = Transform( 0.119855, 0, 0.275018, 0, 0.3, 0, -0.275018, 0, 0.119855, -23.3598, 42.0144, 63.3865 )
+script = ExtResource( 20 )
+
+[node name="laser_horizontal-v58" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
+transform = Transform( 0.0261468, 0, 0.298859, 0, 0.3, 0, -0.298859, 0, 0.0261468, -8.7534, 41.9976, 66.8604 )
+script = ExtResource( 20 )
+
+[node name="laser_horizontal-v62" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
+transform = Transform( -0.00483781, 0, 0.299961, 0, 0.3, 0, -0.299961, 0, -0.00483781, 6.18062, 42.0144, 67.5022 )
+script = ExtResource( 20 )
+
+[node name="laser_horizontal-v61" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
+transform = Transform( -0.100004, 0, 0.282842, 0, 0.3, 0, -0.282842, 0, -0.100004, 20.9139, 41.9976, 64.6133 )
+script = ExtResource( 20 )
+
+[node name="laser_horizontal-v63" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
+transform = Transform( -0.165821, 0, 0.250007, 0, 0.3, 0, -0.250007, 0, -0.165821, 37.6864, 45.2829, 56.6272 )
+script = ExtResource( 20 )
+
+[node name="laser_horizontal-v64" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
+transform = Transform( -0.106067, 0, 0.280624, 0, 0.3, 0, -0.280624, 0, -0.106067, 24.9198, 45.3023, 63.1512 )
+script = ExtResource( 20 )
+
+[node name="laser_horizontal-v65" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
+transform = Transform( -0.0653305, 0, 0.2928, 0, 0.3, 0, -0.2928, 0, -0.0653305, 12.6728, 45.2961, 66.889 )
+script = ExtResource( 20 )
+
+[node name="laser_horizontal-v68" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
+transform = Transform( 0.00401075, 0, 0.299974, 0, 0.3, 0, -0.299974, 0, 0.00401075, 0.150991, 45.2547, 68.0195 )
+script = ExtResource( 20 )
+
+[node name="laser_horizontal-v67" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
+transform = Transform( 0.0706242, 0, 0.291569, 0, 0.3, 0, -0.291569, 0, 0.0706242, -14.0713, 45.2047, 66.2094 )
+script = ExtResource( 20 )
+
+[node name="laser_horizontal-v66" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
+transform = Transform( 0.111133, 0, 0.278657, 0, 0.3, 0, -0.278657, 0, 0.111133, -26.2935, 45.1522, 62.3913 )
+script = ExtResource( 20 )
+
+[node name="laser_horizontal-v71" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
+transform = Transform( 0.181976, 0, 0.238506, 0, 0.3, 0, -0.238506, 0, 0.181976, -41.9757, 45.2242, 53.324 )
+script = ExtResource( 20 )
+
+[node name="laser_horizontal-v70" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
+transform = Transform( 0.230462, 0, 0.192061, 0, 0.3, 0, -0.192061, 0, 0.230462, -52.3183, 45.2784, 43.3953 )
+script = ExtResource( 20 )
+
+[node name="laser_horizontal-v69" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
+transform = Transform( 0.255299, 0, 0.157552, 0, 0.3, 0, -0.157552, 0, 0.255299, -59.8582, 45.2821, 33.0458 )
+script = ExtResource( 20 )
+
+[node name="laser_horizontal-v47" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
+transform = Transform( 0.286616, 0, -0.0886075, 0, 0.3, 0, 0.0886075, 0, 0.286616, -64.4842, 41.9455, -20.771 )
+script = ExtResource( 20 )
+
+[node name="laser_horizontal-v48" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
+transform = Transform( 0.289231, 0, -0.0796568, 0, 0.3, 0, 0.0796568, 0, 0.289231, -66.3079, 41.9455, -13.8468 )
+script = ExtResource( 20 )
+
+[node name="laser_horizontal-v74" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
+transform = Transform( 0.286616, 0, -0.0886075, 0, 0.3, 0, 0.0886075, 0, 0.286616, -64.5611, 45.3073, -20.8435 )
+script = ExtResource( 20 )
+
+[node name="laser_horizontal-v73" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
+transform = Transform( 0.289231, 0, -0.0796568, 0, 0.3, 0, 0.0796568, 0, 0.289231, -66.3848, 45.3338, -13.9193 )
+script = ExtResource( 20 )
+
+[node name="laser_horizontal-v77" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
+transform = Transform( 0.246631, 0, -0.170801, 0, 0.3, 0, 0.170801, 0, 0.246631, -56.0804, 45.3147, -38.8158 )
+script = ExtResource( 20 )
+
+[node name="laser_horizontal-v76" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
+transform = Transform( 0.251821, 0, -0.163054, 0, 0.3, 0, 0.163054, 0, 0.251821, -59.9045, 45.3094, -32.7622 )
+script = ExtResource( 20 )
+
+[node name="laser_horizontal-v79" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
+transform = Transform( 0.20871, 0, -0.2155, 0, 0.3, 0, 0.2155, 0, 0.20871, -46.7062, 45.3173, -49.5426 )
+script = ExtResource( 20 )
+
+[node name="laser_horizontal-v78" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
+transform = Transform( 0.215307, 0, -0.208909, 0, 0.3, 0, 0.208909, 0, 0.215307, -51.6344, 45.3823, -44.3481 )
+script = ExtResource( 20 )
+
+[node name="laser_horizontal-v57" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
+transform = Transform( 0.281622, 0, 0.103388, 0, 0.3, 0, -0.103388, 0, 0.281622, -62.5713, 41.9455, 25.8951 )
+script = ExtResource( 20 )
+
+[node name="laser_horizontal-v49" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
+transform = Transform( 0.297759, 0, 0.0365971, 0, 0.3, 0, -0.0365971, 0, 0.297759, -67.2376, 41.9455, 7.42869 )
+script = ExtResource( 20 )
+
+[node name="laser_horizontal-v50" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
+transform = Transform( 0.295231, 0, -0.0532801, 0, 0.3, 0, 0.0532801, 0, 0.295231, -67.2259, 41.9455, -7.02104 )
+script = ExtResource( 20 )
+
+[node name="laser_horizontal-v72" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
+transform = Transform( 0.295231, 0, -0.0532801, 0, 0.3, 0, 0.0532801, 0, 0.295231, -67.3028, 45.321, -7.09362 )
+script = ExtResource( 20 )
+
+[node name="laser_horizontal-v75" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
+transform = Transform( 0.265484, 0, -0.139708, 0, 0.3, 0, 0.139708, 0, 0.265484, -62.8352, 45.3488, -26.5297 )
+script = ExtResource( 20 )
+
+[node name="laser_horizontal-v51" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
+transform = Transform( 0.29934, 0, -0.0198875, 0, 0.3, 0, 0.0198875, 0, 0.29934, -67.7999, 41.9455, -1.08713 )
+script = ExtResource( 20 )
+
+[node name="laser_horizontal-v52" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
+transform = Transform( 0.292094, 0, 0.0684186, 0, 0.3, 0, -0.0684186, 0, 0.292094, -65.7613, 41.9455, 15.6185 )
 script = ExtResource( 20 )
 
 [node name="laser_horizontal-v11" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
@@ -925,11 +1517,11 @@ mesh = SubResource( 8 )
 material/0 = null
 
 [node name="sensor_more_speed2" type="Area" parent="base_map/sensores"]
-transform = Transform( 0.509927, 0, -0.860218, 0, 1, 0, 0.860218, 0, 0.509927, -24.3665, 48.9963, -62.9742 )
+transform = Transform( 0.509927, 0, -0.860218, 0, 1, 0, 0.860218, 0, 0.509927, -31.3815, 48.9963, -59.4805 )
 script = ExtResource( 12 )
 
 [node name="CollisionShape" type="CollisionShape" parent="base_map/sensores/sensor_more_speed2"]
-transform = Transform( 0.990908, 0, -0.13454, 0, 1, 0, 0.13454, 0, 0.990908, -0.482971, 0, 0.0326214 )
+transform = Transform( 0.990908, 0, -0.13454, 0, 1, 0, 0.13454, 0, 0.990908, -0.482971, 0.646538, 0.0326233 )
 shape = SubResource( 7 )
 
 [node name="MeshInstance" type="MeshInstance" parent="base_map/sensores/sensor_more_speed2"]
@@ -977,7 +1569,7 @@ mesh = SubResource( 8 )
 material/0 = null
 
 [node name="sensor_jump4" type="Area" parent="base_map/sensores"]
-transform = Transform( 0.731508, 0, -0.681832, 0, 1, 0, 0.681832, 0, 0.731508, -42.4465, 45.8429, -51.9116 )
+transform = Transform( 0.731508, 0, -0.681832, 0, 1, 0, 0.681832, 0, 0.731508, -42.4465, 46.5498, -51.9116 )
 script = ExtResource( 9 )
 
 [node name="CollisionShape" type="CollisionShape" parent="base_map/sensores/sensor_jump4"]
