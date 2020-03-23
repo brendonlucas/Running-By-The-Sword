@@ -11,7 +11,7 @@ func _ready():
 func change_speed_slow():
 	MOVE_SPEED = 5
 
-func stop_move(type):
+func active_move(type):
 	move_active = type
 	
 func change_speed(new_speed):

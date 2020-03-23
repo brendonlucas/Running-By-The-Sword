@@ -20,6 +20,7 @@ var is_moving = true
 var block_move = false
 var active_jump_super = false
 var death = false
+var ja_morreu = false
 
 func _ready():
 	animation = get_node("AnimationPlayer")
@@ -66,8 +67,9 @@ func _physics_process(delta):
 		roll = false
 	var move_vec = Vector3()
 	
-	if death:
-		animation.play("")
+	if death and !ja_morreu:
+		ja_morreu = true
+		animation.play("anm_00000001")
 		
 	if !block_move and !block_jump and Input.is_action_just_pressed("traz"):
 		roll = true
@@ -91,13 +93,13 @@ func _physics_process(delta):
 	if !block_move and Type_controls == 3 and Input.is_action_pressed("esquerda"):
 		move_vec.x -= 1
 		
-	if !block_jump and !roll and velo_pista == 7 and is_moving and is_on_floor() and animate_current != "jump_fall":
+	if !block_move and !block_jump and !roll and velo_pista == 7 and is_moving and is_on_floor() and animate_current != "jump_fall":
 		animation.play("anm_02076002")
 	
-	if !block_jump and !roll and velo_pista != 7 and is_moving and is_on_floor() and animate_current != "jump_fall":
+	if !block_move and !block_jump and !roll and velo_pista != 7 and is_moving and is_on_floor() and animate_current != "jump_fall":
 		animation.play("anm_02076008")
 	
-	if !block_jump and jump_active and grounded and Input.is_action_just_pressed("pulo") or active_jump_super:
+	if !block_move and !block_jump and jump_active and grounded and Input.is_action_just_pressed("pulo") or active_jump_super:
 		just_jumped = true
 		y_velo = JUMP_FORCE
 		if active_jump_super:
