@@ -27,7 +27,7 @@ emission_operator = 0
 emission_on_uv2 = false
 
 [sub_resource type="BoxShape" id=6]
-extents = Vector3( 0.96158, 0.851402, 0.134982 )
+extents = Vector3( 0.96158, 0.939874, 0.134982 )
 
 [node name="laser_vertical" type="Spatial"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.11729, 0 )
@@ -57,7 +57,7 @@ mesh = SubResource( 4 )
 material/0 = SubResource( 5 )
 
 [node name="CollisionShape" type="CollisionShape" parent="laser/Area"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.807009, 0, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.807009, -0.0565548, 0 )
 shape = SubResource( 6 )
 
 [node name="laser2" type="Spatial" parent="."]
