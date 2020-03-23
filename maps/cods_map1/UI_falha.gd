@@ -1,16 +1,37 @@
 extends Control
 
+var som_buttom
+var timer_reset
+var active_butom = false
+var active_butom_sim = false
+var active_butom_nao = false
+var escolhido = false
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	som_buttom = get_node("buttom_som")
+	timer_reset = get_node("Timer")
+	
+# botão sim
+func _on_Buttonnao_pressed():
+	if !active_butom and !active_butom_nao: 
+		active_butom_sim = true
+		active_butom = true
+		timer_reset.start()
+		som_buttom.play()
+	
+# botão não
+func _on_Buttonsim_pressed():
+	if !active_butom and !active_butom_sim:
+		active_butom_nao = true
+		active_butom = true
+		som_buttom.play() 
+		timer_reset.start()
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	if !escolhido and active_butom and active_butom_sim and timer_reset.time_left == 0:
+		escolhido = true
+		get_tree().reload_current_scene()
+		
+	elif !escolhido and active_butom and active_butom_nao and timer_reset.time_left == 0:
+		escolhido = true
+		print("foi menu")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=82 format=2]
+[gd_scene load_steps=84 format=2]
 
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://texturas/texture.png" type="Texture" id=2]
@@ -47,6 +47,8 @@
 [ext_resource path="res://maps/cods_map1/area_block_moves.gd" type="Script" id=45]
 [ext_resource path="res://maps/cods_map1/area_active_moves.gd" type="Script" id=46]
 [ext_resource path="res://maps/cods_map1/UI_pontuacao.gd" type="Script" id=47]
+[ext_resource path="res://maps/cods_map1/UI_falha.gd" type="Script" id=48]
+[ext_resource path="res://songs/load.wav" type="AudioStream" id=49]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 3.17774, 1, 15.3905 )
@@ -2391,6 +2393,7 @@ __meta__ = {
 }
 
 [node name="UI_coins" type="Control" parent="."]
+visible = false
 anchor_left = 1.0
 anchor_right = 1.0
 margin_left = -151.0
@@ -2413,6 +2416,7 @@ valign = 1
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 48 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -2478,7 +2482,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="buttom_som" type="AudioStreamPlayer2D" parent="UI_falha"]
+position = Vector2( 521.539, 313.527 )
+stream = ExtResource( 49 )
+
+[node name="Timer" type="Timer" parent="UI_falha"]
+one_shot = true
+
 [node name="UI_pontuacao" type="Control" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 47 )
@@ -2517,3 +2529,5 @@ margin_top = 0.0135498
 margin_right = 0.123169
 margin_bottom = -0.186401
 text = "Proxima Fase"
+[connection signal="pressed" from="UI_falha/Button-sim" to="UI_falha" method="_on_Buttonsim_pressed"]
+[connection signal="pressed" from="UI_falha/Button-nao" to="UI_falha" method="_on_Buttonnao_pressed"]
