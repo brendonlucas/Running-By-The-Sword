@@ -9,8 +9,9 @@ func _ready():
 		
 func _process(delta):
 	if active and time.time_left == 0:
-		get_tree().change_scene("res://maps/map_1.tscn")
-
+		#get_tree().change_scene("res://maps/map_1.tscn")
+		pass
+		
 func _on_Button_pressed():
 	time.start()
 	sond.play()

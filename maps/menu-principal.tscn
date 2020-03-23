@@ -1,8 +1,15 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://texturas/universe.jpg" type="Texture" id=1]
 [ext_resource path="res://texturas/background8269659.jpg" type="Texture" id=2]
 [ext_resource path="res://texturas/sphere.png" type="Texture" id=3]
+[ext_resource path="res://player/Liz-sem_espada.tscn" type="PackedScene" id=4]
+[ext_resource path="res://player/luna_sem_espada.tscn" type="PackedScene" id=5]
+[ext_resource path="res://maps/cods_menu/menu-principal.gd" type="Script" id=6]
+[ext_resource path="res://maps/cods_menu/UI.gd" type="Script" id=7]
+[ext_resource path="res://songs/load.wav" type="AudioStream" id=8]
+[ext_resource path="res://maps/cods_menu/liz.gd" type="Script" id=9]
+[ext_resource path="res://maps/cods_menu/luna.gd" type="Script" id=10]
 
 [sub_resource type="Environment" id=1]
 ambient_light_color = Color( 0.431373, 0.431373, 0.431373, 1 )
@@ -56,10 +63,23 @@ emission_texture = ExtResource( 3 )
 [sub_resource type="CubeMesh" id=7]
 
 [sub_resource type="SpatialMaterial" id=8]
-albedo_color = Color( 0, 0, 0, 1 )
+albedo_color = Color( 0.968627, 0.94902, 0.94902, 1 )
+
+[sub_resource type="Animation" id=11]
+resource_name = "move_cam"
+length = 20.0
+loop = true
+tracks/0/type = "transform"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 2.1, 1, -0.368, 0.27, -0.432, 0, -0.707107, 0, 0.707107, 1, 1, 1, 8, 1, -0.368, 0.27, 0.405, 0, -0.707107, 0, 0.707107, 1, 1, 1, 12.1, 1, -0.368, 0.27, 0.405, 0, -0.707107, 0, 0.707107, 1, 1, 1, 19.3, 1, -0.368, 0.27, -0.432, 0, -0.707107, 0, 0.707107, 1, 1, 1, 19.8, 1, -0.368, 0.27, -0.432, 0, -0.707107, 0, 0.707107, 1, 1, 1 )
 
 [node name="Menu_principal" type="Spatial"]
 transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0 )
+script = ExtResource( 6 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 1 )
@@ -87,12 +107,12 @@ mesh = SubResource( 2 )
 material/0 = SubResource( 10 )
 
 [node name="portal" type="MeshInstance" parent="estruturas"]
-transform = Transform( -1.98336e-09, -0.0221571, -0.999784, 0.680406, -2.01758e-07, 0, -8.06285e-08, -0.900739, 0.0175373, 0.438472, 0.176015, -0.451625 )
+transform = Transform( 1.80601e-14, 1.46793e-07, -0.999938, 0.680406, -1.46793e-07, 0, -1.10852e-07, -0.901011, -1.62911e-07, 0.438, 0.176, -0.445118 )
 mesh = SubResource( 2 )
 material/0 = SubResource( 5 )
 
 [node name="portal2" type="MeshInstance" parent="estruturas"]
-transform = Transform( -1.98336e-09, -0.0221571, -0.999784, 0.549395, -1.6291e-07, 0, -8.23502e-08, -0.919973, 0.0179118, 0.438472, 0.253803, 0.442896 )
+transform = Transform( 1.45827e-14, 1.49926e-07, -0.999945, 0.549395, -1.49926e-07, 0, -8.95078e-08, -0.920239, -1.62912e-07, 0.438472, 0.253803, 0.442896 )
 mesh = SubResource( 2 )
 material/0 = SubResource( 6 )
 
@@ -102,6 +122,60 @@ mesh = SubResource( 7 )
 material/0 = SubResource( 8 )
 
 [node name="target" type="Spatial" parent="."]
-transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, -0.368, 0.27, 0 )
+transform = Transform( -1.19209e-07, 0, -1, 0, 1, 0, 1, 0, -1.19209e-07, -0.368, 0.27, -0.00640678 )
 
 [node name="Camera" type="Camera" parent="target"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="target"]
+anims/move_cam = SubResource( 11 )
+
+[node name="liz" type="Spatial" parent="."]
+transform = Transform( -4.88762e-08, 0, -0.3, 0, 0.3, 0, 0.3, 0, -4.88762e-08, 0.163, 0, -0.378 )
+script = ExtResource( 9 )
+
+[node name="Player" parent="liz" instance=ExtResource( 4 )]
+
+[node name="Timer" type="Timer" parent="liz"]
+wait_time = 15.0
+one_shot = true
+
+[node name="luna" type="Spatial" parent="."]
+transform = Transform( -4.88762e-08, 0, -0.3, 0, 0.3, 0, 0.3, 0, -4.88762e-08, 0.143397, 0, 0.396884 )
+script = ExtResource( 10 )
+
+[node name="luna" parent="luna" instance=ExtResource( 5 )]
+
+[node name="Timer" type="Timer" parent="luna"]
+wait_time = 15.0
+one_shot = true
+
+[node name="UI" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="UI"]
+anchor_left = 0.375
+anchor_top = 0.712
+anchor_right = 0.6
+anchor_bottom = 0.764
+margin_left = 0.207397
+margin_top = 0.0130005
+margin_right = -0.192627
+margin_bottom = -0.187012
+text = "Start Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="UI"]
+wait_time = 5.0
+one_shot = true
+
+[node name="effect" type="AudioStreamPlayer2D" parent="UI"]
+position = Vector2( 506.157, 291.901 )
+stream = ExtResource( 8 )
+[connection signal="pressed" from="UI/Button" to="UI" method="_on_Button_pressed"]
