@@ -22,7 +22,7 @@ func _physics_process(delta):
 		if body.name == "Player" and tocou != true:
 			map.active_front_move(false)
 			animate_player.play("anm_00070010")
-			#ball_animate.play("bal_launcher")
+			ball_animate.play("bal_launcher")
 			#camera_anim.play("cam_move_final")
 			tocou = true
 
