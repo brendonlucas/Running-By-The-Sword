@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://props/cilindro/base_redondo.tscn" type="PackedScene" id=1]
 [ext_resource path="res://texturas/rainbow-textures.jpg" type="Texture" id=2]
@@ -21,19 +21,29 @@
 [ext_resource path="res://props/laser_machine/laser_horizontal-v2.tscn" type="PackedScene" id=19]
 [ext_resource path="res://props/laser_machine/laser_horizontal-v2.gd" type="Script" id=20]
 [ext_resource path="res://props/laser_machine/laser_vertical-v2.tscn" type="PackedScene" id=21]
+[ext_resource path="res://texturas/sphere.png" type="Texture" id=22]
+[ext_resource path="res://maps/cods_masp2/ball_smash.gd" type="Script" id=23]
 
 [sub_resource type="BoxShape" id=7]
-extents = Vector3( 1.80506, 0.791998, 0.1127 )
+extents = Vector3( 2.15652, 0.791998, 0.1127 )
 
 [sub_resource type="QuadMesh" id=8]
 
 [sub_resource type="Environment" id=1]
-ambient_light_color = Color( 0.847059, 0.847059, 0.847059, 1 )
+ambient_light_color = Color( 0.756863, 0.756863, 0.756863, 1 )
+glow_enabled = true
+glow_blend_mode = 0
 
 [sub_resource type="QuadMesh" id=2]
 
 [sub_resource type="SpatialMaterial" id=3]
 albedo_texture = ExtResource( 2 )
+emission_enabled = true
+emission = Color( 0, 0, 0, 1 )
+emission_energy = 1.0
+emission_operator = 0
+emission_on_uv2 = false
+emission_texture = ExtResource( 2 )
 
 [sub_resource type="SphereMesh" id=4]
 flip_faces = true
@@ -46,6 +56,52 @@ albedo_color = Color( 0.054902, 0.054902, 0.054902, 1 )
 extents = Vector3( 1, 1.18948, 1 )
 
 [sub_resource type="CubeMesh" id=14]
+
+[sub_resource type="SpatialMaterial" id=17]
+albedo_color = Color( 0.133333, 0.133333, 0.133333, 1 )
+
+[sub_resource type="Animation" id=18]
+resource_name = "bal_launcher"
+tracks/0/type = "transform"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 2.40805, 1.3121, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 54.5639, 1.3121, 0, 0, 0, 0, 1, 1, 1, 1 )
+
+[sub_resource type="SphereMesh" id=15]
+
+[sub_resource type="SpatialMaterial" id=16]
+albedo_color = Color( 0, 0.905882, 1, 1 )
+albedo_texture = ExtResource( 22 )
+emission_enabled = true
+emission = Color( 0, 1, 1, 1 )
+emission_energy = 0.45
+emission_operator = 0
+emission_on_uv2 = false
+emission_texture = ExtResource( 22 )
+
+[sub_resource type="SphereShape" id=20]
+radius = 1.22237
+
+[sub_resource type="Animation" id=19]
+resource_name = "afundar_mapa"
+length = 2.0
+tracks/0/type = "transform"
+tracks/0/path = NodePath("base_principal")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 17.0884, 0, 0, 0, 0, 1, 1, 1, 1, 2, 1, 0, -34.9077, 0, 0, 0, 0, 1, 1, 1, 1 )
+tracks/1/type = "transform"
+tracks/1/path = NodePath("plataformas")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 1, 0, -51.9962, 0, 0, 0, 0, 1, 1, 1, 1 )
 
 [sub_resource type="BoxShape" id=5]
 extents = Vector3( 1.52203, 0.0211211, 2.87084 )
@@ -824,6 +880,42 @@ script = ExtResource( 20 )
 transform = Transform( 0.202049, 0.00318665, 0.457347, -0.0010905, 0.49999, -0.003002, -0.457357, 0.000215623, 0.202052, 22.3813, 48.9959, -63.7613 )
 script = ExtResource( 20 )
 
+[node name="laser_vertical-v254" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.219763, 0.00317579, 0.449104, -0.0010905, 0.49999, -0.003002, -0.449114, 0.000339954, 0.219765, 29.7175, 48.9959, -62.5069 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v255" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.219763, 0.00317579, 0.449104, -0.0010905, 0.49999, -0.003002, -0.449114, 0.000339954, 0.219765, 29.337, 48.9959, -61.6833 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v256" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.219763, 0.00317579, 0.449104, -0.0010905, 0.49999, -0.003002, -0.449114, 0.000339954, 0.219765, 31.2871, 48.9959, -58.3024 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v257" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.219763, 0.00317579, 0.449104, -0.0010905, 0.49999, -0.003002, -0.449114, 0.000339954, 0.219765, 31.7533, 48.9959, -59.2186 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v258" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.257583, 0.00313478, 0.428534, -0.0010905, 0.49999, -0.003002, -0.428544, 0.000611893, 0.257585, 35.6125, 48.9959, -57.8717 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v259" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.257583, 0.00313478, 0.428534, -0.0010905, 0.49999, -0.003002, -0.428544, 0.000611893, 0.257585, 39.965, 48.9959, -56.7754 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v260" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.257583, 0.00313478, 0.428534, -0.0010905, 0.49999, -0.003002, -0.428544, 0.000611893, 0.257585, 39.4169, 48.9959, -55.835 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v261" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.314128, 0.00302069, 0.388992, -0.0010905, 0.49999, -0.003002, -0.389003, 0.00103763, 0.314128, 43.0341, 48.9959, -50.3164 )
+script = ExtResource( 20 )
+
+[node name="laser_vertical-v262" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
+transform = Transform( 0.314128, 0.00302069, 0.388992, -0.0010905, 0.49999, -0.003002, -0.389003, 0.00103763, 0.314128, 43.6489, 48.9959, -51.0795 )
+script = ExtResource( 20 )
+
 [node name="laser_vertical-v219" parent="base_map/plataformas/lasers/verticais" instance=ExtResource( 21 )]
 transform = Transform( -0.0987033, 0.00272767, 0.490154, -0.0010905, 0.49999, -0.003002, -0.49016, -0.00166164, -0.0986954, -15.441, 48.9959, -67.245 )
 script = ExtResource( 20 )
@@ -1392,6 +1484,38 @@ script = ExtResource( 20 )
 transform = Transform( -0.274274, 0, -0.121547, 0, 0.3, 0, 0.121547, 0, -0.274274, 62.2313, 36.7944, -26.8775 )
 script = ExtResource( 20 )
 
+[node name="laser_horizontal-v86" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
+transform = Transform( -0.218673, 0, -0.205383, 0, 0.3, 0, 0.205383, 0, -0.218673, 48.5768, 48.6163, -47.5748 )
+script = ExtResource( 20 )
+
+[node name="laser_horizontal-v85" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
+transform = Transform( -0.233147, 0, -0.188792, 0, 0.3, 0, 0.188792, 0, -0.233147, 53.2317, 48.6163, -42.2148 )
+script = ExtResource( 20 )
+
+[node name="laser_horizontal-v83" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
+transform = Transform( -0.259742, 0, -0.150113, 0, 0.3, 0, 0.150113, 0, -0.259742, 57.3562, 48.6163, -35.8812 )
+script = ExtResource( 20 )
+
+[node name="laser_horizontal-v81" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
+transform = Transform( -0.275268, 0, -0.119279, 0, 0.3, 0, 0.119279, 0, -0.275268, 61.1179, 48.6163, -29.8926 )
+script = ExtResource( 20 )
+
+[node name="laser_horizontal-v93" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
+transform = Transform( -0.281403, 0, -0.103982, 0, 0.3, 0, 0.103982, 0, -0.281403, 64.1659, 48.6163, -22.2715 )
+script = ExtResource( 20 )
+
+[node name="laser_horizontal-v91" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
+transform = Transform( -0.294178, 0, -0.0588146, 0, 0.3, 0, 0.0588146, 0, -0.294178, 66.3844, 48.6163, -14.441 )
+script = ExtResource( 20 )
+
+[node name="laser_horizontal-v89" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
+transform = Transform( -0.298988, 0, -0.0246284, 0, 0.3, 0, 0.0246284, 0, -0.298988, 67.4876, 48.6163, -7.09091 )
+script = ExtResource( 20 )
+
+[node name="laser_horizontal-v87" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
+transform = Transform( -0.299957, 0, -0.00510999, 0, 0.3, 0, 0.00510999, 0, -0.299957, 67.7382, 48.6163, 0.210113 )
+script = ExtResource( 20 )
+
 [node name="laser_horizontal-v28" parent="base_map/plataformas/lasers" instance=ExtResource( 19 )]
 transform = Transform( -0.293739, 0, -0.0609694, 0, 0.3, 0, 0.0609694, 0, -0.293739, 66.4309, 36.7944, -13.8532 )
 script = ExtResource( 20 )
@@ -1437,6 +1561,7 @@ transform = Transform( -0.118202, 0, 0.275733, 0, 0.3, 0, -0.275733, 0, -0.11820
 script = ExtResource( 20 )
 
 [node name="sensores" type="Spatial" parent="base_map"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.421822, 0 )
 
 [node name="sensor_play_music" type="Area" parent="base_map/sensores"]
 transform = Transform( 0.999905, 0, 0.0137876, 0, 1, 0, -0.0137876, 0, 0.999905, -67.6746, 36.0704, -2.07421 )
@@ -1452,7 +1577,7 @@ mesh = SubResource( 8 )
 material/0 = null
 
 [node name="sensor_rotate" type="Area" parent="base_map/sensores"]
-transform = Transform( 0.992271, 0, 0.124086, 0, 1, 0, -0.124086, 0, 0.992271, -67.6746, 49.0288, -0.959825 )
+transform = Transform( 0.992271, 0, 0.124086, 0, 1, 0, -0.124086, 0, 0.992271, -67.3063, 49.7506, -0.639659 )
 script = ExtResource( 16 )
 
 [node name="CollisionShape" type="CollisionShape" parent="base_map/sensores/sensor_rotate"]
@@ -1465,7 +1590,7 @@ mesh = SubResource( 8 )
 material/0 = null
 
 [node name="sensor_block_moves" type="Area" parent="base_map/sensores"]
-transform = Transform( 0.995023, 0, 0.0996496, 0, 1, 0, -0.0996496, 0, 0.995023, -67.6746, 49.0288, 1.10324 )
+transform = Transform( 0.995023, 0, 0.0996496, 0, 1, 0, -0.0996496, 0, 0.995023, -67.2536, 49.9338, 1.85324 )
 script = ExtResource( 15 )
 
 [node name="CollisionShape" type="CollisionShape" parent="base_map/sensores/sensor_block_moves"]
@@ -1609,18 +1734,39 @@ script = ExtResource( 18 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -63.5257, 48.3343, -0.480075 )
 
 [node name="base" type="StaticBody" parent="base_map/ball"]
-transform = Transform( 2.75054, 0, 0, 0, 0.12603, 0, 0, 0, 1.98124, 0.57217, -0.455242, -0.185273 )
+transform = Transform( 2.75054, 0, 0, 0, 0.12603, 0, 0, 0, 1.98124, 0.57217, 0.307144, -0.185273 )
 
 [node name="CollisionShape" type="CollisionShape" parent="base_map/ball/base"]
 shape = SubResource( 13 )
 
 [node name="MeshInstance" type="MeshInstance" parent="base_map/ball/base"]
 mesh = SubResource( 14 )
-material/0 = null
+material/0 = SubResource( 17 )
 
-[node name="ball_smash" type="Spatial" parent="base_map/ball"]
+[node name="ball_smash" type="Area" parent="base_map/ball"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.40805, 1.3121, 0 )
+script = ExtResource( 23 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="base_map/ball/ball_smash"]
+anims/bal_launcher = SubResource( 18 )
+
+[node name="MeshInstance" type="MeshInstance" parent="base_map/ball/ball_smash"]
+mesh = SubResource( 15 )
+material/0 = SubResource( 16 )
+
+[node name="OmniLight" type="OmniLight" parent="base_map/ball/ball_smash"]
+transform = Transform( 0.666667, 0, 0, 0, 0.666667, 0, 0, 0, 0.666667, 0.0537338, -0.0235023, -0.0581923 )
+light_color = Color( 0, 1, 0, 1 )
+light_energy = 16.0
+light_indirect_energy = 0.0
+light_specular = 0.0
+omni_range = 4.14592
+
+[node name="CollisionShape" type="CollisionShape" parent="base_map/ball/ball_smash"]
+shape = SubResource( 20 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="base_map"]
+anims/afundar_mapa = SubResource( 19 )
 
 [node name="base_chao" type="StaticBody" parent="."]
 transform = Transform( -0.0185344, 0, 0.999828, 0, 1, 0, -0.999828, 0, -0.0185344, -67.6533, 34.3456, -0.467387 )
