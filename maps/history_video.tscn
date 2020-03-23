@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://video/History-game.ogv" type="VideoStream" id=1]
+[ext_resource path="res://maps/cods_menu/VideoPlayer-historia.gd" type="Script" id=2]
+
+[node name="history_video" type="Spatial"]
+
+[node name="ui" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VideoPlayer-historia" type="VideoPlayer" parent="ui"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+stream = ExtResource( 1 )
+autoplay = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="skip" type="Button" parent="ui"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -97.0
+margin_top = 12.0
+margin_right = -14.0
+margin_bottom = 36.0
+text = "Começar"
+[connection signal="finished" from="ui/VideoPlayer-historia" to="ui/VideoPlayer-historia" method="_on_VideoPlayerhistoria_finished"]
+[connection signal="pressed" from="ui/skip" to="ui/VideoPlayer-historia" method="_on_skip_pressed"]

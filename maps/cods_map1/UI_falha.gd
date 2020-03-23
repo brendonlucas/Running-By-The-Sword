@@ -34,4 +34,5 @@ func _process(delta):
 		
 	elif !escolhido and active_butom and active_butom_nao and timer_reset.time_left == 0:
 		escolhido = true
+		get_tree().change_scene("res://maps/menu-principal.tscn")
 		print("foi menu")
