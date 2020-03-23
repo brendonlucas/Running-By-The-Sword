@@ -2528,5 +2528,6 @@ margin_top = 0.0135498
 margin_right = 0.123169
 margin_bottom = -0.186401
 text = "Proxima Fase"
+[connection signal="finished" from="player/Player/target/music" to="player" method="_on_music_finished"]
 [connection signal="pressed" from="UI_falha/Button-sim" to="UI_falha" method="_on_Buttonsim_pressed"]
 [connection signal="pressed" from="UI_falha/Button-nao" to="UI_falha" method="_on_Buttonnao_pressed"]
