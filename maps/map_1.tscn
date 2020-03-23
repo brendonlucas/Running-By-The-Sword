@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=2]
+[gd_scene load_steps=79 format=2]
 
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://texturas/texture.png" type="Texture" id=2]
@@ -42,6 +42,7 @@
 [ext_resource path="res://maps/cods_map1/coin.gd" type="Script" id=40]
 [ext_resource path="res://songs/coin-collect.wav" type="AudioStream" id=41]
 [ext_resource path="res://maps/cods_map1/UI_coins.gd" type="Script" id=42]
+[ext_resource path="res://maps/cods_map1/codigo_de_falha.gd" type="Script" id=43]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 3.17774, 1, 26.2749 )
@@ -50,7 +51,7 @@ extents = Vector3( 3.17774, 1, 26.2749 )
 extents = Vector3( 0.31517, 0.210416, 0.303548 )
 
 [sub_resource type="BoxShape" id=3]
-extents = Vector3( 0.0124682, 4.35737, 2.37107 )
+extents = Vector3( 0.149664, 4.35737, 2.37107 )
 
 [sub_resource type="BoxShape" id=4]
 extents = Vector3( 0.2696, 1.02924, 84.3916 )
@@ -66,6 +67,9 @@ extents = Vector3( 0.0682718, 1, 31.085 )
 
 [sub_resource type="BoxShape" id=8]
 extents = Vector3( 17.1807, 1.25081, 0.0134469 )
+
+[sub_resource type="BoxShape" id=34]
+extents = Vector3( 0.134651, 23.2301, 17.9046 )
 
 [sub_resource type="PlaneMesh" id=9]
 
@@ -130,6 +134,9 @@ albedo_color = Color( 0, 0, 0, 1 )
 albedo_color = Color( 0, 0, 0, 1 )
 
 [sub_resource type="BoxShape" id=24]
+
+[sub_resource type="BoxShape" id=35]
+extents = Vector3( 8.59044, 1, 238.41 )
 
 [sub_resource type="ProceduralSky" id=25]
 sky_top_color = Color( 0, 0.462745, 0.717647, 1 )
@@ -256,11 +263,11 @@ transform = Transform( -1, 6.57671e-08, 3.39705e-07, 1.973e-07, 0.914904, 0.4036
 transform = Transform( 1, -1.95399e-14, -2.84217e-14, 2.30926e-14, 1, -7.45058e-09, 2.84217e-14, 2.98023e-08, 1, 0.371033, -0.879211, 3.51086 )
 far = 50.0
 
-[node name="music" type="AudioStreamPlayer2D" parent="player/Player/target"]
-position = Vector2( 510, 300 )
-rotation = -1.5708
-scale = Vector2( 0.403673, 0.914903 )
+[node name="music" type="AudioStreamPlayer3D" parent="player/Player/target"]
+transform = Transform( -0.995109, -0.0398752, 0.0903761, 0.0398758, 0.674895, 0.736835, -0.0903758, 0.736836, -0.670004, 0.37519, -0.868149, 3.38342 )
 stream = ExtResource( 3 )
+max_db = 1.0
+area_mask = 2
 
 [node name="lasers" type="Spatial" parent="."]
 
@@ -569,6 +576,54 @@ shape = SubResource( 8 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.259, -0.714005, 43.9068 )
 shape = SubResource( 8 )
 
+[node name="CollisionShape49" type="CollisionShape" parent="base_map_1/colisions"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.35901, 7.507, -132.126 )
+shape = SubResource( 34 )
+
+[node name="CollisionShape50" type="CollisionShape" parent="base_map_1/colisions"]
+transform = Transform( 0.593, 0, 0, 0, 1, 0, 0, 0, 1, 0.169006, 7.507, -132.126 )
+shape = SubResource( 34 )
+
+[node name="CollisionShape52" type="CollisionShape" parent="base_map_1/colisions"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.35901, 21.8936, -219.698 )
+shape = SubResource( 34 )
+
+[node name="CollisionShape51" type="CollisionShape" parent="base_map_1/colisions"]
+transform = Transform( 0.593, 0, 0, 0, 1, 0, 0, 0, 1, 0.169006, 21.8936, -219.698 )
+shape = SubResource( 34 )
+
+[node name="CollisionShape54" type="CollisionShape" parent="base_map_1/colisions"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.35901, 43.6465, -297.995 )
+shape = SubResource( 34 )
+
+[node name="CollisionShape53" type="CollisionShape" parent="base_map_1/colisions"]
+transform = Transform( 0.593, 0, 0, 0, 1, 0, 0, 0, 1, 0.169006, 43.6465, -297.995 )
+shape = SubResource( 34 )
+
+[node name="CollisionShape56" type="CollisionShape" parent="base_map_1/colisions"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.35901, 68.6745, -377.94 )
+shape = SubResource( 34 )
+
+[node name="CollisionShape55" type="CollisionShape" parent="base_map_1/colisions"]
+transform = Transform( 0.593, 0, 0, 0, 1, 0, 0, 0, 1, 0.169006, 68.6745, -377.94 )
+shape = SubResource( 34 )
+
+[node name="CollisionShape58" type="CollisionShape" parent="base_map_1/colisions"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.35901, 87.6844, -450.704 )
+shape = SubResource( 34 )
+
+[node name="CollisionShape57" type="CollisionShape" parent="base_map_1/colisions"]
+transform = Transform( 0.593, 0, 0, 0, 1, 0, 0, 0, 1, 0.169006, 87.6844, -450.704 )
+shape = SubResource( 34 )
+
+[node name="CollisionShape60" type="CollisionShape" parent="base_map_1/colisions"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.35901, 113.217, -706.334 )
+shape = SubResource( 34 )
+
+[node name="CollisionShape59" type="CollisionShape" parent="base_map_1/colisions"]
+transform = Transform( 0.593, 0, 0, 0, 1, 0, 0, 0, 1, 0.169006, 113.217, -706.334 )
+shape = SubResource( 34 )
+
 [node name="laser_verticais" type="Spatial" parent="base_map_1"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -147.98, 137.82, 0 )
 
@@ -619,12 +674,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -49.1845, 0.337906, -0.0266089
 
 [node name="laser_vertical15" parent="base_map_1/laser_verticais/red" instance=ExtResource( 17 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -59.2925, 0.337906, -0.688775 )
-
-[node name="laser_vertical16" parent="base_map_1/laser_verticais/red" instance=ExtResource( 17 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -68.2026, 0.337906, 0.796343 )
-
-[node name="laser_vertical20" parent="base_map_1/laser_verticais/red" instance=ExtResource( 17 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -70.2178, 0.337906, 0.0643836 )
 
 [node name="laser_vertical17" parent="base_map_1/laser_verticais/red" instance=ExtResource( 17 )]
 transform = Transform( -1.62921e-07, 0, 2, 0, 2, 0, -1, 0, -3.25841e-07, -72.1462, 0.337906, 0.298082 )
@@ -969,7 +1018,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 0.510686, -291.254, 140.666, -0.5
 script = ExtResource( 18 )
 
 [node name="CollisionShape" type="CollisionShape" parent="base_map_1/area_change_rotation_player"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.162262, 0, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.162262, -0.867111, 0.903335 )
 shape = SubResource( 3 )
 
 [node name="area_change_cam_down" type="Area" parent="base_map_1"]
@@ -981,7 +1030,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.606415, -2.57062, 0 )
 shape = SubResource( 3 )
 
 [node name="area_change_cam_down_to_normal" type="Area" parent="base_map_1"]
-transform = Transform( 0.012182, -0.999926, 0, 0.999926, 0.012182, 0, 0, 0, 1, 252.801, 137.986, 0 )
+transform = Transform( 0.012182, -0.999926, 0, 0.999926, 0.012182, 0, 0, 0, 1, 252.801, 138.331, 0 )
 script = ExtResource( 21 )
 
 [node name="CollisionShape" type="CollisionShape" parent="base_map_1/area_change_cam_down_to_normal"]
@@ -1003,7 +1052,7 @@ script = ExtResource( 12 )
 shape = SubResource( 3 )
 
 [node name="aria_super_jump_1" type="Area" parent="base_map_1"]
-transform = Transform( -0.127636, 0, -0.991821, 0, 1, 0, 0.991821, 0, -0.127636, -291.353, 140.666, -162.353 )
+transform = Transform( -0.0158121, 0, -0.999875, 0, 1, 0, 0.999875, 0, -0.0158121, -291.353, 140.666, -162.353 )
 script = ExtResource( 7 )
 
 [node name="CollisionShape" type="CollisionShape" parent="base_map_1/aria_super_jump_1"]
@@ -1027,7 +1076,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.12711, -3.31654, 0.423309 )
 shape = SubResource( 3 )
 
 [node name="aria_super_jump_4" type="Area" parent="base_map_1"]
-transform = Transform( -0.127636, 0, -0.991821, 0, 1, 0, 0.991821, 0, -0.127636, -291.353, 208.28, -395.356 )
+transform = Transform( -0.127636, 0, -0.991821, 0, 1, 0, 0.991821, 0, -0.127636, -291.353, 206.941, -395.356 )
 script = ExtResource( 7 )
 
 [node name="CollisionShape" type="CollisionShape" parent="base_map_1/aria_super_jump_4"]
@@ -1848,117 +1897,118 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 261.514, 7.54689, 0.019917 )
 script = ExtResource( 40 )
 
 [node name="coin9" parent="base_map_1/coins" instance=ExtResource( 39 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 255.423, 18.7774, 0.019917 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 254.978, 18.7774, 0.019917 )
 script = ExtResource( 40 )
 
 [node name="coin10" parent="base_map_1/coins" instance=ExtResource( 39 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 255.423, 23.0663, -1.17674 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 254.978, 23.0663, -1.17674 )
 script = ExtResource( 40 )
 
 [node name="coin11" parent="base_map_1/coins" instance=ExtResource( 39 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 255.423, 29.3034, -3.26196 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 254.978, 29.3034, -3.26196 )
 script = ExtResource( 40 )
 
 [node name="coin12" parent="base_map_1/coins" instance=ExtResource( 39 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 255.423, 37.2009, -3.26196 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 254.978, 37.2009, -3.26196 )
 script = ExtResource( 40 )
 
 [node name="coin13" parent="base_map_1/coins" instance=ExtResource( 39 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 255.423, 42.0568, -0.392762 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 254.978, 42.0568, -0.392762 )
 script = ExtResource( 40 )
 
 [node name="coin14" parent="base_map_1/coins" instance=ExtResource( 39 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 255.423, 47.7607, 4.65992 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 254.978, 47.7607, 4.65992 )
 script = ExtResource( 40 )
 
 [node name="coin15" parent="base_map_1/coins" instance=ExtResource( 39 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 255.423, 56.7651, -3.74491 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 254.978, 56.7651, -3.74491 )
 script = ExtResource( 40 )
 
 [node name="coin16" parent="base_map_1/coins" instance=ExtResource( 39 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 255.423, 64.4962, 0.687448 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 254.978, 64.4962, 0.687448 )
 script = ExtResource( 40 )
 
 [node name="coin17" parent="base_map_1/coins" instance=ExtResource( 39 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 255.423, 68.4664, 0.687448 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 254.978, 68.4664, 0.687448 )
 script = ExtResource( 40 )
 
 [node name="coin18" parent="base_map_1/coins" instance=ExtResource( 39 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 255.423, 73.3403, 0.687448 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 254.978, 73.3403, 0.687448 )
 script = ExtResource( 40 )
 
 [node name="coin19" parent="base_map_1/coins" instance=ExtResource( 39 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 255.423, 78.9693, 0.687448 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 254.978, 78.9693, 0.687448 )
 script = ExtResource( 40 )
 
 [node name="coin20" parent="base_map_1/coins" instance=ExtResource( 39 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 255.423, 85.4397, -2.54282 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 254.978, 85.4397, -2.54282 )
 script = ExtResource( 40 )
 
 [node name="coin21" parent="base_map_1/coins" instance=ExtResource( 39 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 255.423, 87.8023, -2.54282 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 254.978, 87.8023, -2.54282 )
 script = ExtResource( 40 )
 
 [node name="coin22" parent="base_map_1/coins" instance=ExtResource( 39 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 255.423, 91.1794, -2.54282 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 254.978, 91.1794, -2.54282 )
 script = ExtResource( 40 )
 
 [node name="coin23" parent="base_map_1/coins" instance=ExtResource( 39 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 255.423, 96.2227, -2.54282 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 254.978, 96.2227, -2.54282 )
 script = ExtResource( 40 )
 
 [node name="coin24" parent="base_map_1/coins" instance=ExtResource( 39 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 255.423, 98.8638, -2.54282 )
-script = ExtResource( 40 )
-
-[node name="coin25" parent="base_map_1/coins" instance=ExtResource( 39 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 255.423, 100.292, 2.0867 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 254.978, 98.8638, -2.54282 )
 script = ExtResource( 40 )
 
 [node name="coin27" parent="base_map_1/coins" instance=ExtResource( 39 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 255.423, 105.492, 2.56857 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 254.978, 105.492, 2.56857 )
 script = ExtResource( 40 )
 
 [node name="coin28" parent="base_map_1/coins" instance=ExtResource( 39 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 255.423, 105.492, 1.32742 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 254.978, 105.492, 1.32742 )
 script = ExtResource( 40 )
 
 [node name="coin29" parent="base_map_1/coins" instance=ExtResource( 39 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 255.423, 105.492, -0.0590178 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 254.978, 105.492, -0.0590178 )
 script = ExtResource( 40 )
 
 [node name="coin32" parent="base_map_1/coins" instance=ExtResource( 39 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 255.423, 109.561, -0.0590178 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 254.978, 109.561, -0.0590178 )
 script = ExtResource( 40 )
 
 [node name="coin33" parent="base_map_1/coins" instance=ExtResource( 39 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 255.423, 111.398, -0.0590178 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 254.978, 111.398, -0.0590178 )
 script = ExtResource( 40 )
 
 [node name="coin34" parent="base_map_1/coins" instance=ExtResource( 39 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 255.423, 114.182, -0.0590178 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 254.978, 114.182, -0.0590178 )
 script = ExtResource( 40 )
 
 [node name="coin35" parent="base_map_1/coins" instance=ExtResource( 39 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 255.423, 130.642, -0.0590178 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 254.978, 130.642, -0.0590178 )
 script = ExtResource( 40 )
 
 [node name="coin30" parent="base_map_1/coins" instance=ExtResource( 39 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 255.423, 105.492, -1.31279 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 254.978, 105.492, -1.31279 )
 script = ExtResource( 40 )
 
 [node name="coin31" parent="base_map_1/coins" instance=ExtResource( 39 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 255.423, 105.492, -2.49453 )
-script = ExtResource( 40 )
-
-[node name="coin26" parent="base_map_1/coins" instance=ExtResource( 39 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 255.423, 98.0374, 2.0867 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 254.978, 105.492, -2.49453 )
 script = ExtResource( 40 )
 
 [node name="coin_audio" type="AudioStreamPlayer2D" parent="base_map_1/coins"]
-position = Vector2( 509.322, 277.668 )
+position = Vector2( 519.819, 256.674 )
 stream = ExtResource( 41 )
 volume_db = 1.0
+
+[node name="AREA DE MORTE" type="Spatial" parent="base_map_1"]
+
+[node name="Area" type="Area" parent="base_map_1/AREA DE MORTE"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -291.597, 266.244, -994.744 )
+script = ExtResource( 43 )
+
+[node name="CollisionShape" type="CollisionShape" parent="base_map_1/AREA DE MORTE/Area"]
+shape = SubResource( 35 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 26 )
@@ -2010,6 +2060,7 @@ align = 1
 valign = 1
 
 [node name="UI_falha" type="Control" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
