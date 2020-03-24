@@ -1,4 +1,4 @@
-[gd_scene load_steps=87 format=2]
+[gd_scene load_steps=90 format=2]
 
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://texturas/texture.png" type="Texture" id=2]
@@ -51,6 +51,9 @@
 [ext_resource path="res://songs/load.wav" type="AudioStream" id=49]
 [ext_resource path="res://maps/cods_map1/colisao_player.gd" type="Script" id=50]
 [ext_resource path="res://maps/cods_map1/aria_active_run.gd" type="Script" id=51]
+[ext_resource path="res://texturas/esferas/golden-esfera.png" type="Texture" id=52]
+[ext_resource path="res://texturas/esferas/bronze-esfera.png" type="Texture" id=53]
+[ext_resource path="res://texturas/esferas/silver-esfera.png" type="Texture" id=54]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 3.17774, 1, 15.3905 )
@@ -1281,11 +1284,11 @@ transform = Transform( -0.127636, 0, -0.991821, 0, 1, 0, 0.991821, 0, -0.127636,
 script = ExtResource( 11 )
 
 [node name="CollisionShape" type="CollisionShape" parent="base_map_1/aria_active_final_fase"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.1387, -10.2536, 2.09796 )
+transform = Transform( 0.988402, 0, 0.151865, 0, 1, 0, -0.151865, 0, 0.988402, -16.1381, -10.2536, 2.09796 )
 shape = SubResource( 4 )
 
 [node name="aria_active_run" type="Area" parent="base_map_1"]
-transform = Transform( -0.127636, 0, -0.991821, 0, 1, 0, 0.991821, 0, -0.127636, -291.353, 299.55, -1168.12 )
+transform = Transform( -0.127636, 0, -0.991821, 0, 1, 0, 0.991821, 0, -0.127636, -290.921, 299.27, -1156.06 )
 script = ExtResource( 51 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="base_map_1/aria_active_run"]
@@ -1309,7 +1312,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.162273, 0, 0 )
 shape = SubResource( 4 )
 
 [node name="area_active_moves" type="Area" parent="base_map_1"]
-transform = Transform( -0.0158121, 0, -0.999875, 0, 1, 0, 0.999875, 0, -0.0158121, -291.353, 162.045, -185.058 )
+transform = Transform( -0.0158121, 0, -0.999875, 0, 1, 0, 0.999875, 0, -0.0158121, -291.353, 162.045, -181.948 )
 script = ExtResource( 46 )
 
 [node name="CollisionShape" type="CollisionShape" parent="base_map_1/area_active_moves"]
@@ -2673,34 +2676,72 @@ __meta__ = {
 [node name="ColorRect" type="ColorRect" parent="UI_pontuacao"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0.0509804, 0.0509804, 0.0509804, 0.47451 )
+color = Color( 0.0509804, 0.0509804, 0.0509804, 0.815686 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="coins_total_label" type="Label" parent="UI_pontuacao"]
-anchor_left = 0.097
-anchor_top = 0.223
-anchor_right = 0.285
-anchor_bottom = 0.275
-margin_left = -0.328003
-margin_top = 0.199997
-margin_right = 0.159973
+[node name="Button" type="Button" parent="UI_pontuacao"]
+anchor_left = 0.856
+anchor_top = 0.871
+anchor_right = 0.975
+anchor_bottom = 0.947
+margin_left = -81.1689
+margin_top = -0.254089
+margin_right = -0.0247803
+margin_bottom = 0.145935
+text = "Proxima Fase"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="Control" parent="UI_pontuacao"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -87.0
+margin_top = -101.0
+margin_right = 96.0
+margin_bottom = 99.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="coins_total_label" type="Label" parent="UI_pontuacao/CenterContainer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -68.5975
+margin_top = -79.1024
+margin_right = 61.4025
+margin_bottom = -65.1024
 custom_colors/font_color = Color( 1, 0.996078, 0.996078, 1 )
-text = "20 Esferas coletadas"
+text = "0 Esferas coletadas"
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Button" type="Button" parent="UI_pontuacao"]
-anchor_left = 0.782
-anchor_top = 0.801
-anchor_right = 0.98
-anchor_bottom = 0.878
-margin_left = -0.124878
-margin_top = 0.0135498
-margin_right = 0.123169
-margin_bottom = -0.186401
-text = "Proxima Fase"
+[node name="Sprite-golden" type="Sprite" parent="UI_pontuacao/CenterContainer"]
+visible = false
+position = Vector2( 86.7887, 102.606 )
+scale = Vector2( 0.192086, 0.196187 )
+texture = ExtResource( 52 )
+
+[node name="Sprite-silver" type="Sprite" parent="UI_pontuacao/CenterContainer"]
+visible = false
+position = Vector2( 86.7887, 102.606 )
+scale = Vector2( 0.192086, 0.196187 )
+texture = ExtResource( 54 )
+
+[node name="Sprite-bronze" type="Sprite" parent="UI_pontuacao/CenterContainer"]
+visible = false
+position = Vector2( 86.7887, 102.606 )
+scale = Vector2( 0.192086, 0.196187 )
+texture = ExtResource( 53 )
 [connection signal="finished" from="player/Player/target/music" to="base_map_1/area_play_music" method="_on_music_finished"]
 [connection signal="pressed" from="UI_falha/Button-sim" to="UI_falha" method="_on_Buttonsim_pressed"]
 [connection signal="pressed" from="UI_falha/Button-nao" to="UI_falha" method="_on_Buttonnao_pressed"]
