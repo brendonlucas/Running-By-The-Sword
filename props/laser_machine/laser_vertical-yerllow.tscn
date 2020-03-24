@@ -42,7 +42,7 @@ emission_energy = 0.5
 emission_operator = 0
 emission_on_uv2 = false
 
-[node name="laser_vertical" type="Area"]
+[node name="laser_vertical" type="StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.11729, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
@@ -64,7 +64,7 @@ shape = SubResource( 4 )
 [node name="laser" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1.71224, 0, 0, 0, 1, -0.611506, 0.785881, 0 )
 
-[node name="Area" type="Area" parent="laser"]
+[node name="Area" type="Spatial" parent="laser"]
 
 [node name="MeshInstance" type="MeshInstance" parent="laser/Area"]
 transform = Transform( 0.15, 0, 0, 0, 1, 0, 0, 0, 0.15, 0, 0, 0 )
@@ -74,7 +74,7 @@ material/0 = SubResource( 6 )
 [node name="laser2" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1.71224, 0, 0, 0, 1, 0.177924, 0.785881, 0 )
 
-[node name="Area" type="Area" parent="laser2"]
+[node name="Area" type="Spatial" parent="laser2"]
 
 [node name="MeshInstance" type="MeshInstance" parent="laser2/Area"]
 transform = Transform( 0.15, 0, 0, 0, 1, 0, 0, 0, 0.15, 0, 0, 0 )
@@ -84,7 +84,7 @@ material/0 = SubResource( 7 )
 [node name="laser3" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1.71224, 0, 0, 0, 1, 1.02072, 0.785881, 0 )
 
-[node name="Area" type="Area" parent="laser3"]
+[node name="Area" type="Spatial" parent="laser3"]
 
 [node name="MeshInstance" type="MeshInstance" parent="laser3/Area"]
 transform = Transform( 0.15, 0, 0, 0, 1, 0, 0, 0, 0.15, 0, 0, 0 )
