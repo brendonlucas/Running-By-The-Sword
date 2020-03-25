@@ -19,7 +19,7 @@ func _physics_process(delta):
 	for body in bodies:
 		if body.name == "luna" and tocou != true:
 			map_animation.play("afundar_mapa")
-			luna_anim.play("anm_90002004",true)
+			luna_anim.play("anm_90002004",true,-1)
 			music.stop()
 			tocou = true
 

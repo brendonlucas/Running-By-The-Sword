@@ -25,8 +25,6 @@ var active_jump_super = false
 func _ready():
 	animation = get_node("AnimationPlayer")
 	
-func _input(event):
-	pass
 
 func block_moves(move_type):
 	moves_blocked = move_type
@@ -49,13 +47,7 @@ func change_speed(speed):
 func invert_controls(type):
 	Type_controls = type
 	
-	if direita:
-		direita = false
-		esquerda = true
-		
-	elif esquerda:
-		esquerda = false
-		direita = true
+	
 		
 	
 func _physics_process(delta):
@@ -72,8 +64,6 @@ func _physics_process(delta):
 		
 	var move_vec = Vector3()
 	
-	if true:
-		is_moving = true
 		
 	if !moves_blocked and !block_jump and Input.is_action_just_pressed("traz"):
 		roll = true
@@ -119,7 +109,6 @@ func _physics_process(delta):
 			animation.play("anm_00000008")
 	
 	move_vec *= MOVE_SPEED
-	move_vec.z
 	move_vec.y = y_velo
 	move_and_slide(move_vec, Vector3(0, 1, 0))
 	y_velo -= GRAVITY

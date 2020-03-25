@@ -1,16 +1,16 @@
 [gd_scene load_steps=8 format=2]
 
-[sub_resource type="BoxShape" id=8]
+[sub_resource type="BoxShape" id=1]
 extents = Vector3( 2.13489, 0.861244, 0.420656 )
 
-[sub_resource type="CubeMesh" id=9]
+[sub_resource type="CubeMesh" id=2]
 
-[sub_resource type="SpatialMaterial" id=10]
+[sub_resource type="SpatialMaterial" id=3]
 albedo_color = Color( 0.368627, 0.282353, 0.282353, 1 )
 
-[sub_resource type="SphereMesh" id=11]
+[sub_resource type="SphereMesh" id=4]
 
-[sub_resource type="SpatialMaterial" id=12]
+[sub_resource type="SpatialMaterial" id=5]
 albedo_color = Color( 0, 1, 1, 1 )
 emission_enabled = true
 emission = Color( 0, 1, 1, 1 )
@@ -18,7 +18,7 @@ emission_energy = 1.0
 emission_operator = 0
 emission_on_uv2 = false
 
-[sub_resource type="CylinderMesh" id=13]
+[sub_resource type="CylinderMesh" id=6]
 
 [sub_resource type="SpatialMaterial" id=7]
 albedo_color = Color( 1, 0, 0, 1 )
@@ -28,35 +28,35 @@ emission_energy = 1.0
 emission_operator = 0
 emission_on_uv2 = false
 
-[node name="laser_vertical-v2" type="Area"]
+[node name="laser_vertical-v2" type="StaticBody"]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.0109282, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 0.3, 0, 0, 0, -0.813644, 1.01211e-07, 0, -2.65119e-07, -0.310615, 0.109084, 0.678688, -0.00321167 )
-shape = SubResource( 8 )
+shape = SubResource( 1 )
 
 [node name="base" type="Spatial" parent="."]
 transform = Transform( 0.39201, 0, 0, 0, -0.115809, 1.40535e-07, 0, -3.77354e-08, -0.431299, 0.125938, 0.00918061, 0.00321152 )
 
 [node name="MeshInstance" type="MeshInstance" parent="base"]
 transform = Transform( 2.10747, 0, 0, 0, 0.354433, 0, 0, 3.55271e-15, 0.61934, 0, 0, 0 )
-mesh = SubResource( 9 )
-material/0 = SubResource( 10 )
+mesh = SubResource( 2 )
+material/0 = SubResource( 3 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="base"]
 transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.459257, 0 )
-mesh = SubResource( 11 )
-material/0 = SubResource( 12 )
+mesh = SubResource( 4 )
+material/0 = SubResource( 5 )
 
 [node name="MeshInstance4" type="MeshInstance" parent="base"]
 transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -1.35001, 0.459257, 0 )
-mesh = SubResource( 11 )
-material/0 = SubResource( 12 )
+mesh = SubResource( 4 )
+material/0 = SubResource( 5 )
 
 [node name="MeshInstance3" type="MeshInstance" parent="base"]
 transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 1.29695, 0.459257, 0 )
-mesh = SubResource( 11 )
-material/0 = SubResource( 12 )
+mesh = SubResource( 4 )
+material/0 = SubResource( 5 )
 
 [node name="laser" type="Spatial" parent="."]
 transform = Transform( 0.3, 0, 0, 0, -0.813644, 1.20958e-07, 0, -3.16845e-07, -0.310615, 0.586789, 0.421735, -0.00321167 )
@@ -65,15 +65,15 @@ transform = Transform( 0.3, 0, 0, 0, -0.813644, 1.20958e-07, 0, -3.16845e-07, -0
 
 [node name="MeshInstance" type="MeshInstance" parent="laser/Area"]
 transform = Transform( 0.5, 0, 0, 0, 0.860733, -5.36273e-08, 0, -3.67968e-07, 0.5, 0.198295, -0.355929, 3.63216e-07 )
-mesh = SubResource( 13 )
+mesh = SubResource( 6 )
 material/0 = SubResource( 7 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="laser/Area"]
 transform = Transform( 0.5, 0, 0, 0, 0.860733, -5.36273e-08, 0, -3.67968e-07, 0.5, -1.47357, -0.355929, 3.63216e-07 )
-mesh = SubResource( 13 )
+mesh = SubResource( 6 )
 material/0 = SubResource( 7 )
 
 [node name="MeshInstance3" type="MeshInstance" parent="laser/Area"]
 transform = Transform( 0.5, 0, 0, 0, 0.860733, -5.36273e-08, 0, -3.67968e-07, 0.5, -3.36295, -0.355929, 3.63216e-07 )
-mesh = SubResource( 13 )
+mesh = SubResource( 6 )
 material/0 = SubResource( 7 )

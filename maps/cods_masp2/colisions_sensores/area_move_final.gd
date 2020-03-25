@@ -19,6 +19,7 @@ func _physics_process(delta):
 			map.stop_move()
 			map.active_front_move(true)
 			animate_player.play("anm_02076008")
+			#rotate_object_local(Vector3(1, 0, 0), PI/2)
 			animate_rotate_player.play("rotate_final_player")
 			tocou = true
 
