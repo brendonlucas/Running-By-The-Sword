@@ -1,6 +1,5 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://props/laser_machine/StaticBody.gd" type="Script" id=1]
 [ext_resource path="res://songs/laser.ogg" type="AudioStream" id=2]
 
 [sub_resource type="CubeMesh" id=1]
@@ -212,7 +211,10 @@ emission_on_uv2 = false
 [sub_resource type="ConvexPolygonShape" id=7]
 points = PoolVector3Array( -0.982432, -0.982623, -0.184098, -0.982432, -0.982623, 0.184098, -0.982432, 0.982623, -0.184098, -0.982432, 0.982623, 0.184098, -0.951084, -0.981837, -0.306584, -0.951084, 0.981837, 0.306584, -0.917023, -0.978309, -0.397223, -0.917023, -0.978309, 0.397223, -0.917023, 0.978309, -0.397223, -0.853813, -0.975892, -0.518323, -0.853813, -0.975892, 0.518323, -0.853813, 0.975892, -0.518323, -0.853813, 0.975892, 0.518323, -0.79176, -0.974761, -0.60913, -0.79176, -0.974761, 0.60913, -0.707103, -0.983887, -0.707097, -0.707103, -0.983887, 0.707097, -0.707103, 0.983887, -0.707097, -0.707103, 0.983887, 0.707097, -0.609138, 0.97476, -0.791754, -0.609138, 0.97476, 0.791754, -0.518332, -0.975889, -0.853807, -0.518332, -0.975889, 0.853807, -0.518332, 0.975889, -0.853807, -0.397393, 0.978225, -0.916943, -0.397393, 0.978225, 0.916943, -0.306598, -0.981834, -0.951079, -0.306598, -0.981834, 0.951079, -0.18408, -0.982434, -0.982434, -0.18408, -0.982434, 0.982434, -0.18408, 0.982434, -0.982434, -0.18408, 0.982434, 0.982434, 0.184038, -0.982441, -0.982441, 0.184038, -0.982441, 0.982441, 0.184038, 0.982441, -0.982441, 0.184038, 0.982441, 0.982441, 0.306731, -0.981785, 0.951032, 0.306731, 0.981785, -0.951032, 0.306731, 0.981785, 0.951032, 0.397198, -0.978324, -0.917035, 0.397198, 0.978324, 0.917035, 0.459081, -0.979594, 0.887733, 0.459081, 0.979594, -0.887733, 0.5183, -0.975911, -0.853827, 0.5183, 0.975911, -0.853827, 0.5183, 0.975911, 0.853827, 0.609111, -0.974785, 0.791775, 0.642894, -0.979738, -0.765301, 0.642894, 0.979738, -0.765301, 0.642894, 0.979738, 0.765301, 0.791813, -0.974646, -0.609058, 0.791813, -0.974646, 0.609058, 0.791813, 0.974646, -0.609058, 0.791813, 0.974646, 0.609058, 0.853885, -0.976024, -0.518202, 0.853885, -0.976024, 0.518202, 0.917016, 0.978348, -0.397238, 0.917016, 0.978348, 0.397238, 0.95108, -0.981878, -0.306596, 0.95108, -0.981878, 0.306596, 0.98243, -0.982666, -0.184106, 0.98243, -0.982666, 0.184106, 0.98243, 0.982666, -0.184106, 0.98243, 0.982666, 0.184106 )
 
-[node name="Laser_machine" type="Spatial"]
+[sub_resource type="BoxShape" id=8]
+extents = Vector3( 0.446677, 1, 1 )
+
+[node name="Laser_machine" type="KinematicBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.61864, 3.00445, 0 )
 
 [node name="corpo_principal" type="Spatial" parent="."]
@@ -243,15 +245,14 @@ anims/laser = SubResource( 4 )
 [node name="laser_1" type="Spatial" parent="."]
 transform = Transform( -0.103192, -0.994662, 0, 0.994662, -0.103192, 0, 0, 0, 1, -0.580171, 0.871628, -1.29194 )
 
-[node name="StaticBody" type="Area" parent="laser_1"]
-script = ExtResource( 1 )
+[node name="Laser" type="StaticBody" parent="laser_1"]
 
-[node name="MeshInstance" type="MeshInstance" parent="laser_1/StaticBody"]
+[node name="MeshInstance" type="MeshInstance" parent="laser_1/Laser"]
 transform = Transform( -2.89288e-06, -17.7564, 0, 0.2, -3.25841e-08, 0, 0, 0, 0.2, -17.7313, 0.0456131, 0.20272 )
 mesh = SubResource( 5 )
 material/0 = SubResource( 6 )
 
-[node name="CollisionShape" type="CollisionShape" parent="laser_1/StaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="laser_1/Laser"]
 transform = Transform( -2.89288e-06, -17.7564, 0, 0.2, -3.25841e-08, 0, 0, 0, 0.2, -17.7313, 0.0456131, 0.20272 )
 shape = SubResource( 7 )
 
@@ -262,15 +263,14 @@ stream = ExtResource( 2 )
 [node name="laser_2" type="Spatial" parent="."]
 transform = Transform( -0.103192, -0.994662, 0, 0.994662, -0.103192, 0, 0, 0, 1, -0.580171, 0.871628, -0.171575 )
 
-[node name="StaticBody" type="Area" parent="laser_2"]
-script = ExtResource( 1 )
+[node name="Laser" type="StaticBody" parent="laser_2"]
 
-[node name="MeshInstance" type="MeshInstance" parent="laser_2/StaticBody"]
+[node name="MeshInstance" type="MeshInstance" parent="laser_2/Laser"]
 transform = Transform( -2.89288e-06, -17.7564, 0, 0.2, -3.25841e-08, 0, 0, 0, 0.2, -17.7313, 0.0456131, 0.20272 )
 mesh = SubResource( 5 )
 material/0 = SubResource( 6 )
 
-[node name="CollisionShape" type="CollisionShape" parent="laser_2/StaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="laser_2/Laser"]
 transform = Transform( -2.89288e-06, -17.7564, 0, 0.2, -3.25841e-08, 0, 0, 0, 0.2, -17.7313, 0.0456131, 0.20272 )
 shape = SubResource( 7 )
 
@@ -281,18 +281,21 @@ stream = ExtResource( 2 )
 [node name="laser_3" type="Spatial" parent="."]
 transform = Transform( -0.103192, -0.994662, 0, 0.994662, -0.103192, 0, 0, 0, 1, -0.580171, 0.871628, 0.975218 )
 
-[node name="StaticBody" type="Area" parent="laser_3"]
-script = ExtResource( 1 )
+[node name="Laser" type="StaticBody" parent="laser_3"]
 
-[node name="MeshInstance" type="MeshInstance" parent="laser_3/StaticBody"]
+[node name="MeshInstance" type="MeshInstance" parent="laser_3/Laser"]
 transform = Transform( -2.89288e-06, -17.7564, 0, 0.2, -3.25841e-08, 0, 0, 0, 0.2, -17.7313, 0.0456131, 0.20272 )
 mesh = SubResource( 5 )
 material/0 = SubResource( 6 )
 
-[node name="CollisionShape" type="CollisionShape" parent="laser_3/StaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="laser_3/Laser"]
 transform = Transform( -2.89288e-06, -17.7564, 0, 0.2, -3.25841e-08, 0, 0, 0, 0.2, -17.7313, 0.0456131, 0.20272 )
 shape = SubResource( 7 )
 
 [node name="laser3" type="AudioStreamPlayer3D" parent="laser_3"]
 transform = Transform( 1, 0.000291541, 0, -0.000291541, 1, 0, 0, 0, 1, -22.9136, 0.104478, 0.344 )
 stream = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.05494, 0 )
+shape = SubResource( 8 )

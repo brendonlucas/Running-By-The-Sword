@@ -235,9 +235,9 @@ tracks/0/keys = PoolRealArray( 0, 1, 2.79397e-07, 0.414705, 1.75037, 6.72122e-08
 [node name="map_1" type="Spatial"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.16803, 0 )
 
-[node name="StaticBody" type="StaticBody" parent="."]
+[node name="chao" type="StaticBody" parent="."]
 
-[node name="chao_colider" type="CollisionShape" parent="StaticBody"]
+[node name="chao_colider" type="CollisionShape" parent="chao"]
 transform = Transform( 6.59982, 0, 0, 0, 0.028, 0, 0, 0, 1, 351.959, 0, 0 )
 shape = SubResource( 1 )
 
