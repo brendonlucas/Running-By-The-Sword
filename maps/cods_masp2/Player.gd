@@ -19,13 +19,23 @@ var animate_current
 var block_jump = false
 var is_moving = true
 var moves_blocked = false
-
+var death = false
 var active_jump_super = false
+var ja_morreu = false
+
 
 func _ready():
 	animation = get_node("AnimationPlayer")
 	
-
+	
+func player_death():
+	death = true
+	moves_blocked = true
+	is_moving = false
+	
+func block_moving():
+	is_moving = false
+	
 func block_moves(move_type):
 	moves_blocked = move_type
 	
@@ -47,12 +57,8 @@ func change_speed(speed):
 func invert_controls(type):
 	Type_controls = type
 	
-	
-		
-	
 func _physics_process(delta):
 	animate_current = animation.current_animation
-	
 	var roll = false
 	var just_jumped = false
 	var grounded = is_on_floor()
@@ -63,7 +69,9 @@ func _physics_process(delta):
 		roll = false
 		
 	var move_vec = Vector3()
-	
+	if death and !ja_morreu:
+		ja_morreu = true
+		animation.play("anm_00000001")
 		
 	if !moves_blocked and !block_jump and Input.is_action_just_pressed("traz"):
 		roll = true
