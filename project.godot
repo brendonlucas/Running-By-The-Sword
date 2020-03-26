@@ -15,9 +15,14 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Runnig"
-run/main_scene="res://maps/map_2.tscn"
+config/name="Running by the Sword "
+run/main_scene="res://maps/map_1.tscn"
+boot_splash/image="res://logo.png"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/fullscreen=true
 
 [input]
 

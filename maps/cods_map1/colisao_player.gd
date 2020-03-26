@@ -15,7 +15,7 @@ func _ready():
 func _physics_process(delta):
 	var bodies = get_overlapping_bodies()
 	for body in bodies:
-		if !tocou != true:
+		if tocou != true:
 			if body.name == "laser_vertical" or body.name == "Laser" or body.name == "laser_horizontal":
 				player.player_death()
 				map.active_move(false)

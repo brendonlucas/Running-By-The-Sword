@@ -22,7 +22,6 @@ func _physics_process(delta):
 			music.stop()
 			ui_falha.show()
 			tocou = true
-			print("morreu")
 			
 
 

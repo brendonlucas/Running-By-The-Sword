@@ -24,3 +24,7 @@ func show_pontuacao():
 		
 func set_coin():
 	total_coins += 1
+
+
+func _on_Buttoncontinuar_pressed():
+	get_tree().change_scene("res://maps/final _game.tscn")

@@ -55,7 +55,7 @@ glow_blend_mode = 1
 [sub_resource type="SpatialMaterial" id=4]
 albedo_texture = ExtResource( 2 )
 emission_enabled = true
-emission = Color( 0, 0, 0, 1 )
+emission = Color( 0, 0.835294, 1, 1 )
 emission_energy = 1.0
 emission_operator = 0
 emission_on_uv2 = false
@@ -2088,7 +2088,7 @@ transform = Transform( -0.707846, 0, 0.706367, 0, 1, 0, -0.706367, 0, -0.707846,
 transform = Transform( 0.281622, 0, 0.103388, 0, 0.3, 0, -0.103388, 0, 0.281622, -62.5713, 41.9455, 25.8951 )
 
 [node name="laser_horizontal" parent="base_map/plataformas/lasers/horizontal/laser-51" instance=ExtResource( 19 )]
-transform = Transform( -0.063662, 0, -0.997973, 0, 1, 0, 0.997973, 0, -0.063662, 226.065, -8.20401, -235.547 )
+transform = Transform( -0.063662, 0, -0.997973, 0, 1, 0, 0.997973, 0, -0.063662, 227.677, -8.20401, -235.323 )
 
 [node name="laser-52" type="Spatial" parent="base_map/plataformas/lasers/horizontal"]
 transform = Transform( 0.297759, 0, 0.0365971, 0, 0.3, 0, -0.0365971, 0, 0.297759, -67.2376, 41.9455, 7.42869 )
@@ -2118,7 +2118,7 @@ transform = Transform( 0.347264, 0, -0.937768, 0, 1, 0, 0.937768, 0, 0.347264, 1
 transform = Transform( 0.29934, 0, -0.0198875, 0, 0.3, 0, 0.0198875, 0, 0.29934, -67.7999, 41.9455, -1.08713 )
 
 [node name="laser_horizontal" parent="base_map/plataformas/lasers/horizontal/laser-56" instance=ExtResource( 19 )]
-transform = Transform( 0.3471, 0, -0.93783, 0, 1, 0, 0.93783, 0, 0.3471, 145.476, -8.20401, -222.86 )
+transform = Transform( 0.3471, 0, -0.93783, 0, 1, 0, 0.93783, 0, 0.3471, 147.534, -8.20401, -223.523 )
 
 [node name="laser-57" type="Spatial" parent="base_map/plataformas/lasers/horizontal"]
 transform = Transform( 0.292094, 0, 0.0684186, 0, 0.3, 0, -0.0684186, 0, 0.292094, -65.7613, 41.9455, 15.6185 )
@@ -2301,13 +2301,13 @@ transform = Transform( 0.389042, 0, -0.92122, 0, 1, 0, 0.92122, 0, 0.389042, 141
 transform = Transform( -0.147476, 0, 0.261249, 0, 0.3, 0, -0.261249, 0, -0.147476, 34.1935, 36.7944, 58.6881 )
 
 [node name="laser_horizontal" parent="base_map/plataformas/lasers/horizontal/laser-84" instance=ExtResource( 19 )]
-transform = Transform( -0.997915, 0, 0.0645305, 0, 1, 0, -0.0645305, 0, -0.997915, 451.631, 8.96633, 9.90518 )
+transform = Transform( -0.997915, 0, 0.0645306, 0, 1, 0, -0.0645306, 0, -0.997915, 451.461, 8.96633, 10.8829 )
 
 [node name="laser-85" type="Spatial" parent="base_map/plataformas/lasers/horizontal"]
 transform = Transform( -0.118202, 0, 0.275733, 0, 0.3, 0, -0.275733, 0, -0.118202, 25.7979, 36.7944, 62.5823 )
 
 [node name="laser_horizontal" parent="base_map/plataformas/lasers/horizontal/laser-85" instance=ExtResource( 19 )]
-transform = Transform( -0.999698, 0, 0.0245718, 0, 1, 0, -0.0245718, 0, -0.999698, 451.323, 8.96633, 3.40754 )
+transform = Transform( -0.999698, 0, 0.0245719, 0, 1, 0, -0.0245719, 0, -0.999698, 451.008, 8.96633, 5.15591 )
 
 [node name="sensores" type="Spatial" parent="base_map"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.421822, 0 )
@@ -2993,7 +2993,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="UI_pontuacao"]
+[node name="Button-continuar" type="Button" parent="UI_pontuacao"]
 anchor_left = 1.0
 anchor_top = 0.911
 anchor_right = 1.0
@@ -3038,18 +3038,22 @@ __meta__ = {
 }
 
 [node name="Sprite-golden" type="Sprite" parent="UI_pontuacao/CenterContainer"]
+visible = false
 position = Vector2( 151.138, 192.423 )
 scale = Vector2( 0.183776, 0.175613 )
 texture = ExtResource( 25 )
 
 [node name="Sprite-bronze" type="Sprite" parent="UI_pontuacao/CenterContainer"]
+visible = false
 position = Vector2( 151.138, 192.423 )
 scale = Vector2( 0.183776, 0.175613 )
 texture = ExtResource( 26 )
 
 [node name="Sprite-silver" type="Sprite" parent="UI_pontuacao/CenterContainer"]
+visible = false
 position = Vector2( 151.138, 192.423 )
 scale = Vector2( 0.183776, 0.175613 )
 texture = ExtResource( 27 )
 [connection signal="pressed" from="UI_falha/Control/Button-sim" to="UI_falha" method="_on_Buttonsim_pressed"]
 [connection signal="pressed" from="UI_falha/Control/Button-nao" to="UI_falha" method="_on_Buttonnao_pressed"]
+[connection signal="pressed" from="UI_pontuacao/Button-continuar" to="UI_pontuacao" method="_on_Buttoncontinuar_pressed"]

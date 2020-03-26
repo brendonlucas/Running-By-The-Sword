@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://video/final-game.ogv" type="VideoStream" id=1]
+[ext_resource path="res://maps/cod_final_game/final _game.gd" type="Script" id=2]
+
+[node name="final _game" type="Spatial"]
+script = ExtResource( 2 )
+
+[node name="VideoPlayer" type="VideoPlayer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+stream = ExtResource( 1 )
+autoplay = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="menu" type="Button" parent="Control"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -109.5
+margin_top = -35.0
+margin_right = 109.5
+margin_bottom = 35.0
+text = "Voltar para o menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="finished" from="VideoPlayer" to="." method="_on_VideoPlayer_finished"]
+[connection signal="pressed" from="Control/menu" to="." method="_on_menu_pressed"]
