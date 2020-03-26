@@ -1,16 +1,12 @@
 extends Spatial
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
 var animate_cam
-# Called when the node enters the scene tree for the first time.
+
 func _ready():
 	animate_cam = get_node("target/AnimationPlayer")
 	animate_cam.play("move_cam")
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	if Input.is_action_pressed("reset") and Input.is_action_pressed("traz") and  Input.is_action_pressed("pulo") and Input.is_action_pressed("Secret_button"):  
+		get_tree().change_scene("res://maps/map_2.tscn")
+

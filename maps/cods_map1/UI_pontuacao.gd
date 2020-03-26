@@ -28,3 +28,7 @@ func set_coin():
 
 func _on_Buttoncontinuar_pressed():
 	get_tree().change_scene("res://maps/final _game.tscn")
+
+
+func _on_Button_proxima_pressed():
+	get_tree().change_scene("res://maps/map_2.tscn")
