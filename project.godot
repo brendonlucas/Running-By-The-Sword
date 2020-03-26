@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Running by the Sword "
-run/main_scene="res://maps/map_1.tscn"
+run/main_scene="res://maps/menu-principal.tscn"
 boot_splash/image="res://logo.png"
 config/icon="res://icon.png"
 
