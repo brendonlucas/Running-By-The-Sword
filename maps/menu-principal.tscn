@@ -213,7 +213,6 @@ __meta__ = {
 }
 
 [node name="ui_controles" type="Control" parent="."]
-visible = false
 anchor_left = 0.776
 anchor_top = 0.04
 anchor_right = 0.936
@@ -229,7 +228,11 @@ __meta__ = {
 [node name="Label" type="Label" parent="ui_controles"]
 margin_right = 40.0
 margin_bottom = 14.0
-text = "Controles aqui"
+text = "Controles:
+
+A -  Esquerda
+D - Direita
+Espaço - Pular"
 __meta__ = {
 "_edit_use_anchors_": false
 }

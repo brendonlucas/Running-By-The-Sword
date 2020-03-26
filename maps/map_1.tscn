@@ -2769,16 +2769,19 @@ __meta__ = {
 }
 
 [node name="Sprite-golden" type="Sprite" parent="UI_pontuacao/CenterContainer"]
+visible = false
 position = Vector2( 86.7887, 102.606 )
 scale = Vector2( 0.192086, 0.196187 )
 texture = ExtResource( 52 )
 
 [node name="Sprite-silver" type="Sprite" parent="UI_pontuacao/CenterContainer"]
+visible = false
 position = Vector2( 86.7887, 102.606 )
 scale = Vector2( 0.192086, 0.196187 )
 texture = ExtResource( 54 )
 
 [node name="Sprite-bronze" type="Sprite" parent="UI_pontuacao/CenterContainer"]
+visible = false
 position = Vector2( 86.7887, 102.606 )
 scale = Vector2( 0.192086, 0.196187 )
 texture = ExtResource( 53 )
