@@ -12,7 +12,7 @@ func _physics_process(delta):
 	var bodies = get_overlapping_bodies()
 	for body in bodies:
 		if body.name == "Player" and tocou != true:
-			coin_audio.play()
+			#coin_audio.play()
 			label_coins.set_text_coin()
 			hide()
 			tocou = true

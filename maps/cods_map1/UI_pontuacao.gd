@@ -18,7 +18,7 @@ func show_pontuacao():
 	elif 30 <= total_coins < 50 :
 		silver_esfera = get_node("CenterContainer/Sprite-silver")
 		silver_esfera.show()
-	else:
+	elif total_coins < 30:
 		bronze_esfera = get_node("CenterContainer/Sprite-bronze")
 		bronze_esfera.show()
 		

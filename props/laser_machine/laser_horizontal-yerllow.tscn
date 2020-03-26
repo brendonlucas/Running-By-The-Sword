@@ -26,7 +26,7 @@ emission_energy = 0.5
 emission_operator = 0
 emission_on_uv2 = false
 
-[node name="laser_vertical" type="Area"]
+[node name="laser_vertical" type="StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.11729, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]

@@ -15,13 +15,13 @@ func _ready():
 func _physics_process(delta):
 	var bodies = get_overlapping_bodies()
 	for body in bodies:
-		if body.name == "laser_vertical" and tocou != true or body.name == "Laser" and tocou != true:
-			player.player_death()
-			map.active_move(false)
-			music.stop()
-			ui_falha.show()
-			tocou = true
-			print("moreu")
+		if !tocou != true:
+			if body.name == "laser_vertical" or body.name == "Laser" or body.name == "laser_horizontal":
+				player.player_death()
+				map.active_move(false)
+				music.stop()
+				ui_falha.show()
+				tocou = true
 
 
 
