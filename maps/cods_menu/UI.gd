@@ -11,7 +11,6 @@ func _ready():
 func _process(delta):
 	if !trocou and active and time.time_left == 0:
 		#get_tree().change_scene("res://maps/map_1.tscn")
-		print("passoou")
 		trocou = true
 		get_tree().change_scene("res://maps/history_video.tscn")
 
